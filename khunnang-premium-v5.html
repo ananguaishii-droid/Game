@@ -1,0 +1,903 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="utf-8"><title>เส้นทางขุนนางกรุงศรี</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#f5ecd9;--s:#fffaf0;--t:#2b1d0e;--m:#7a6446;--a:#9c2a1a;--g:#b8860b;--b:#d9c7a3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1c140b;--s:#2a1f12;--t:#f1e4c8;--m:#b09870;--a:#e0674f;--g:#e3b341;--b:#4a3a22}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--t);font:16px/1.6 "Sarabun","Noto Sans Thai",sans-serif}
+main{max-width:560px;margin:auto;padding:14px}
+h1{font-size:20px;margin:4px 0;color:var(--a);text-align:center}
+.card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:12px;margin:10px 0}
+.rank{font-size:18px;font-weight:700}.sub{color:var(--m);font-size:13px}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px;text-align:center;font-size:13px}
+.st div{background:var(--bg);border-radius:8px;padding:4px}.st b{display:block;font-size:17px;color:var(--g)}
+.bar{height:8px;background:var(--b);border-radius:5px;margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--a)}
+button{display:block;width:100%;text-align:left;margin:6px 0;padding:11px 12px;border:1px solid var(--b);border-radius:10px;background:var(--s);color:var(--t);font:inherit}
+button:active{background:var(--b)}button small{display:block;color:var(--m);font-size:12px}
+#log{max-height:150px;overflow:auto;font-size:13px;color:var(--m)}#log p{margin:3px 0}
+h3{margin:0 0 6px;font-size:16px;color:var(--a)}
+.sv{width:100%;border-radius:10px;display:block}.ch{animation:bob 1.2s infinite}.arm{transform-box:fill-box;transform-origin:top;animation:arm 1s infinite}.ey{transform-box:fill-box;transform-origin:center;animation:bl 4s infinite}.wv{animation:wv 3s linear infinite}.rn{animation:rn .8s linear infinite}.sw{transform-box:fill-box;transform-origin:bottom;animation:sw .6s infinite}.cl{animation:dr 8s ease-in-out infinite alternate}.bt{animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(-3px)}}@keyframes arm{50%{transform:rotate(-35deg)}}@keyframes bl{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}@keyframes wv{to{transform:translateX(-40px)}}@keyframes rn{to{transform:translateY(40px)}}@keyframes sw{50%{transform:rotate(25deg)}}@keyframes dr{to{transform:translateX(40px)}}
+.lg{transform-box:fill-box;transform-origin:50% 0;animation:lg .5s infinite alternate}.l2{animation-direction:alternate-reverse}.scr{animation:scr 14s linear infinite}.pl{animation:pl 7s ease-in-out infinite alternate}.np{animation:np 7s ease-in-out infinite alternate}.sp{animation:sp 7s infinite alternate}
+@keyframes lg{from{transform:rotate(-28deg)}to{transform:rotate(28deg)}}@keyframes scr{to{transform:translateX(-320px)}}@keyframes pl{to{transform:translateX(30px)}}@keyframes np{to{transform:translateX(-115px)}}@keyframes sp{0%,60%{opacity:0}75%,100%{opacity:1}}
+#ti{position:fixed;inset:0;z-index:9;display:flex;flex-direction:column;background:#14131c;color:#f1e4c8}.hero{flex:1;position:relative;overflow:hidden;min-height:0}.hero svg{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated}.tt{position:absolute;top:calc(env(safe-area-inset-top,0px) + 6%);width:100%;text-align:center}
+#ti h1{font-size:clamp(34px,12vw,64px);color:#f2c14e;margin:0;font-weight:900;text-shadow:3px 3px 0 #6b3e00,-2px -2px 0 #6b3e00,2px -2px 0 #6b3e00,-2px 2px 0 #6b3e00}.rb{display:inline-block;background:#9c2a1a;border:3px solid #e8c36a;color:#fff3c8;padding:2px 16px;margin-top:6px;font-weight:700;font-size:15px}.lv{position:absolute;left:8px;bottom:8px;background:#000a;color:#fff;font-size:12px;padding:3px 8px;border-radius:3px}
+.pnl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 12px calc(12px + env(safe-area-inset-bottom,0px));border-top:3px solid #5a4630;max-width:640px;width:100%;box-sizing:border-box;margin:auto}.pnl input,.pnl button{margin:0;padding:11px 6px;text-align:center;background:#241a1c;color:#f1e4c8;border:2px solid #cdbb94;border-radius:2px;font:inherit;font-size:14px;width:100%;box-sizing:border-box}.pnl .big{grid-column:span 2;background:#5a2024;font-weight:700;font-size:17px}.pnl input{grid-column:span 3}.pnl .on{background:#7a5a1a}.rm *{animation:none!important}
+main{padding-bottom:84px}.spd{display:flex;gap:4px;margin:4px 0}.spd button{margin:0;text-align:center;padding:6px 0;font-size:13px}.spd .on,#nv .on{background:var(--b);font-weight:700}#nv{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--s);border-top:2px solid var(--b);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}#nv button{flex:1;margin:0;border:0;border-radius:0;text-align:center;font-size:11px;padding:6px 0;line-height:1.3}#tp{max-height:230px;overflow:auto;font-size:14px}#tp p{margin:4px 0;border-bottom:1px solid var(--b);padding-bottom:3px}.bar2{display:inline-block;width:55%;height:9px;background:var(--b);vertical-align:middle;border-radius:5px;overflow:hidden}.bar2 i{display:block;height:100%;background:#b03a2e}.gl{grid-column:span 3;text-align:left!important;font-size:13px}
+body{background-image:repeating-linear-gradient(45deg,#c9a24a14 0 2px,transparent 2px 14px)}
+.card{border:2px solid #c9a24a;box-shadow:inset 0 0 0 2px var(--s),inset 0 0 0 3px #b8860b66,0 3px 10px #0003}
+h1{letter-spacing:1px;text-shadow:1px 1px 0 #e8c36a}.rank{letter-spacing:.5px}
+button{box-shadow:0 2px 0 var(--b);transition:transform .08s}button:active{transform:translateY(2px)}
+#sc{border:3px solid #c9a24a;box-shadow:0 0 0 2px #6b3e00,0 6px 16px #0006}
+.mb{display:block;height:4px;background:var(--b);border-radius:3px;margin-top:2px}.mb u{display:block;height:100%;background:var(--g);border-radius:3px}
+.fu{animation:fu 2.4s ease-out forwards}@keyframes fu{from{transform:translateY(8px);opacity:1}to{transform:translateY(-26px);opacity:0}}
+.pnl button:active{background:#7a5a1a}
+body{background-image:none}
+:root{--bg:#E8EFE9;--s:#f6faf6;--t:#26332F;--m:#5d6f66;--a:#8a3b2a;--g:#8a6b3e;--b:#b9ccbb}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1d2622;--s:#26332F;--t:#E8EFE9;--m:#a8c2a5;--a:#e0a58f;--g:#d9c07a;--b:#3d5148}}
+main{max-width:760px}.card{border:1px solid var(--b);border-radius:8px;box-shadow:0 2px 6px #26332f22}#sc{border:1px solid var(--b);box-shadow:0 3px 10px #26332f33;border-radius:8px}h1{text-shadow:none;font-size:18px}
+button:hover{background:#dfeadf}button:disabled{opacity:.5}#box>*{animation:fi .25s}@keyframes fi{from{opacity:0;transform:translateY(5px)}}
+.cvw{position:relative}#cv{width:100%;height:auto;display:block;image-rendering:pixelated;image-rendering:crisp-edges}.cap,.lg2{position:absolute;left:6px;background:#f6faf6ee;color:#26332F;border:1px solid #b9ccbb;border-radius:6px;padding:2px 8px;font-size:12px;box-shadow:0 1px 3px #0003}.cap{top:6px}.lg2{bottom:6px;right:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fu2{position:absolute;left:0;right:0;top:34%;text-align:center;font-weight:700;color:#fff;text-shadow:0 1px 3px #000,0 0 6px #000;animation:fu 2.4s ease-out forwards}
+
+#en{position:fixed;inset:0;z-index:20;overflow:auto;background:#1d2622;color:#E8EFE9;animation:fi .6s}.enw{max-width:560px;margin:auto;padding:14px 14px 40px}.es{position:relative;height:150px;overflow:hidden;border:2px solid #c9a24a;border-radius:8px;image-rendering:pixelated}.eg{position:absolute;left:0;right:0;bottom:0;height:32%}.ei{position:absolute;left:calc(50% - 28px);top:12px}.ei>*{animation:bob 2s infinite}.pp{position:absolute;bottom:22%;width:7px;height:12px;border-top:5px solid #e3b58a;background:var(--c);opacity:0;animation:fi .8s forwards}.en1{animation:fi 1.2s .3s both}.en2{animation:fi 1.2s 1s both}.en3{animation:fi 1.2s 1.8s both}.eh{font-size:24px;color:#f2c14e;margin:12px 0 4px;text-align:center}.enw p{margin:6px 0}.enw .sub{color:#a8c2a5}
+#md{position:fixed;inset:0;z-index:30;background:#0008;display:flex;align-items:flex-end;justify-content:center;animation:fi .2s}.mdb{background:var(--s);color:var(--t);width:100%;max-width:560px;max-height:88vh;display:flex;flex-direction:column;border-radius:12px 12px 0 0;animation:su .25s}.mdh{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:2px solid var(--b)}.mdh button{width:auto;margin:0;padding:6px 12px}.mdc{overflow:auto;padding:4px 14px 16px}.mdc p{margin:6px 0;font-size:14px}.mdc textarea{width:100%;height:120px;box-sizing:border-box;background:var(--bg);color:var(--t);border:1px solid var(--b);border-radius:6px}.lk{opacity:.55}.mr{display:flex;gap:4px;margin:6px 0}.mr button{margin:0;text-align:center;padding:8px 2px;font-size:13px}@keyframes su{from{transform:translateY(40px);opacity:0}}@media(min-width:700px){#md{align-items:center}.mdb{border-radius:12px}}
+
+:root{--bg:#F3F0E5;--s:#E7E4D8;--t:#293A34;--m:#5f6f67;--a:#426B57;--g:#C6A45A;--gt:#7a5f24;--b:#A9BFAF;--pd:#426B57;--wd:#80644E;--ok:#668F70;--wn:#C69A4D;--dg:#B64C43;--r:10px;--tr:.15s}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1f2a25;--s:#2a3731;--t:#F3F0E5;--m:#b4c7ba;--a:#A9BFAF;--gt:#d9c07a;--b:#4a6355}}
+body{font-size:calc(16px*var(--fs,1))}main{max-width:1100px;display:flex;flex-direction:column;padding:10px 12px 90px}
+#hd{order:0;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;background:var(--wd);color:#F3F0E5;border-radius:var(--r);padding:8px 12px;box-shadow:0 2px 0 #00000033}.ht{font-size:20px;color:#F1D98F}.hl{display:flex;flex-direction:column;line-height:1.3}.hl .sub{color:#E7E4D8}.hc{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.chip{background:#0003;border-radius:20px;padding:4px 10px;font-size:13px}
+#hd .spd{margin:0}#hd button{margin:0;min-width:44px;width:auto;text-align:center;padding:6px 8px;background:#E7E4D8;color:#293A34;border:2px solid #C6A45A;font-size:13px}#hd button.on,#hd button[aria-pressed=true]{background:#C6A45A;font-weight:700}
+#sc{order:1}#ic{order:2;position:relative}#box{order:3}#tc{order:4}#rs{order:5}
+.ct{position:absolute;top:6px;right:6px;width:44px!important;padding:0!important;text-align:center!important;margin:0!important}.cl #st,.cl #lg{display:none}#lg{margin-top:6px}#ic .rank{padding-right:48px}
+button{min-height:44px;border:2px solid var(--b);border-radius:var(--r);transition:background var(--tr),transform var(--tr),box-shadow var(--tr)}button:hover{background:var(--b)}button:active{transform:translateY(2px);box-shadow:none}button:disabled{opacity:.5;cursor:not-allowed}button.on{background:var(--a);color:#F3F0E5;border-color:var(--a)}:focus-visible{outline:3px solid var(--g);outline-offset:2px}
+.card{background:var(--s);border:2px solid var(--b);border-radius:var(--r);box-shadow:0 2px 0 var(--b)}.st b{color:var(--gt)}h3{color:var(--a);font-size:17px}.sub{font-size:13px}
+#nv{background:var(--wd);border-top:3px solid var(--g)}#nv button{min-height:56px;color:#F3F0E5;border:0;background:transparent;position:relative;font-size:12px}#nv button:hover{background:#0002}#nv .on{background:#0003;color:#F1D98F;box-shadow:inset 0 3px 0 var(--g);animation:fi .15s}.dot{position:absolute;top:6px;right:calc(50% - 18px);width:9px;height:9px;border-radius:50%;background:var(--dg);border:2px solid #F3F0E5}
+#tt{position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);opacity:0;pointer-events:none;background:var(--a);color:#F3F0E5;padding:8px 16px;border-radius:20px;z-index:40;font-size:14px}#tt.on{animation:tt 2.2s}@keyframes tt{10%,85%{opacity:1}0%{transform:translate(-50%,10px)}}
+#tp p{animation:fi .15s}.mdc button{margin:6px 0}.dg{border-color:var(--dg)!important}
+@media(min-width:600px){#sc{border-radius:var(--r)}}
+@media(min-width:900px){main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);column-gap:14px;align-items:start}#hd{grid-column:1/-1;margin-bottom:10px}#sc{grid-column:1;grid-row:2}#box{grid-column:1;grid-row:3}#ic{grid-column:2;grid-row:2}#tc{grid-column:2;grid-row:3}#rs{grid-column:1/-1;grid-row:4}#nv{justify-content:center}#nv button{max-width:140px}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.mr{flex-wrap:wrap}.mr button{flex:1 0 20%}.npc{border-bottom:1px solid var(--b);padding:8px 0;font-size:14px}.npc .mr button{min-height:40px;font-size:13px}</style></head><body><main>
+<header id="hd"><div class="hl"><b class="ht">เส้นทางขุนนางกรุงศรี</b><span class="sub" id="hs"></span></div><div class="hc"><span class="chip" id="hg" title="ทรัพย์"></span><div class="spd"><button data-s="0" class="on" aria-label="หยุดเวลา" onclick="sp(0)">หยุด</button><button data-s="1" aria-label="ความเร็ว 1 เท่า" onclick="sp(1)">1×</button><button data-s="2" aria-label="ความเร็ว 2 เท่า" onclick="sp(2)">2×</button><button data-s="3" aria-label="ความเร็ว 3 เท่า" onclick="sp(3)">3×</button></div><button aria-label="ตั้งค่า" onclick="W('t')">ตั้งค่า</button></div></header>
+<div class="card" id="ic"><button class="ct" id="icb" aria-label="ย่อหรือขยายแผงข้อมูล" onclick="IC()">▾</button><div class="rank" id="rk"></div><div class="sub" id="sb"></div><div class="bar"><i id="pg"></i></div><div class="st" id="st"></div><div class="sub" id="lg"></div></div>
+<div class="card" style="padding:0;overflow:hidden" id="sc"></div>
+<div class="card" id="box"></div>
+<div class="card" id="tc"><div id="tp"></div></div>
+<button id="rs" onclick="CF('กลับหน้าแรก? เกมปัจจุบันถูกบันทึกอัตโนมัติไว้แล้ว',showT)">กลับหน้าแรก / เริ่มชีวิตใหม่</button>
+</main>
+<nav id="nv"></nav>
+<div id="tt" role="status" aria-live="polite"></div><div id="en" style="display:none"></div><div id="md" style="display:none"></div>
+<div id="ti"><div class="hero"><svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="320" height="200" fill="#2f6f72"/><rect y="40" width="320" height="30" fill="#6fa58a"/><rect y="70" width="320" height="30" fill="#c9c98a"/><rect y="100" width="320" height="100" fill="#f0dc9a"/><circle cx="235" cy="88" r="44" fill="#f6e7b0"/><circle cx="235" cy="88" r="31" fill="#fff3c8"/><path d="M120 130L150 96L175 120L205 100L235 130Z" fill="#8fb59c"/><path d="M270 130L292 90L320 112V130Z" fill="#3f6e4a"/><g fill="#c9a24a"><rect x="225" y="100" width="20" height="28"/><rect x="228" y="86" width="14" height="14"/><rect x="231" y="72" width="8" height="14"/><rect x="233" y="58" width="4" height="14"/></g><g fill="#b98c3a"><rect x="204" y="110" width="12" height="18"/><rect x="207" y="98" width="6" height="12"/><rect x="254" y="110" width="12" height="18"/><rect x="257" y="98" width="6" height="12"/></g><rect x="196" y="128" width="78" height="5" fill="#8a5a2b"/><rect x="225" y="112" width="4" height="16" fill="#a3261c"/><rect x="236" y="112" width="4" height="16" fill="#a3261c"/><g class="cl" style="animation-duration:22s" fill="#dfe9df"><rect x="10" y="118" width="80" height="12" rx="6"/><rect x="150" y="124" width="90" height="10" rx="5"/></g><rect y="136" width="320" height="64" fill="#bcd3cb"/><g class="cl" style="animation-duration:30s" fill="#e8f0ea"><rect x="60" y="142" width="110" height="14" rx="7"/><rect x="190" y="158" width="100" height="14" rx="7"/><rect x="20" y="172" width="90" height="12" rx="6"/></g><path d="M0 130L40 130L70 140L100 150L96 200H0Z" fill="#4a6a3a"/><rect y="128" width="72" height="4" fill="#6b9a4a"/><g class="bt"><rect x="52" y="92" width="14" height="22" fill="#a3261c"/><rect x="52" y="110" width="14" height="22" fill="#8a1c1c"/><rect x="66" y="96" width="16" height="14" fill="#2f8f8a"/><circle cx="59" cy="84" r="7" fill="#d9a574"/><path d="M51 82A8 8 0 0 1 67 82L67 86L51 86Z" fill="#222"/><path d="M52 78L59 56L66 78Z" fill="#d4a017"/></g></svg><div class="tt"><h1>เส้นทางขุนนาง</h1><div style="font-weight:900;font-size:22px;color:#f6e7b0;text-shadow:2px 2px 0 #6b3e00">Way of Khunnang</div><div class="rb">เส้นทางสู่ตำแหน่งเจ้าพระยาแห่งกรุงศรี</div></div><div class="lv" id="lv"></div></div>
+<div class="pnl"><input id="nm" placeholder="ชื่อตัวละคร (เว้นว่าง = สุ่ม)" maxlength="16"><button class="big" onclick="NL()">ชีวิตใหม่</button><button id="g0" class="on" onclick="SG(0)">🎲 สุ่มเพศ</button><button id="g1" onclick="SG(1)">♂ ชาย</button><button id="g2" onclick="SG(2)">♀ หญิง</button><button onclick="LD()">โหลด</button><button onclick="document.body.classList.toggle('rm')">ภาพนิ่ง/ขยับ</button><button onclick="alert('บันทึกพัฒนา\n• ฉากพิกเซลหน้าเกม\n• เลือกชื่อ/เพศ\n• ฉากเคลื่อนไหวตามการกระทำ\n• ลางดวงชะตา/ฉายา\n\nเร็วๆ นี้: ผังราชสำนัก, กรุงแตก')">บันทึกพัฒนา</button></div></div>
+<script>
+const R=[["ไพร่","เด็กวัด ผู้ใฝ่ฝัน",10],["ไพร่หลวง","ลูกหลานไพร่ถวายแรงงานหลวง",10],["มหาดเล็ก","ผู้ปรนนิบัติใกล้ชิดองค์พระมหากษัตริย์",100],["หมื่น","ขุนนางชั้นผู้น้อยในกรม",400],["ขุน","เจ้ากรมน้อยผู้ถือตรา",600],["หลวง","ขุนนางผู้ใหญ่ในราชสำนัก",800],["พระ","ผู้ว่าการหัวเมือง/เจ้ากรม",1000],["พระยา","เสนาบดีผู้ทรงอำนาจ",10000],["เจ้าพระยา","อัครมหาเสนาบดี สูงสุดแห่งขุนนาง",10000]];
+const NEED=[0,6,14,26,42,62,88,120,160];
+const CH=["บทที่ ๑ เด็กวัดบ้านนอก","บทที่ ๒ ไพร่หลวงสังกัดกรม","บทที่ ๓ มหาดเล็กในวัง","บทที่ ๔ หมื่นแห่งกรมพระคลัง","บทที่ ๕ ขุนผู้ถือตรา","บทที่ ๖ หลวงในราชสำนัก","บทที่ ๗ พระผู้ครองเมือง","บทที่ ๘ พระยาเสนาบดี","บทที่ ๙ เจ้าพระยา"];
+const N={w:"ปัญญา",i:"บารมี",g:"ทรัพย์",l:"ภักดี",m:"บุญ",k:"ผลงาน"};
+// actions: [label, hint, fx, text]
+const A=[["📖 ร่ำเรียนกับพระอาจารย์","+ปัญญา",{w:3,k:1},"ท่องจำคัมภีร์และกฎหมายตราสามดวง"],
+["⚒ ทำงานราชการหนักๆ","+ผลงาน +ภักดี",{k:3,l:1,g:1},"ถวายงานไม่ขาดตกบกพร่อง"],
+["🤝 คบหาผู้ใหญ่","+บารมี -ทรัพย์",{i:3,g:-2,k:1},"นำของฝากไปเยี่ยมเยียนท่านเจ้านาย"],
+["🪷 ทำบุญสร้างวัด","+บุญ -ทรัพย์",{m:3,g:-2,l:1},"ถวายสังฆทานและปฏิสังขรณ์วัด"],
+["💰 ค้าขายสำเภา","+ทรัพย์ เสี่ยง",{g:4,i:-1},"ส่งสินค้าไปขายกับพ่อค้าต่างชาติ"],
+["💍 สร้างครอบครัว","+บารมี +บุญ -ทรัพย์",{m:1,i:2,g:-2},"แต่งงานสร้างครอบครัวตามประเพณี"],
+["⚔ ประลองคู่แข่ง","เสี่ยง 50% +บารมี",{k:1},"ท้าประลองฝีมือกับคู่แข่งในราชสำนัก"],
+["🧿 ซื้อเครื่องราง","กันพลาดได้ 1 ครั้ง -ทรัพย์",{g:-4},"ซื้อยันต์เครื่องรางจากตลาดหน้าวัด"],
+["🎭 ร่วมงานเทศกาล","+บารมี +บุญ",{i:2,m:2,g:-1},"ร่วมงานลอยกระทง พบปะผู้คนมากมาย"],
+["🐎 ฝึกม้าและอาวุธ","+ผลงาน +ภักดี",{k:2,l:1,w:1},"ฝึกขี่ม้าและใช้ดาบเตรียมรับราชการสงคราม"]];
+const G=[{x:"ลูกน้องคนสนิทมาบอกว่าพบเห็นโจรสลัดแถวปากแม่น้ำ ขอกำลังไปปราบ",c:[["ยกกำลังไปปราบ","ปราบโจรสำเร็จ",{k:3,i:2,g:-1},0.6,"ถูกซุ่มโจมตี",{g:-3,i:-1}],["ส่งเรื่องให้เจ้านาย","ปลอดภัยไว้ก่อน",{l:1}]]},{x:"พ่อค้าจีนนำถุงเงินมาขอให้ช่วยผ่านใบอนุญาต",c:[["รับสินบน","ได้เงินก้อนโต",{g:5,l:-1},0.65,"เรื่องแดงถึงหูผู้ใหญ่!",{g:-4,l:-3}],["ปฏิเสธทันที","ชื่อเสียงดีขึ้น",{m:2,l:1}]]},{x:"เกิดไฟไหม้ใหญ่ในพระนคร ราษฎรวิ่งหนีกันวุ่น",c:[["นำคนไปช่วยดับ","ชาวเมืองสรรเสริญ",{m:3,i:3,g:-1}],["รักษาทรัพย์สินตัวเอง","ทรัพย์รอดแต่คนติฉิน",{g:2,m:-2}]]},{x:"คู่แข่งในราชสำนักแอบใส่ร้ายเจ้าต่อเจ้านาย",c:[["ชี้แจงด้วยหลักฐาน","ความจริงปรากฏ",{w:2,i:2}],["ตอบโต้ด้วยข่าวลือ","สำเร็จ แต่สกปรก",{i:2,m:-2,l:-1},0.55,"ถูกจับได้",{i:-3,l:-2}]]},{x:"ภรรยา/ญาติผู้ใหญ่ล้มป่วยหนัก ต้องใช้ยาแพง",c:[["ซื้อยาดีที่สุด","หายป่วย ครอบครัวอบอุ่น",{g:-4,m:3}],["ใช้ยาสมุนไพรบ้านๆ","พอไปได้",{g:-1,m:1},0.5,"อาการทรุด",{m:-2}]]}];
+// events per chapter: {x:text, c:[[label,result,fx,p,failResult,failFx]]}
+const E=[
+[{x:"พระอาจารย์ที่วัดเล่าว่า ท่านขุนกำลังหาเด็กรู้หนังสือไปช่วยจดบัญชี",c:[["อาสาไปทันที","ท่านขุนพอใจในความขยัน",{k:2,i:1}],["ขอเรียนต่ออีกปี","ปัญญาแตกฉานยิ่งขึ้น",{w:3}]]},
+{x:"ชาวบ้านทะเลาะแย่งน้ำกัน ผู้ใหญ่บ้านให้เจ้าไกล่เกลี่ย",c:[["ตัดสินด้วยหลักธรรม","ทุกฝ่ายยอมรับ",{w:1,m:2,i:2}],["เอนเอียงเข้าข้างคนมีเงิน","ได้ค่าน้ำร้อนน้ำชา แต่คนครหา",{g:3,m:-2}]]}],
+[{x:"นายหมวดสั่งเกณฑ์แรงไปขุดคลอง ใครให้เงินก็ได้ยกเว้น",c:[["จ่ายเงินส่วยแทนแรง","รอดตัว แต่เบาเงิน",{g:-3,k:1}],["ลงแรงเอง","ผู้ใหญ่เห็นความอดทน",{k:3,l:2,m:1}]]},
+{x:"เสมียนคนหนึ่งเสนอให้ปลอมบัญชีรายชื่อไพร่เลกเอาส่วนต่าง",c:[["ร่วมมือ","ได้เงินมาก",{g:5,l:-2},0.6,"ถูกตรวจพบ! ถูกเฆี่ยนและปรับ",{g:-5,l:-3,i:-2}],["ปฏิเสธและรายงาน","ได้ความเชื่อถือ",{l:3,k:2,i:-1}]]}],
+[{x:"พระมหากษัตริย์เสด็จออก ขุนนางทั้งหลายเข้าเฝ้า เจ้าจะทำอย่างไรเมื่อถูกตรัสถาม",c:[["กราบทูลตรงไปตรงมา","ทรงพอพระทัยในความซื่อ",{l:3,k:2},0.6,"ทรงขัดเคืองถ้อยคำ",{l:-2,i:-2}],["กราบทูลอ่อนน้อมถ่อมตน","ทรงรับสั่งชม",{i:2,l:2}]]},
+{x:"ขุนนางฝ่ายตรงข้ามกล่าวหาเจ้านายของเจ้าว่าทุจริต",c:[["เข้าข้างเจ้านาย","เจ้านายจดจำบุญคุณ",{i:3,l:1},0.55,"ถูกลากเข้าไปเกี่ยวข้อง",{i:-3,k:-2}],["วางตัวเป็นกลาง","รอดพ้น แต่ไม่มีใครรัก",{k:1}]]}],
+[{x:"พระคลังสินค้าได้รับสินค้าสำเภาจีนจำนวนมาก มีโอกาสแบ่งส่วนแอบแฝง",c:[["จดบัญชีถูกต้อง","ภักดีและโปร่งใส",{l:3,k:3,m:1}],["กินส่วนต่างเล็กน้อย","ได้ทรัพย์ แต่เสี่ยง",{g:6,l:-1},0.6,"ถูกตรวจสอบพบ!",{g:-6,l:-4}]]},
+{x:"ชาวต่างชาติ (ฮอลันดา/โปรตุเกส) ขอเข้าเจรจาการค้า",c:[["ต้อนรับอย่างเหมาะสม","สร้างชื่อเสียงดี",{i:2,k:3,w:1}],["ส่งต่อให้ผู้อื่น","ปลอดภัย",{k:1}]]}],
+[{x:"พม่ายกทัพมาประชิดหัวเมืองเหนือ ขุนนางถูกเกณฑ์ไปรบ",c:[["อาสาออกศึก","ได้รับความดีความชอบ",{k:5,i:2,l:2},0.55,"บาดเจ็บหนัก ต้องพักฟื้น",{g:-4,k:1}],["จัดเสบียงด้านหลัง","สำคัญไม่แพ้กัน",{k:3,g:1}]]},
+{x:"เกิดข่าวลือว่ามีขุนนางสมคบคิดกับเจ้านายต่างองค์",c:[["แจ้งความจริงต่อพระองค์","ทรงโปรดความภักดี",{l:4,i:-1,k:2}],["เก็บไว้ก่อน","รอดูท่าที",{i:1}]]}],
+[{x:"พระเจ้าอยู่หัวทรงมีรับสั่งให้ตรวจสอบกรมที่ทุจริต เจ้าอยู่ในรายชื่อ",c:[["เสนอผลงานจริง","ผ่านการตรวจ",{k:3,l:2,w:1}],["ติดสินบนผู้ตรวจ","เงียบเรื่อง",{g:-5,i:1},0.5,"ถูกจับได้ซ้ำ!",{l:-5,i:-4}]]},
+{x:"ขุนนางผู้ใหญ่เสนอให้ลูกสาวของท่านแต่งงานกับเจ้า เพื่อเสริมอำนาจ",c:[["ตกลงรับ","ได้พันธมิตรทรงอำนาจ",{i:5,g:2}],["ปฏิเสธอย่างสุภาพ","รักษาเกียรติและอิสระ",{m:2,l:1}]]}],
+[{x:"ฝนแล้ง ข้าวยากหมากแพง ชาวเมืองทุกข์ยาก",c:[["เปิดคลังหลวงช่วยราษฎร","ประชาชนสรรเสริญ",{m:4,i:3,g:-3,k:2}],["เก็บภาษีตามปกติ","ได้เงินเข้าคลัง",{g:4,m:-3,k:2}]]},
+{x:"วัดใหญ่ในเมืองขอให้เจ้าอุปถัมภ์การสร้างพระเจดีย์",c:[["รับเป็นเจ้าภาพ","บุญใหญ่",{m:5,g:-4,i:2}],["ปฏิเสธ","เก็บทรัพย์ไว้",{g:2,m:-1}]]}],
+[{x:"เกิดศึกชิงราชบัลลังก์ ขุนนางแบ่งเป็นสองฝ่าย",c:[["เข้าข้างผู้ที่ถูกธรรมเนียม","ภักดีเป็นมั่นคง",{l:4,i:3},0.6,"ฝ่ายที่เลือกพ่ายแพ้",{i:-6,l:-3,g:-5}],["วางตัวรอดูท่าที","รอดจากภัย",{k:2,m:1}]]},
+{x:"กษัตริย์ประสงค์ให้เจ้าตัดสินคดีใหญ่ของพระญาติ",c:[["ตัดสินตามกฎหมายตราสามดวง","ยุติธรรม แต่มีศัตรู",{w:2,m:3,i:-2,k:3}],["ตัดสินตามพระประสงค์","ทรงโปรด",{l:3,m:-3,k:1}]]}],
+[{x:"ถึงเวลาที่ต้องตัดสินใจว่าใครควรสืบทอดตำแหน่งต่อจากเจ้า",c:[["เลือกผู้มีฝีมือ","ราชสำนักมั่นคง",{w:2,m:3,k:4}],["เลือกลูกหลานตนเอง","ตระกูลรุ่งเรือง",{i:4,m:-2,k:2}]]},
+{x:"พระเจ้าอยู่หัวทรงถามว่าเจ้าต้องการสิ่งใดเป็นรางวัลสุดท้าย",c:[["ขอให้บ้านเมืองสงบสุข","ทรงปลื้มพระทัยยิ่ง",{m:5,l:3,k:3}],["ขอที่ดินและบริวาร","ได้มาตามปรารถนา",{g:6,i:3,m:-2}]]}]
+];
+
+const Q=(l,f,t,p,ft,ff,cm,fm)=>[l,f,t,p,ft,ff,cm,fm];
+A.push(["📜 สอบเข้ารับราชการ","3-5 ตัวเลือก",{},""],["🧮 ตรวจบัญชีกรม","3-5 ตัวเลือก",{},""],["🍶 จัดงานเลี้ยง","3-5 ตัวเลือก",{},""],["🌾 ซื้อที่นา/สร้างเรือน","3-5 ตัวเลือก",{},""],["🌏 เจรจาการค้าต่างชาติ","3-5 ตัวเลือก",{},""]);
+A.forEach((a,i)=>{if(i<10)a[1]="3-5 ตัวเลือก · "+a[1]});
+const CHS=[
+[Q("ท่องคัมภีร์กับพระอาจารย์",{w:3,k:1},"ท่องจำคัมภีร์จนขึ้นใจ"),Q("ศึกษากฎหมายตราสามดวง",{w:2,k:2,l:1},"ศึกษาตัวบทกฎหมายอย่างถ่องแท้"),Q("เรียนโหราศาสตร์",{w:2,m:1,i:1},"เรียนดูฤกษ์ยามจากโหรหลวง"),Q("เรียนภาษาต่างชาติ",{w:2,i:1,g:-2},"จ้างล่ามสอนภาษาโปรตุเกส"),Q("อ่านตำราข้ามคืน",{w:5},"อ่านตำราจนรุ่งสาง",.7,"อดนอนจนเป็นไข้ เสียการเรียน",{w:1,g:-2})],
+[Q("ถวายงานไม่ขาดตกบกพร่อง",{k:3,l:1,g:1},"ถวายงานไม่ขาดตกบกพร่อง"),Q("ช่วยเสมียนจดบัญชี",{k:2,w:1},"ช่วยเสมียนจดบัญชีจนเสร็จ"),Q("อาสางานยากที่ไม่มีใครรับ",{k:5,l:2},"งานยากสำเร็จ ผู้ใหญ่ชื่นชม",.6,"งานพลาด ถูกตำหนิ",{k:-1,l:-1}),Q("ตรวจตราคลังเสบียง",{k:2,l:2},"ตรวจเสบียงไม่ผิดพลาด"),Q("ทำพอผ่านแล้วพักผ่อน",{k:1,m:1},"ทำงานพอประมาณ ใจสบาย")],
+[Q("นำของกำนัลไปเยี่ยมท่านเจ้านาย",{i:3,g:-2,k:1},"นำของฝากไปเยี่ยมเยียน"),Q("ช่วยงานบ้านท่านเจ้านาย",{i:2,l:1},"ช่วยงานบ้านท่านจนเป็นที่รัก"),Q("ร่วมวงสนทนาขุนนางหนุ่ม",{i:2,w:1,g:-1},"ได้เพื่อนใหม่ในราชสำนัก"),Q("ประจบสอพลอ",{i:4,k:1},"ท่านพอใจคำเยินยอ",.6,"ถูกมองว่าตอแหล",{i:-2,m:-1}),Q("เลี้ยงสุราผู้มีอำนาจ",{i:4,g:-4},"ผูกมิตรบนโต๊ะสุรา")],
+[Q("ถวายสังฆทาน",{m:3,g:-2,l:1},"ถวายสังฆทานแด่พระสงฆ์"),Q("ปฏิสังขรณ์วัด",{m:4,g:-3,i:1},"ร่วมซ่อมแซมวัดประจำหมู่บ้าน"),Q("ใส่บาตรตอนเช้า",{m:2,g:-1},"ใส่บาตรทุกเช้า"),Q("ปฏิบัติธรรมในวัด",{m:3,w:1},"นั่งสมาธิเจริญภาวนา"),Q("บริจาคช่วยคนยากไร้",{m:3,i:1,g:-2},"แจกข้าวสารแก่คนยากจน")],
+[Q("ส่งสำเภาไปเมืองจีน",{g:5,i:-1},"สำเภากลับมาพร้อมกำไรงาม",.65,"สำเภาอับปาง ขาดทุนยับ",{g:-4}),Q("ค้าขายชายฝั่งปลอดภัย",{g:2},"ค้าขายใกล้ฝั่งได้กำไรเล็กน้อย"),Q("ร่วมหุ้นกับพ่อค้าจีน",{g:3,i:1},"ร่วมหุ้นได้ผลตอบแทน",.75,"หุ้นส่วนเบี้ยวเงิน",{g:-2}),Q("ลงทุนค้าเครื่องเทศ",{g:7},"เครื่องเทศขายได้ราคาสูง",.5,"เครื่องเทศเสียหาย ขาดทุนหนัก",{g:-6})],
+[Q("แต่งงานตามประเพณี",{m:1,i:2,g:-2},"จัดพิธีแต่งงานตามประเพณี",0,"",0,0,1),Q("มีบุตรและตั้งชื่อ",{m:2,g:-2},"บุตรคนใหม่ลืมตาดูโลก",0,"",0,0,1),Q("ส่งลูกเรียนหนังสือ",{w:1,m:1,g:-2},"ส่งลูกไปเรียนกับพระอาจารย์"),Q("เยี่ยมญาติผู้ใหญ่",{i:1,m:1},"เยี่ยมญาติ รักษาสายสัมพันธ์"),Q("จัดพิธีเลี้ยงญาติ",{i:3,g:-4},"จัดงานเลี้ยงต้อนรับญาติพี่น้อง")],
+[Q("ประลองดาบ",{i:3,k:2},"ชนะการประลองดาบ",.5,"พ่ายแพ้ ถูกหัวเราะเยาะ",{i:-2,l:-1}),Q("ประลองธนู",{i:2,k:2},"ยิงธนูแม่นยำ ชนะคู่แข่ง",.55,"ยิงพลาดต่อหน้าผู้คน",{i:-2}),Q("โต้วาทีด้วยปัญญา",{w:2,i:2},"ชนะด้วยถ้อยคำหลักแหลม",.6,"ถูกจับผิดจนอับอาย",{i:-2}),Q("ท้าต่อหน้าราชสำนัก",{i:5,k:3},"ชนะอย่างสง่างามต่อหน้าราชสำนัก",.4,"แพ้ต่อหน้าขุนนาง เสียหน้าหนัก",{i:-4,l:-2}),Q("ประลองแบบฉันมิตร",{i:1,l:1},"ประลองฝีมือกับคู่แข่งอย่างเป็นมิตร")],
+[Q("ซื้อเครื่องรางทั่วไป",{g:-4},"ซื้อเครื่องรางตลาดหน้าวัด",0,"",0,1),Q("ซื้อยันต์ชั้นดี 2 ชิ้น",{g:-7},"ซื้อยันต์ชั้นดีจากพระผู้ทรงวิทยาคม",0,"",0,2),Q("ขอพรจากพระอาจารย์",{m:1,g:-1},"พระอาจารย์ปลุกเสกให้",0,"",0,1)],
+[Q("ลอยกระทง",{i:2,m:2,g:-1},"ลอยกระทงริมคลอง"),Q("ประกวดการละเล่น",{i:3,g:-2},"เข้าประกวดการละเล่นในงาน",.6,"พลาดท่าต่อหน้าชาวบ้าน",{i:-1}),Q("เลี้ยงข้าวชาวบ้าน",{m:3,i:2,g:-3},"เลี้ยงข้าวชาวบ้านในงาน"),Q("เดินชมงานวัด",{m:1,i:1},"เดินชมงานวัดสบายๆ")],
+[Q("ฝึกขี่ม้า",{k:2,l:1},"ฝึกขี่ม้าเตรียมรับศึก"),Q("ฝึกดาบ",{k:2,w:1},"ฝึกดาบกับครูทหาร"),Q("ฝึกธนู",{k:2,i:1},"ฝึกยิงธนูทุกเช้า"),Q("ฝึกยุทธวิธี",{w:2,k:2,g:-1},"ศึกษาการจัดทัพกับนายทหาร"),Q("ฝึกหนักจนเกินกำลัง",{k:4},"ฝึกหนักได้ผลดี",.6,"บาดเจ็บจากการฝึก",{k:1,g:-3})],
+[Q("สอบความรู้กฎหมาย",{k:4,w:1},"สอบผ่านวิชากฎหมาย",.55,"สอบตก ต้องทบทวนใหม่",{g:-1}),Q("สอบเขียนหนังสือราชการ",{k:3,w:2},"เขียนหนังสือราชการงดงาม",.65,"ลายมือไม่ผ่านเกณฑ์",{k:0}),Q("ฝากตัวกับท่านขุน",{k:2,i:2,g:-2},"ท่านขุนรับเป็นลูกศิษย์"),Q("สอบด้วยความซื่อสัตย์",{k:2,l:2,m:1},"สอบอย่างสุจริต ได้ความเชื่อมั่น")],
+[Q("ตรวจบัญชีโดยละเอียด",{k:3,l:2,w:1},"ตรวจพบข้อผิดพลาดในบัญชี"),Q("เปิดโปงการทุจริต",{k:5,l:3,i:-2},"เปิดโปงเสมียนทุจริต มีศัตรูเพิ่ม",.6,"ถูกใส่ร้ายกลับ",{i:-3,l:-1}),Q("ปิดตาข้างหนึ่ง รับส่วนแบ่ง",{g:5,l:-2},"ได้ส่วนแบ่งเงียบๆ",.6,"ถูกตรวจสอบพบ!",{g:-5,l:-3}),Q("ตรวจแบบพอผ่าน",{k:1})],
+[Q("งานเลี้ยงใหญ่ในเรือน",{i:4,g:-5},"จัดงานเลี้ยงใหญ่ในเรือน"),Q("งานเลี้ยงเล็กกับมิตรสนิท",{i:2,g:-2},"เลี้ยงมิตรสนิท"),Q("เลี้ยงพระและชาวบ้าน",{m:3,i:2,g:-3},"เลี้ยงพระและชาวบ้าน"),Q("เลี้ยงต้อนรับผู้ใหญ่",{i:3,k:2,g:-4},"เลี้ยงต้อนรับขุนนางผู้ใหญ่")],
+[Q("ซื้อที่นาผืนเล็ก",{g:-3,m:1},"ซื้อที่นาผืนเล็ก"),Q("ต่อเติมเรือน",{g:-4,i:2},"ต่อเติมเรือนให้ใหญ่ขึ้น"),Q("จ้างคนรับใช้",{g:-2,k:1,i:1},"จ้างคนรับใช้ช่วยงานบ้าน"),Q("ปลูกสวนผลไม้",{g:-2,m:1,w:1},"ปลูกสวนผลไม้ริมคลอง",.7,"น้ำท่วมสวน",{g:-1}),Q("กู้เงินซื้อที่ดินผืนใหญ่",{g:-6,i:3,k:1},"ซื้อที่ดินผืนใหญ่ด้วยเงินกู้")],
+[Q("เจรจาการค้ากับฮอลันดา",{g:4,k:2},"ได้สัญญาการค้าฉบับใหม่",.6,"เจรจาไม่ลงตัว",{g:-1}),Q("ต้อนรับทูตโปรตุเกส",{i:3,k:2,w:1},"ต้อนรับทูตด้วยไมตรี"),Q("ค้ากับพ่อค้าจีน",{g:3,i:1},"ค้ากับพ่อค้าจีนได้กำไร"),Q("ขายอาวุธให้ต่างชาติ",{g:6,l:-2},"ขายอาวุธได้เงินก้อนโต",.55,"ถูกกล่าวหาว่าแปรพักตร์",{l:-4,i:-3}),Q("ศึกษาสินค้าต่างแดน",{w:2,g:1},"ศึกษาสินค้าและกฎหมายการค้าต่างแดน")]
+];
+function ch(i){if(S.over||S.busy)return;S.pa=i;draw()}
+function bk(){S.pa=null;draw()}
+const cht=c=>fxs(c[1])+(c[3]?" · เสี่ยง "+Math.round(c[3]*100)+"% สำเร็จ":"");
+let S,KEY="ayu1";
+function init(){S={hp:100,age:12,yr:2100,r:0,w:5,i:2,g:5,l:5,m:3,k:0,log:[],ev:null,over:0};rec("เกิดเป็นเด็กวัดในหมู่บ้านใกล้กรุงศรีอยุธยา ฝันอยากรับราชการ");save();draw()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function rec(t){S.log.unshift(`พ.ศ.${S.yr} (อายุ ${S.age}): ${t}`);S.log=S.log.slice(0,40)}
+function ap(fx){S.fl=Object.entries(fx).map(([k,v])=>N[k]+(v>0?"+":"")+v).join(" ");for(const k in fx)S[k]+=fx[k];["w","i","l","m"].forEach(k=>S[k]=Math.max(0,S[k]));if(S.k<0)S.k=0}
+function fxs(fx){return Object.entries(fx).map(([k,v])=>`${N[k]}${v>0?"+":""}${v}`).join(" ")}
+const ED={
+hp_war:["🐎 ตกม้าในลานฝึก","เสียงกีบม้าดังกึกก้อง ท่านฝึกจนเกินกำลัง ม้าพยศสะบัดท่านลงจากหลัง ตำนานนักรบหยุดที่ลานฝึกนั่นเอง"],
+hp_book:["📜 ตาลายเพราะตำรา","ตะเกียงดวงสุดท้ายดับพร้อมลมหายใจ บนโต๊ะยังมีคัมภีร์เปิดค้างไว้หน้าหนึ่ง"],
+hp_sea:["🌊 ไข้ป่าและลมทะเล","การค้าสำเภานำทรัพย์มาให้ แต่ก็นำไข้ร้ายกลับมาด้วย ท่านจากไปท่ามกลางกลิ่นเกลือและเครื่องเทศ"],
+hp:["☠ ล้มป่วยถึงแก่อสัญกรรม","สุขภาพทรุดโทรมจากการตรากตรำ"],
+l_rich:["⛓ ถูกริบทรัพย์","ความภักดีหมดสิ้น พระองค์ทรงริบทรัพย์สินจนเหลือเพียงผ้านุ่งผืนเดียว"],
+l_pow:["🏝 เนรเทศไปหัวเมืองไกล","แม้ถูกถอดยศ แต่คนมากมายยังเคารพท่าน ท่านไปตั้งสำนักสอนผู้คนปลายแดน ไกลวังแต่ไม่เคยไร้คนฟัง"],
+l:["💀 ถูกถอดยศและเนรเทศ","ความภักดีหมดสิ้น พระองค์ทรงริบยศและตำแหน่งเสียสิ้น"],
+debt_monk:["🪷 บวชหนีหนี้ ได้พ้นทุกข์","หนี้สินท่วมตัว แต่ท่านเลือกผ้าเหลืองแทนโซ่ตรวน ในวัดนั้นท่านพบความสงบที่ยศใดก็ให้ไม่ได้"],
+debt:["⛓ ตกเป็นทาสหนี้","หนี้สินท่วมตัว ต้องขายตนเองเป็นทาส"],
+renounce:["🪷 สละยศออกบวช","ท่านวางทรัพย์และตำแหน่งไว้เบื้องหลัง ห่มผ้าเหลืองเดินเข้าวัด ผู้คนพูดถึงขุนนางผู้เลือกทางธรรมอีกหลายปี"],
+sea:["⛵ สำเภาลำสุดท้าย","ท่านออกเรือเที่ยวสุดท้ายยามเย็นและไม่เคยกลับ บางคนว่าท่านตั้งรกรากเมืองไกล บางคนว่าสำเภาลำนั้นยังแล่นอยู่ในตำนาน"],
+g_virtue:["👑 เจ้าพระยาผู้ทรงคุณธรรม","คนทั้งแผ่นดินเรียกท่านว่าที่พึ่ง ศาลาของท่านเปิดรับเรื่องทุกข์ราษฎรจนวันสุดท้าย"],
+g_rich:["💰 เจ้าพระยามหาเศรษฐี","สำเภาของท่านเต็มท่า ยุ้งฉางล้นเมือง ทรัพย์ที่ทิ้งไว้ให้ลูกหลานนับกันสามชั่วคนก็ไม่หมด"],
+g_war:["⚔ เจ้าพระยาจอมทัพ","ธงรบของท่านเคยทำให้ข้าศึกถอย เมื่อท่านจากไป ทหารทั้งค่ายยืนส่งโดยไม่มีใครสั่ง"],
+g_pow:["🌟 เจ้าพระยาผู้ชี้ขาดแผ่นดิน","ไม่มีเรื่องใหญ่ในราชสำนักที่ปราศจากเสียงของท่าน ผู้สืบราชบัลลังก์ต้องฟังท่านก่อนเสมอ"],
+g_sage:["📚 เจ้าพระยาปราชญ์","ท่านชำระกฎหมายและตำราไว้ให้คนรุ่นหลัง ลูกศิษย์ของท่านกลายเป็นเสาหลักของราชสำนักต่อมา"],
+g_def:["🏛 เจ้าพระยาผู้สูงสุดแห่งขุนนาง","ท่านเดินมาจากเด็กวัดจนถึงยอดขุนนาง เรื่องของท่านถูกเล่าสืบต่อกันมา"],
+h_rich:["🚢 พระยาเศรษฐีสำเภา","ท่านไม่ใช่ผู้ที่สูงที่สุด แต่เป็นผู้ที่มั่งคั่งที่สุดในหมู่ขุนนาง"],
+h_war:["🛡 พระยาแม่ทัพหัวเมือง","ท่านเฝ้าชายแดนมาทั้งชีวิต แผลเป็นทุกรอยคือแผนที่ของการศึก"],
+h_faith:["🪷 พระยาผู้อุปถัมภ์พระศาสนา","เจดีย์และพระวิหารหลายแห่งยังตั้งอยู่ด้วยทรัพย์ของท่าน"],
+h_def:["🏛 เสนาบดีผู้เกษียณ","ท่านวางภาระราชการลงอย่างสงบ ใช้ชีวิตบั้นปลายในเรือนริมน้ำ"],
+k_fam:["🏡 ผู้สร้างตระกูลขุนนาง","ยศของท่านอาจไม่สูงสุด แต่ลูกหลานเต็มเรือน และชื่อตระกูลถูกจดไว้ในทะเบียนหลวง"],
+k_rich:["🌾 ขุนนางเศรษฐีที่ดิน","ท่านมีที่นาสุดสายตา ชาวนานับร้อยเรียกท่านว่านายใหญ่"],
+k_merit:["🤲 ขุนนางผู้ใจบุญ","ชาวบ้านจำท่านได้ไม่ใช่เพราะยศ แต่เพราะข้าวสารกับน้ำใจ"],
+k_teach:["🖋 ครูหลวงของขุนนางรุ่นใหม่","ท่านนั่งสอนใต้ถุนเรือนจนผมขาว ศิษย์หลายคนขึ้นไปสูงกว่าท่าน และไม่เคยลืมท่าน"],
+k_def:["📋 ขุนนางผู้ซื่อเรียบง่าย","ท่านทำหน้าที่ไม่ขาดตกบกพร่อง จบชีวิตอย่างสงบโดยไม่มีศัตรู"],
+p_fam:["🏠 ไพร่ผู้มีครอบครัวอบอุ่น","ท่านไม่ได้ยศ แต่ได้เรือนที่เต็มไปด้วยเสียงหัวเราะของลูกหลาน"],
+p_rich:["🛶 ไพร่ผู้ร่ำรวยด้วยการค้า","ไม่มียศแต่มีทรัพย์ ขุนนางหลายคนยังต้องมาขอยืมเงินจากท่าน"],
+p_monk:["🙏 ผู้เฒ่าผู้ทรงศีล","ชาวบ้านมาขอพรและคำปรึกษาจากท่านจนวันสุดท้าย"],
+p_def:["🌿 ชีวิตเรียบง่ายของไพร่หลวง","ท่านไม่ได้เป็นใหญ่ แต่ใช้ชีวิตครบทุกฤดู ได้เห็นลูกหลานโต และนั่งดูน้ำขึ้นน้ำลงจนวาระสุดท้าย"]
+};
+
+var CI=0;
+const esc=x=>String(x).replace(/[&<>"']/g,c=>"&#"+c.charCodeAt(0)+";");
+Object.assign(ED,{
+secret:["🌳 ผู้เฒ่าใต้ต้นโพธิ์ (ลับ)","ชาวบ้านเล่าว่ามีผู้เฒ่าผู้ศึกษาธรรมและโหราศาสตร์ นั่งใต้ต้นโพธิ์ ใครมาขอพรก็ได้คำตอบที่ตรงใจเสมอ"],
+legend:["🐘 ตำนานแห่งกรุงศรี","ทั้งทางธรรม ทางศึก และทางราษฎร ท่านทำครบ นิทานของท่านถูกเล่าให้เด็กฟังข้ามรุ่น"],
+exec:["⚰ นักโทษประหาร","ความโลภที่ถูกจับได้ซ้ำแล้วซ้ำเล่า ลงเอยที่ลานประหาร"],
+traitor:["🗡 ผู้ทรยศแห่งราชสำนัก","ท่านขายความลับและความภักดีจนไม่มีใครเชื่อใจ ชื่อท่านถูกลบออกจากทะเบียนหลวง"],
+loyal:["📜 เสนาบดีผู้ซื่อสัตย์","ตลอดชีวิตท่านไม่เคยรับสินบนแม้แต่เหรียญเดียว ราชสำนักไว้ใจท่านเสมอ"],
+bgp:["🕯 ผู้กุมอำนาจเบื้องหลัง","ยศของท่านอาจไม่สูงสุด แต่เสียงกระซิบของท่านชี้ขาดการเมืองในราชสำนัก"],
+clan:["🌳 ตระกูลอมตะ","บุตรหลานเต็มเรือน ทรัพย์และชื่อเสียงสืบต่อไปอีกหลายชั่วอายุ"],
+guard:["🏯 ผู้พิทักษ์พระนคร","ท่านเฝ้าเมืองด้วยความภักดีจนวาระสุดท้าย กำแพงพระนครยังจำฝีมือท่านได้"],
+hero:["🏅 วีรบุรุษแห่งแผ่นดิน","ท่านทั้งช่วยราษฎรและนำทัพออกศึก คนทั้งเมืองเรียกท่านว่าวีรบุรุษ"],
+war_s:["🩹 ผู้รอดชีวิตจากสงคราม","ท่านผ่านศึกมาหลายครั้ง และเลือกใช้ชีวิตที่เหลืออย่างสงบพร้อมรอยแผลเป็น"],
+build:["🏗 ผู้สร้างบ้านเมือง","เรือน นา และวัดที่ท่านสร้างไว้ ยังเป็นที่พึ่งของคนในหมู่บ้านต่อมา"],
+forgot:["🍂 ผู้ถูกลืมเลือน","ท่านจากไปเงียบๆ ไม่มีใครจดบันทึกชื่อ มีเพียงสายลมที่ยังจำได้"],
+merch:["⚓ พ่อค้าผู้มั่งคั่ง","ท่านรู้ราคาทุกท่าเรือ สำเภาของท่านนำผ้าและเครื่องเทศมากองเต็มคลัง"],
+fallen:["🥀 ขุนนางตกอับ","ยศยังอยู่ แต่ทรัพย์และบารมีหมดสิ้น ผู้คนค่อยๆ เลิกเข้าเรือนท่าน"]});
+const EH={secret:"ผู้ที่ศึกษาธรรมและโชคลางมาทั้งชีวิต โดยไม่แปดเปื้อน",legend:"ต้องสร้างชื่อครบทั้งทางธรรม ทางศึก และทางราษฎร",exec:"ความโลภที่ถูกจับได้ซ้ำๆ",traitor:"เส้นทางที่ไม่มีใครไว้ใจ",loyal:"ความซื่อตรงที่ไม่เคยแปดเปื้อน",bgp:"อำนาจที่ไม่ได้อยู่บนยศ",clan:"ทายาทจำนวนมากและทรัพย์สืบต่อ",guard:"ศึกกับความภักดี",hero:"ศึกกับการช่วยราษฎร",war_s:"รอดมาจากสนามรบ",build:"เรือน ที่นา และวัด",merch:"สำเภาและการค้าต่างแดน",fallen:"ยศที่ไม่เหลืออะไร",forgot:"ชีวิตที่ไม่มีใครจดจำ"};
+function hist(l,ok){let h=S.hs=S.hs||{};const t=(r,k)=>{if(r.test(l))h[k]=(h[k]||0)+1};t(/สินบน|ส่วนต่าง|ปลอม|ร่วมมือ|ข่าวลือ|ปิดตาข้าง|ขายอาวุธ/,"cor");t(/ปฏิเสธทันที|ปฏิเสธและรายงาน|ถูกต้อง|ชี้แจง|แจ้งความจริง|หลักธรรม|ซื่อสัตย์/,"hon");t(/ช่วย|เปิดคลัง|ดับ|ไกล่เกลี่ย|ขอให้บ้านเมือง|บริจาค/,"hel");t(/ออกศึก|ยกกำลัง|ปราบ|เสบียง/,"war");t(/เข้าข้าง|กราบทูล|แจ้งความจริง/,"pol");if(!ok)h.fail=(h.fail||0)+1;if(S.npc){if(/สินบน|ส่วนต่าง|ปลอม|ร่วมมือ|ข่าวลือ|ปิดตาข้าง|ขายอาวุธ/.test(l))nmem("ขุนนาง","ได้ยินว่าท่านทุจริต",-4);if(/ปฏิเสธทันที|ปฏิเสธและรายงาน|ถูกต้อง|ชี้แจง|แจ้งความจริง|หลักธรรม|ซื่อสัตย์/.test(l))nmem("ขุนนาง","เห็นว่าท่านซื่อสัตย์",3);if(/ช่วย|เปิดคลัง|ดับ|ไกล่เกลี่ย|ขอให้บ้านเมือง|บริจาค/.test(l)){nmem("ชาวบ้าน","ได้รับความช่วยเหลือจากท่าน",4);nmem("พระ","เห็นน้ำใจของท่าน",2)}if(/ออกศึก|ยกกำลัง|ปราบ|เสบียง/.test(l))nmem("ทหาร","ท่านร่วมรบเคียงข้าง",4)}}
+function fe(id){if(S.over)return 1;let e=ED[id];S.endId=id;try{let u=JSON.parse(localStorage.getItem("ayuE")||"[]"),d=JSON.parse(localStorage.getItem("ayuD")||"{}");if(!u.includes(id))u.push(id);if(!d[id])d[id]="พ.ศ."+S.yr;localStorage.setItem("ayuE",JSON.stringify(u));localStorage.setItem("ayuD",JSON.stringify(d))}catch(x){}return end(e[0],e[1])}
+function fin(){let t=S.tc||{},w=(t[6]||0)+(t[9]||0),r=S.r,H=S.hs||{},c=H.cor||0,hn=H.hon||0,hl=H.hel||0,wr=H.war||0,k=S.fam||0;
+if(t[3]>=4&&t[0]>=4&&t[7]>=2&&r<=3&&c==0)return"secret";
+if(r>=8&&hn>=3&&hl>=3&&wr>=2&&S.m>=25&&S.i>=30&&k>=2)return"legend";
+if(c>=3&&S.l<=5&&r>=3)return"traitor";
+if(r>=6&&S.l>=20&&hn>=3&&c==0)return"loyal";
+if(r>=4&&r<8&&S.i>=28&&(H.pol||0)>=1&&c>=1)return"bgp";
+if(k>=6&&S.g>=20&&S.i>=15)return"clan";
+if(wr>=3&&S.l>=15&&r>=5)return"guard";
+if(hl>=3&&wr>=2&&r>=4&&r<8)return"hero";
+if(wr>=2&&r<=4)return"war_s";
+if((t[4]||0)+(t[14]||0)>=5&&S.g>=25)return"merch";
+if(t[13]>=3&&t[3]>=2&&S.m>=8)return"build";
+if(r>=4&&S.g<=3&&S.i<=6)return"fallen";
+if(S.k<12&&S.i<8&&k<=1)return"forgot";
+return fin0()}
+function EU(){try{return JSON.parse(localStorage.getItem("ayuE")||"[]")}catch(x){return[]}}
+function fin0(){let t=S.tc||{},w=(t[6]||0)+(t[9]||0),r=S.r;
+if(t[4]>=5&&r<6)return"sea";
+if(r>=8)return S.m>=25&&S.l>=20?"g_virtue":S.g>=50?"g_rich":w>=6?"g_war":S.i>=40?"g_pow":S.w>=30?"g_sage":"g_def";
+if(r>=6)return S.g>=35?"h_rich":w>=5?"h_war":S.m>=18?"h_faith":"h_def";
+if(r>=3)return(S.fam||0)>=4?"k_fam":S.g>=25?"k_rich":S.m>=14?"k_merit":S.w>=18?"k_teach":"k_def";
+return(S.fam||0)>=3?"p_fam":S.g>=20?"p_rich":S.m>=10?"p_monk":"p_def"}
+function ended(){let t=S.tc||{};
+if(S.hp<=0)return fe((t[9]||0)+(t[6]||0)>=4?"hp_war":t[0]>=4?"hp_book":t[4]>=3?"hp_sea":"hp");
+if(S.l<=0){let H=S.hs||{};return fe((H.cor||0)>=2&&(H.fail||0)>=2?"exec":S.g>=15?"l_rich":S.i>=15?"l_pow":"l")}
+if(S.g<-8)return fe(S.m>=10?"debt_monk":"debt");
+if(S.m>=20&&S.g<=2&&S.age>=35&&S.r>=2)return fe("renounce");
+if(S.age>=62||S.r>=8&&S.k>=NEED[8]+30)return fe(fin());
+return 0}
+function end(a,b){S.over=1;S.endT=a;S.endD=b;return 1}
+function act(i,j){if(S.over)return;let c=CHS[i][j||0];S.pa=null;S.tc=S.tc||{};S.tc[i]=(S.tc[i]||0)+1;S.sc=["wat","work","pal","wat","ship","home","fight","wat","fest","war","work","work","fest","home","ship"][i];
+if(c[7]){S.fam=(S.fam||0)+1;if(S.pp){if(!S.pp.sp)S.pp.sp={n:NM[S.gd==1?0:1][Math.floor(Math.random()*5)],a:40};else S.pp.sp.a+=8}}
+if(c[6])S.cm=(S.cm||0)+c[6];if(S.pp){if(i==2)S.pp.pt.a+=8;if(i==6)S.pp.rv.a-=4}
+let ok=!c[3]||Math.random()<c[3];if(!ok&&S.cm>0){S.cm--;ok=1;rec("🧿 เครื่องรางช่วยให้รอดพ้น")}
+if(i==4||i==14)nmem("พ่อค้า","ท่านร่วมค้าขายกับพ่อค้า",3);if(i==3)nmem("พระ","ท่านทำบุญที่วัด",2);hist(c[0],ok);if(ok){ap(c[1]);rec(c[2]+" ("+fxs(c[1])+")")}else{ap(c[5]);rec(c[4]+" ("+fxs(c[5])+")")}
+ S.age++;S.yr++;bonus();tick();S.hp=Math.max(0,Math.min(100,(S.hp??100)+1+([0,-2,0,3,-1,2,-3,0,2,-2,0,-1,1,0,-1][i]||0)-(S.age>40?(S.age-40)/4:0)));
+ // event
+ if(!ended()){let p=E[Math.min(S.r,8)].concat(G);if(Math.random()<.8){S.ev=p[Math.floor(Math.random()*p.length)]}else S.ev=null;promo()}
+ save();draw()}
+function pick(i){let c=S.ev.c[i],ok=!c[3]||Math.random()<c[3];if(!ok&&S.cm>0){S.cm--;ok=1;rec("🧿 เครื่องรางช่วยให้รอดพ้น")}
+ hist(c[0],ok);if(ok){ap(c[2]);rec(c[1]+" ("+fxs(c[2])+")")}else{ap(c[5]);rec(c[4]+" ("+fxs(c[5])+")")}
+ S.ev=null;ended();promo();save();draw()}
+function promo(){if(S.over||S.ev)return;
+ while(S.r<8&&S.k>=NEED[S.r+1]&&S.l>=3+S.r&&S.i>=S.r*2-2&&S.w>=S.r*2+3){S.r++;rec("⭐ ได้เลื่อนเป็น "+R[S.r][0]+" — "+CH[S.r]);toast("เลื่อนเป็น "+R[S.r][0]);if(S.r>=7&&S.m<6&&S.l<10)break}}
+function draw(){ensure();let r=R[S.r],nx=S.r<8?NEED[S.r+1]:NEED[8],pc=S.r<8?Math.min(100,S.k/nx*100):100;
+ document.getElementById("rk").textContent=(S.nm?S.nm+" · ":"")+r[0]+" · ศักดินา "+r[2]+(S.cm?" · เครื่องราง "+S.cm:"");
+ document.getElementById("sb").textContent=CH[S.r]+" — "+r[1]+" | อายุ "+S.age+" · พ.ศ."+S.yr+(S.fam?" · บุตรธิดา "+(S.fam-1>0?S.fam-1:0)+" ครอบครัว ♥":"");
+ document.getElementById("pg").style.width=pc+"%";document.getElementById("sc").innerHTML=scene2();
+ const IC={w:"book",i:"star",g:"coin",l:"shield",m:"lotus",k:"scroll"};S.hp=S.hp??100;document.getElementById("st").innerHTML=Object.keys(N).map(k=>`<div>${ico(IC[k],16)} ${N[k]}<b>${S[k]}</b><i class="mb"><u style="width:${Math.min(100,S[k]*3)}%"></u></i></div>`).join("")+`<div class="gl">${ico("heart",14)} สุขภาพ <span class="bar2"><i style="width:${Math.round(S.hp)}%"></i></span> ${Math.round(S.hp)}</div><div class="gl">${S.r<8?"เป้าหมาย: เลื่อนเป็น "+R[S.r+1][0]+" (ผลงาน "+S.k+"/"+NEED[S.r+1]+")":"เป้าหมาย: สร้างตำนานเจ้าพระยา"}</div>`;
+ let h="";
+ if(S.over)h=`<h3>${S.endT}</h3><p>${S.endD}</p><p class="sub">ตำแหน่งสูงสุด: ${R[S.r][0]} · ผลงาน ${S.k}</p><p class="sub">ฉากจบที่ปลดล็อก ${EU().length}/${Object.keys(ED).length}: ${EU().map(k=>ED[k]&&NE(ED[k][0])).join(" · ")}</p><button onclick="showT()">เริ่มชีวิตใหม่ ▶</button>`;
+ else if(S.pa!=null&&!S.ev)h=`<h3>${A[S.pa][0]}</h3><p class="sub">เลือกวิธีที่จะทำ</p>`+CHS[S.pa].map((c,j)=>`<button onclick="go(2,${j})">${c[0]}<small>${cht(c)}</small></button>`).join("")+`<button onclick="bk()">← กลับ</button>`;
+ else if(S.ev)h=`<h3>เหตุการณ์</h3><p>${S.ev.x}</p>`+S.ev.c.map((c,i)=>`<button onclick="go(1,${i})">${c[0]}<small>${c[3]?"เสี่ยง "+Math.round(c[3]*100)+"% สำเร็จ":"ปลอดภัย"}</small></button>`).join("");
+ else h=`<h3>ปีนี้เจ้าจะทำสิ่งใด?</h3>`+A.map((a,i)=>`<button onclick="ch(${i})">${ico(AI[i]||"star",16)} ${a[0].replace(/^\S+\s/,"")}<small>${a[1]}</small></button>`).join("");
+ document.getElementById("box").innerHTML=h;
+ TAB();HD();if(S.over)cine()}
+function fig(x,c,hat,fl,sw){const s=fl?-1:1;return `<g class="ch" transform="translate(${x} 0) scale(${s} 1)" style="transform-origin:0 100px"><rect x="-12" y="84" width="24" height="30" rx="6" fill="${c}"/><rect class="arm" x="10" y="86" width="6" height="22" rx="3" fill="${c}"/><rect x="-10" y="112" width="8" height="12" fill="#6b4a2b"/><rect x="2" y="112" width="8" height="12" fill="#6b4a2b"/><circle cx="0" cy="74" r="11" fill="#e0b080"/><path d="M-11 72Q0 58 11 72Q0 66 -11 72" fill="#222"/><g class="ey"><circle cx="-4" cy="75" r="1.6" fill="#222"/><circle cx="4" cy="75" r="1.6" fill="#222"/></g>${hat?`<path d="M-9 66L0 40L9 66Z" fill="#d4a017" stroke="#8a5a00"/>`:""}${sw?`<g class="sw"><rect x="16" y="68" width="3" height="34" fill="#ccd"/></g>`:""}</g>`}
+function scene(){let t=S.ev?S.ev.x:"",k=S.sc||["wat","work","pal","pal","ship","pal","pal","pal","pal"][Math.min(S.r,8)];
+if(/พม่า|ศึก|ทัพ|โจร/.test(t))k="war";else if(/สำเภา|ต่างชาติ|พระคลัง|พ่อค้า/.test(t))k="ship";else if(/ฝน|ข้าว/.test(t))k="rain";else if(/วัด|เจดีย์|บุญ/.test(t))k="wat";else if(/ไฟไหม้/.test(t))k="fire";else if(/กษัตริย์|พระเจ้า|พระมหา/.test(t))k="pal";
+const bg={wat:"#f7d9a0",work:"#cfe3c0",pal:"#f0c27b",ship:"#a8d8ea",fight:"#e8b4a0",home:"#f5d6c6",war:"#c9777a",rain:"#8fa3b5",fire:"#d9824a"}[k]||"#f7d9a0";
+const col=["#8b6b3e","#6d4c2a","#2a4d8f","#1f6f5c","#7a2e8e","#a3261c","#b8860b","#0f3d6e","#8a1c1c"][S.r],hat=S.r>=3;
+let p="";
+if(k=="wat")p=`<path d="M230 120L250 50L270 120Z" fill="#d4a017"/><path d="M250 30L250 50" stroke="#8a5a00" stroke-width="3"/><path d="M200 120L212 90L224 120Z" fill="#e5b93c"/>`;
+if(k=="pal"||k=="work"||k=="home")p=`<g class="bt"><path d="M195 80L255 80L275 95L175 95Z" fill="#a3261c"/><path d="M205 62L245 62L255 80L195 80Z" fill="#d4a017"/></g><rect x="185" y="95" width="80" height="25" fill="#8b5a2b"/>`;
+if(k=="ship")p=`<g class="bt"><path d="M190 110L270 110L255 128L205 128Z" fill="#6b3e1a"/><path d="M230 108L230 50" stroke="#333" stroke-width="3"/><path d="M230 52L268 100L230 100Z" fill="#fff8e0"/></g><g class="wv"><path d="M0 130Q10 122 20 130T40 130T60 130T80 130T100 130T120 130T140 130T160 130T180 130T200 130T220 130T240 130T260 130T280 130T300 130T320 130T360 130V150H0Z" fill="#4a90b8" opacity=".8"/></g>`;
+if(k=="war"||k=="fight")p=fig(250,"#555",0,1,1)+`<path d="M180 130L180 70L200 80L180 90" fill="#a3261c"/>`+(k=="war"?`<circle class="cl" cx="60" cy="30" r="14" fill="#555"/>`:"");
+if(k=="rain")p=`<g class="cl"><ellipse cx="120" cy="20" rx="60" ry="14" fill="#667"/></g>`+[40,90,140,190,240,290].map((x,i)=>`<line class="rn" x1="${x}" y1="${30+i*5}" x2="${x-4}" y2="${44+i*5}" stroke="#cde" stroke-width="2"/>`).join("");
+if(k=="fire")p=[210,235,260].map(x=>`<path class="bt" d="M${x} 120Q${x-14} 90 ${x} 70Q${x+14} 95 ${x} 120Z" fill="#ff5a00"/>`).join("");
+const fl=k=="war"||k=="fight"?0:0;
+return `<svg class="sv" viewBox="0 0 320 150"><rect width="320" height="150" fill="${bg}"/><circle cx="290" cy="22" r="12" fill="#fff3b0" opacity=".8"/><rect y="124" width="320" height="26" fill="${k=="ship"?"#4a90b8":"#6b8e4e"}"/>${p}${fig(90,col,hat,fl,k=="war"||k=="fight")}<text x="8" y="16" font-size="11" fill="#3a2a10">${CH[S.r]}</text></svg>`}
+const PA=[[/ศึก/,"war","🏹"],[/ประลอง|สู้|ปราบ|ม้า|อาวุธ|ดาบ/,"fight","⚔️"],[/เรียน|ศึกษา|ตำรา/,"wat","📖"],[/บุญ|สังฆ|เจ้าภาพ|เจดีย์|คลังหลวง/,"wat","🪷"],[/ค้า|สำเภา|สินบน|ส่งสิน|ต่างชาติ/,"ship","💰"],[/ครอบครัว|แต่งงาน|ยา|ลูกสาว/,"home","👨‍👩‍👧"],[/เทศกาล|ลอย/,"fest","🏮"],[/เครื่องราง/,"wat","🧿"],[/คบหา|เยี่ยม|ต้อนรับ|ถ่อมตน|ตรงไปตรงมา|เจ้านาย|ผู้ใหญ่|ทูล/,"pal","🎁"],[/ทำงาน|แรง|อาสา|จด|ตรวจ|บัญชี|คลอง|ดับ/,"work","⚒️"]];
+const PM=c=>PA.find(a=>a[0].test(c))||[0,0,"✨"];
+const OM=[["🌠 ฟ้าประทานลาภ",{g:3}],["🐘 ช้างเผือกปรากฏในรัชกาล",{i:2,l:1}],["📜 ได้ตำราโบราณ",{w:2}],["🌧 ฝนตกต้องฤดู ข้าวงาม",{m:1,g:1}],["☠ ถูกกล่าวหาลับหลัง",{i:-2}]];
+const PN=[["ขุนศรี","หลวงอินทร์","พระสุนทร","หมื่นแก้ว","ขุนเพชร"],["นายสิงห์","หมื่นราม","ขุนพิชัย","นายทอง","หลวงเกษม"]];
+function bonus(){let q=S.pp;if(q){if(q.pt.a>=50&&Math.random()<.5){ap({k:1});rec("🧑‍⚖️ "+q.pt.n+" ช่วยผลักดันผลงานของท่าน")}if(q.rv.a<=-20&&Math.random()<.3){ap({i:-1,l:-1});rec("⚔️ "+q.rv.n+" แอบใส่ร้ายท่านลับหลัง")}if(q.sp){q.sp.a=Math.min(100,q.sp.a+1);if(q.sp.a>=60&&Math.random()<.3){S.hp=Math.min(100,(S.hp||100)+4);rec("💞 "+q.sp.n+" ดูแลท่านยามเหนื่อย")}}q.pt.a=Math.max(-100,q.pt.a-1)}if(Math.random()<.3){let o=OM[Math.floor(Math.random()*5)];ap(o[1]);rec(o[0]+" ("+fxs(o[1])+")")}S.ac=S.ac||[];[[S.m>=15,"🪷 ผู้มีศีล"],[S.g>=30,"💰 เศรษฐีกรุงศรี"],[S.fam>=3,"👨‍👩‍👧 ครอบครัวใหญ่"],[S.w>=20,"📚 ปราชญ์ราชสำนัก"],[S.i>=25,"🌟 ผู้มีบารมี"]].forEach(a=>{if(a[0]&&!S.ac.includes(a[1])){S.ac.push(a[1]);rec("🏅 ได้รับฉายา "+a[1])}})}
+function go(t,i){if(S.busy||S.over)return;S.busy=1;S.fl="";S.cap=t==2?CHS[S.pa][i][0]:t?S.ev.c[i][0]:A[i][0];document.getElementById("sc").innerHTML=scene2();document.getElementById("box").style.opacity=.5;setTimeout(()=>{S.busy=0;document.getElementById("box").style.opacity=1;t==2?act(S.pa,i):t?pick(i):act(i,0)},SP?1600/SP:1600)}
+let SP=0,TM,CT=0;const TN=["journal|บันทึก","heart|ชีวิต","lotus|วิถี","people|ผู้คน","map|แผนที่","temple|เพิ่มเติม"];
+function sp(n){SP=n;clearInterval(TM);document.querySelectorAll(".spd button").forEach(b=>b.classList.toggle("on",+b.dataset.s==n));if(n)TM=setInterval(auto,2200/n)}
+function auto(){if(!S||S.over||S.busy||document.getElementById("ti").style.display!="none")return;if(S.ev)go(1,Math.floor(Math.random()*S.ev.c.length));else{let a=[0,1,2,3,1,0,5,9,8,10,11,12,13,14][Math.floor(Math.random()*14)];S.pa=a;go(2,Math.floor(Math.random()*CHS[a].length))}}
+function ST(i){CT=i;TAB()}
+function TAB(){if(CT==0&&S.log)LRs=S.log[0];let h="",P=n=>`<p>${n}</p>`,sk=[[S.w>=8,"อ่านออกเขียนได้"],[S.i>=10,"การทูต"],[S.g>=15,"การค้า"],[S.k>=20,"งานราชการ"],[S.m>=10,"ธรรมะ"]].filter(a=>a[0]).map(a=>a[1]);
+if(CT==0)h=S.log.map(P).join("");
+if(CT==1)h=P("อายุ "+S.age+" ปี · พ.ศ."+S.yr)+P("🏅 ฉายา: "+((S.ac||[]).join(" ")||"-"))+P("👶 บุตรธิดา: "+Math.max(0,(S.fam||0)-1));
+if(CT==2)h=P("แนวทาง: "+(S.m>=S.g&&S.m>=S.i?"สายธรรมะ 🪷":S.g>S.i?"สายพ่อค้า 💰":"สายราชการ 🏛"))+P("ปัญญา "+S.w+" · ภักดี "+S.l+" · บุญ "+S.m);
+if(CT==3)h=P("👫 คู่ครอง: "+(S.fam?"มี":"ยังไม่มี"))+P("🧑‍⚖️ ผู้ใหญ่ในสังกัด: "+R[Math.min(S.r+1,8)][0])+P("⚔ คู่แข่งในราชสำนัก: "+(S.i>10?"ยำเกรงบารมีคุณ":"ยังไม่รู้จักคุณ"));
+if(CT==3&&S.pp)h=PC()+PP();if(CT==4)h=["หมู่บ้านวัด","คลองตลาดน้ำ","พระนครศรีอยุธยา","ท่าเรือสำเภา","เมืองหน้าด่าน","หัวเมืองเหนือ","พระราชวัง","ศาลาเสนาบดี","จุดสูงสุดในแผ่นดิน"].map((n,i)=>P((i==S.r?"📍 ":i<S.r?"✅ ":"🔒 ")+n)).join("");
+if(CT==5)h=P("🧿 เครื่องราง: "+(S.cm||0))+P("💪 ทักษะ: "+(sk.join(", ")||"ยังไม่มี"))+GH();
+if(CT==6)h=R.map((r,i)=>P((i==S.r?"▶ ":i<S.r?"✅ ":"🔒 ")+r[0]+" (ศักดินา "+r[2]+")")).join("");
+document.getElementById("tp").innerHTML=NE(h);document.getElementById("nv").innerHTML=TN.map((t,i)=>`<button class="${i==CT||i==5&&CT>=5?"on":""}" aria-label="${t.split("|")[1]}" onclick="${i==5?"MM()":"ST("+i+")"}">${ico(t.split("|")[0],22)}<br>${t.split("|")[1]}${DT(i)}</button>`).join("")}
+const hs=(x,w=30,c="#8b5a2b")=>`<rect x="${x+4}" y="104" width="2" height="20" fill="#5a3a1a"/><rect x="${x+w-6}" y="104" width="2" height="20" fill="#5a3a1a"/><rect x="${x}" y="88" width="${w}" height="16" fill="${c}"/><path d="M${x-4} 88L${x+w/2} 70L${x+w+4} 88Z" fill="#a3261c"/>`;
+const cd=x=>`<path d="M${x} 124L${x+28} 124L${x+20} 96L${x+16} 66L${x+14} 44L${x+12} 66L${x+8} 96Z" fill="#e5b93c" stroke="#8a5a00"/>`;
+const pm=x=>`<path d="M${x} 124L${x+2} 80" stroke="#6b4a2b" stroke-width="4"/><circle cx="${x+2}" cy="76" r="14" fill="#3f7a3a"/>`;
+const bo=x=>`<path d="M${x} 128L${x+50} 128L${x+42} 138L${x+8} 138Z" fill="#6b3e1a"/><path d="M${x+8} 120Q${x+25} 108 ${x+42} 120L${x+42} 128L${x+8} 128Z" fill="#d4a017"/>`;
+const TW={vil:()=>hs(8)+hs(70,34,"#a07040")+pm(125)+hs(160)+hs(225,36,"#9a6a3a")+pm(285),
+mkt:()=>`<rect y="124" width="320" height="26" fill="#4a90b8"/>`+hs(10)+bo(70)+hs(150)+bo(205)+pm(290),
+city:()=>`<rect y="98" width="320" height="26" fill="#b9a88a"/>`+Array.from({length:16},(_,i)=>`<rect x="${i*20+3}" y="92" width="10" height="8" fill="#b9a88a"/>`).join("")+cd(40)+`<path d="M110 98L130 70L190 70L210 98Z" fill="#a3261c"/><path d="M120 70L145 50L175 50L200 70Z" fill="#d4a017"/>`+cd(240),
+port:()=>`<rect y="124" width="320" height="26" fill="#4a90b8"/>`+[30,120,220].map(x=>`<path d="M${x} 126L${x+60} 126L${x+48} 138L${x+12} 138Z" fill="#6b3e1a"/><path d="M${x+30} 124L${x+30} 60" stroke="#333" stroke-width="3"/><path d="M${x+32} 62L${x+58} 118L${x+32} 118Z" fill="#fff8e0"/>`).join(""),
+wat:()=>cd(20)+cd(100)+hs(160,40,"#e8c36a")+cd(250)+pm(300)};
+function f2(x,c,hat,fl,sw){return `<g transform="translate(${x} 0)"><g transform="scale(${fl?-1:1} 1)"><g class="ch"><rect class="lg" x="-8" y="110" width="7" height="14" fill="#6b4a2b"/><rect class="lg l2" x="1" y="110" width="7" height="14" fill="#6b4a2b"/><ellipse cx="0" cy="125" rx="13" ry="3" fill="#0004"/><rect x="-11" y="84" width="22" height="30" rx="6" fill="${c}"/><path d="M-11 86L11 104L11 99L-11 82Z" fill="#f4e4b8"/><rect x="-11" y="102" width="22" height="4" fill="#d4a017"/><rect x="-11" y="106" width="22" height="8" fill="#5a2a14" opacity=".35"/><rect class="arm" x="9" y="86" width="6" height="22" rx="3" fill="${c}"/><circle cy="74" r="11" fill="#e0b080"/><path d="M-11 72Q0 58 11 72Q0 66-11 72" fill="#222"/><g class="ey"><circle cx="-4" cy="75" r="1.6"/><circle cx="4" cy="75" r="1.6"/></g>${hat?'<path d="M-9 66L0 36L9 66Z" fill="#d4a017" stroke="#8a5a00"/><rect x="-9" y="62" width="18" height="3" fill="#a3261c"/>':'<circle cy="62" r="4" fill="#222"/>'}${sw?'<rect class="sw" x="15" y="66" width="3" height="34" fill="#cdd"/>':''}</g></g></g>`}
+const IB={book:["#3b6ea5","#1d3557","#f2eee2",[".bbbbbb.","baaaaaab","baccccab","baaaaaab","baccccab","baaaaaab",".bbbbbb.","........"]],
+star:["#e6b422","#a67c00","#fff3b0",["...aa...","..acca..","aaaccaaa",".aaccaa.","..aaaa..",".aa..aa.",".a....a.","........"]],
+coin:["#e6b422","#8a5a00","#fff3b0",["..bbbb..",".baaaab.","baacaaab","baacaaab","baacaaab","baaaaaab",".baaaab.","..bbbb.."]],
+shield:["#a3261c","#5a1010","#f2eee2",["bbbbbbbb","baaaaaab","baaccaab","baaccaab","baaaaaab",".baaaab.","..baab..","...bb..."]],
+lotus:["#e88aa8","#f7c8d8","#5a9a5a",["...aa...","..abba..",".aabbaa.","aabbbbaa",".aabbaa.","cccccccc",".cccccc.","........"]],
+scroll:["#f2eee2","#a68e76","#7a6446",[".bbbbbb.","baaaaaab",".bacccb.",".baaaab.",".bacccb.",".baaaab.","baaaaaab",".bbbbbb."]],
+heart:["#c0392b","#7a1a10","#f08a7a",[".aa..aa.","aacaaaaa","aaaaaaaa","aaaaaaaa",".aaaaaa.","..aaaa..","...aa...","........"]],
+sword:["#dfe3ea","#8a93a3","#8a5a00",["......ab","....aab.","...aab..","..aab...","c.ab....",".cb.....",".cc.....","c.c....."]],
+lantern:["#e8a33a","#7a4a10","#fff3b0",["...bb...","..bbbb..",".baaaab.","baaccaab","baaccaab",".baaaab.","..bbbb..","...bb..."]],
+journal:["#3b6ea5","#1d3557","#f2eee2",["bbbbbbbb","baaaaaab","bacccaab","baaaaaab","bacccaab","baaaaaab","bbbbbbbb","........"]],
+people:["#6d8f6a","#e86a92","#26332f",[".aa..bb.",".aa..bb.","aaaabbbb","aaaabbbb",".aa..bb.",".cc..cc.",".cc..cc.","........"]],
+map:["#a8c2a5","#a68e76","#6fa5bd",["bbbbbbbb","baacaaab","baaccaab","baaaacab","bcaaaaab","bccaaaab","bbbbbbbb","........"]],
+bag:["#a68e76","#5a4636","#e6b422",["..bbbb..",".b....b.","bbbbbbbb","baaaaaab","baaccaab","baaaaaab","baaaaaab",".bbbbbb."]],
+temple:["#d9b04a","#7a3a2a","#a3261c",["...aa...","..aaaa..",".aaaaaa.","bbbbbbbb",".cccccc.",".c.cc.c.",".c.cc.c.","bbbbbbbb"]]};
+const AI=["book","scroll","star","lotus","coin","heart","sword","shield","lantern","sword","journal","scroll","lantern","heart","coin"];
+function ico(n,s=16){const d=IB[n];if(!d)return"";let o="";d[3].forEach((row,y)=>[...row].forEach((c,x)=>{if(c!=".")o+=`<rect x="${x}" y="${y}" width="1" height="1" fill="${d["abc".indexOf(c)]}"/>`}));return `<svg viewBox="0 0 8 8" width="${s}" height="${s}" shape-rendering="crispEdges" style="vertical-align:-3px">${o}</svg>`}
+const NE=t=>String(t).replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF\u2B50\uFE0F\u200D]/gu,"");
+const H=h=>[1,3,5].map(i=>parseInt(h.substr(i,2),16)),MX=(a,b,t)=>"#"+H(a).map((v,i)=>Math.round(v+(H(b)[i]-v)*t).toString(16).padStart(2,"0")).join("");
+const SKY=[["#f4c9a0","#d9e6dc"],["#86bde0","#c6dce6"],["#e8956b","#f4c9a0"],["#1b2a4a","#3a5278"]],RC=["#8b6b3e","#6d4c2a","#2a4d8f","#1f6f5c","#7a2e8e","#a3261c","#b8860b","#0f3d6e","#8a1c1c"];
+let SC={k:"wat",town:"vil",cp:"",t0:0,ic:""},TK=0;
+function iconFor(c,k){return /เครื่องราง/.test(c)?"shield":/เรียน|ศึกษา|ตำรา/.test(c)?"book":({war:"sword",fight:"sword",wat:"lotus",ship:"coin",home:"heart",fest:"lantern",pal:"star",work:"scroll"})[k]||"star"}
+function paint(){const cv=document.getElementById("cv");if(!cv||!S)return;const x=cv.getContext("2d"),R=(a,b,w,h,f)=>{x.fillStyle=f;x.fillRect(Math.round(a),Math.round(b),w,h)};
+if(!document.body.classList.contains("rm"))TK++;const T=TK,ph=((T/1100)+(S.yr%4)/4)%1,sg=ph*4,i=sg|0,f=sg-i,j=(i+1)%4,dk=[.1,0,.2,.5],da=dk[i]+(dk[j]-dk[i])*f,night=i==3||(i==2&&f>.6),k=SC.k,tw=SC.town,cp=SC.cp,wt=tw=="mkt"||tw=="port";
+for(let y=0;y<58;y+=2)R(0,y,160,2,MX(MX(SKY[i][0],SKY[j][0],f),MX(SKY[i][1],SKY[j][1],f),y/58));
+if(night){for(let n=0;n<14;n++)if((T/9+n*7)%20>2)R((n*37)%158,(n*13)%30,1,1,"#fff");R(128,10,7,7,"#f2eee2");R(131,10,4,7,"#c9cbd4")}else{let sy=10+(i==2?14:0);R(127,sy,7,7,"#ffe9a0");R(125,sy+2,11,3,"#ffe9a0");R(129,sy-2,3,11,"#ffe9a0")}
+for(let n=0;n<3;n++){let cx=((T*.07*(n+1)+n*70)%200)-30,cy=8+n*9;R(cx,cy,22,4,"#f6faf6");R(cx+4,cy-3,12,3,"#f6faf6");R(cx+14,cy-2,8,2,"#f6faf6")}
+for(let n=0;n<160;n++){let a=22+Math.sin(n/19)*9+Math.sin(n/6)*3,b=14+Math.sin(n/11+2)*6;R(n,58-a,1,a,"#9db9b0");R(n,58-b,1,b,"#7fa393")}
+if(wt){R(0,58,160,26,"#6fa5bd");for(let n=0;n<16;n++)R(((n*23+T*.4)%170)-5,62+(n*7)%20,8,1,"#a8d0de")}else{R(0,58,160,26,"#a8c2a5");for(let n=0;n<34;n++)R((n*53)%160,60+(n*17)%24,2,1,"#8fae8c");for(let y=58;y<84;y++)R(64-(y-58)*.7,y,18+(y-58)*1.4,1,"#cdbb94")}
+const palm=px=>{R(px,34,2,24,"#8a6b4a");for(let n=0;n<6;n++)R(px-8+n*3+Math.sin(T/20+n),30+(n%2)*2,5,2,"#5c8f58");R(px,33,2,2,"#7a4a1a")};
+const chedi=cx=>{R(cx-12,52,24,6,"#d9b04a");R(cx-9,44,18,8,"#e6c25e");R(cx-6,34,12,10,"#d9b04a");R(cx-4,26,8,8,"#e6c25e");R(cx-2,16,4,10,"#d9b04a");R(cx-1,8,2,8,"#b8860b")};
+const hse=(hx,hy)=>{R(hx+2,hy+14,2,10,"#7a6450");R(hx+38,hy+14,2,10,"#7a6450");R(hx,hy+12,44,2,"#7a6450");R(hx+2,hy,40,12,"#a68e76");for(let n=0;n<10;n++)R(hx+2+n*4,hy,1,12,"#8f7762");R(hx+19,hy+3,7,9,"#5a4636");R(hx+5,hy+3,6,5,"#f2e2a8");R(hx+33,hy+3,6,5,"#f2e2a8");for(let r=0;r<13;r++){let w=8+r*3.4;R(hx+22-w/2,hy-13+r,w,1,r%3?"#8a4a34":"#6e3a2a")}R(hx+21,hy-17,2,5,"#6e3a2a")};
+const bt=(bx,by)=>{let o=Math.sin(T/18+bx)*1;R(bx,by+o,24,3,"#6e3a2a");R(bx+3,by+3+o,18,1,"#4a2a1a");R(bx+7,by-5+o,10,5,"#e8a33a")};
+if(tw=="vil"){palm(14);hse(98,30);palm(80)}
+else if(tw=="mkt"){hse(6,32);hse(104,32);bt(54,66);bt(100,72)}
+else if(tw=="city"){R(0,44,160,14,"#cdbb94");for(let n=0;n<20;n++)R(n*8,41,4,3,"#cdbb94");R(60,36,24,8,"#d9c07a");R(64,28,16,8,"#e6c25e");R(67,20,10,8,"#d9b04a");R(70,12,4,8,"#e6c25e");R(71,6,2,6,"#b8860b");R(20,34,28,10,"#8a3b2a");R(26,28,16,6,"#d9b04a");R(100,34,28,10,"#8a3b2a");R(106,28,16,6,"#d9b04a")}
+else if(tw=="port"){for(const sx of [14,96]){let o=Math.sin(T/20+sx)*1;R(sx,60+o,40,5,"#6e3a2a");R(sx+20,32+o,1,28,"#3a2e24");for(let r=0;r<22;r++)R(sx+21,34+r+o,5+r*.6,1,"#f2eee2")}}
+else{chedi(30);chedi(124);R(60,40,36,18,"#e6c25e");R(56,36,44,5,"#a3261c");R(64,30,28,6,"#d9b04a")}
+const PL=window.PVL?PVL(x,R,T,k,tw,i,j,f,cp):0;if(!PL){if(k=="war"){R(142,26,1,32,"#3a2e24");R(143,27+Math.sin(T/6),12,7,"#a3261c");for(let n=0;n<5;n++)R(20+n*9,34-((T/4+n*5)%14),6,4,"#7a7f8a")}
+if(k=="fire")for(let n=0;n<9;n++)R(90+n*5,42-((T/2+n*3)%12),3,5,n%2?"#ff7a1a":"#ffd24a");
+R(20,66,8,10,"#8a6b4a");R(20,69,8,1,"#5a4636");R(20,73,8,1,"#5a4636");for(let r=0;r<3;r++)for(let c=0;c<3-r;c++){R(128+c*5+r*2,72-r*4,4,4,"#cdbb94");R(129+c*5+r*2,73-r*4,2,2,"#a68e76")}
+for(let n=0;n<13;n++){let bx=n*12+4;R(bx+Math.sin(T/15+n),77,1,4,"#6f9a6a");R(bx+2,80,1,1,n%2?"#e8a0c0":"#f6e07a")}
+}const pc=(px,py,d,fr,col,o)=>{o=o||{};x.save();x.translate(px,py);x.scale(d,1);const sk="#e3b58a",hr=o.monk?sk:"#2a2420",L=fr?1:0,bl=T%100<4;
+R(-5,23,11,2,"#0003");R(-3,17+L,3,6-L,sk);R(1,18-L,3,5+L,sk);R(-3,22,3,1,"#5a4636");R(1,22,3,1,"#5a4636");
+R(-4,10,9,8,col);R(-4,14,9,2,o.f?"#e86a92":"#d4a017");R(-1,10,5,2,"#f4e4b8");R(2,12,3,2,"#f4e4b8");
+R(-6,11+L,2,5,col);R(5,12-L,2,5,col);R(-6,16+L,2,2,sk);R(5,17-L,2,2,sk);
+R(-4,0,9,1,sk);R(-5,1,11,7,sk);R(-4,8,9,1,sk);R(-4,0,9,2,hr);R(-5,2,2,4,hr);R(4,2,2,4,hr);
+R(-3,5,2,bl?1:2,"#26332f");R(2,5,2,bl?1:2,"#26332f");R(-4,7,2,1,"#e8a0a0");R(3,7,2,1,"#e8a0a0");R(0,8,1,1,"#a0524a");
+if(o.hat)for(let r=0;r<8;r++){let w=3+r;R(-(w>>1),-8+r,w,1,r%4==3?"#a3261c":"#d4a017")}else if(o.f){R(-2,-3,5,3,hr);R(-1,-4,3,1,hr)}else if(!o.monk){R(-1,-3,3,3,hr);R(0,-4,1,1,hr)}
+if(o.sw)R(8,6+Math.sin(T/5)*2,1,11,"#dfe3ea");x.restore()};
+let px=36+(((T*.4)%200)<100?((T*.4)%200):200-((T*.4)%200))*.8,pd=((T*.4)%200)<100?1:-1,nx=140-(Math.sin(T/70)+1)*20,fr=((T/6)|0)%2,near=Math.abs(px-nx)<36;
+const war=k=="war"||k=="fight",mk=/เรียน|บุญ|สังฆ/.test(cp),fam=/ครอบครัว|แต่งงาน/.test(cp);
+if(cp){px=62;nx=96;pd=1;fr=0;near=0}
+pc(px,54,pd,cp?0:fr,RC[S.r],{hat:S.r>=3&&S.gd!=1,f:S.gd==1,sw:/ประลอง|ศึก|ดาบ|อาวุธ|ปราบ/.test(cp)});
+pc(nx,54,-1,cp?0:((T/7)|0)%2,war?"#444":mk?"#e67e22":fam?"#e86a92":["#c0392b","#2e7d5b","#8e44ad","#2c6e9b"][S.age%4],{monk:mk,f:fam,sw:war,hat:!war&&!mk&&!fam&&S.age%3==0});
+if(near){R(nx-4,40,9,6,"#f6faf6");R(nx-2,43,1,1,"#26332f");R(nx,43,1,1,"#26332f");R(nx+2,43,1,1,"#26332f")}
+if(SC.ic){let d=IB[SC.ic],by=34+Math.sin(T/8)*2;d[3].forEach((row,yy)=>[...row].forEach((c,xx)=>{if(c!=".")R(70+xx*2,by+yy*2,2,2,d["abc".indexOf(c)])}))}
+if(S.fl&&!S.busy&&T-SC.t0<45)for(let n=0;n<9;n++){x.globalAlpha=1-(T-SC.t0)/45;R(px+Math.sin(n*2+T/5)*14,50-((T-SC.t0)*.5+n*3)%30,2,2,"#ffe27a");x.globalAlpha=1}
+if(k=="rain"||(S.yr%3==1&&((T/400)|0)%3==0)){x.globalAlpha=.55;for(let n=0;n<44;n++)R((n*37+T*1.5)%160,(n*19+T*5)%84,1,3,"#cfe3f0");x.globalAlpha=1;R(0,0,0,0,"#000")}
+if(S.yr%3==2&&((T/500)|0)%2==0){x.globalAlpha=.25;R(((T*.2)%40)-20,44,200,14,"#fff");x.globalAlpha=1}
+x.globalAlpha=da*.8;R(0,0,160,84,"#0a1432");x.globalAlpha=1}
+function scene2(){let t=S.ev?S.ev.x:"",k=S.sc||"",cp=S.busy?S.cap:"";
+if(/พม่า|ศึก|ทัพ|โจร/.test(t))k="war";else if(/สำเภา|ต่างชาติ|พระคลัง|พ่อค้า/.test(t))k="ship";else if(/ฝน|ข้าว/.test(t))k="rain";else if(/วัด|เจดีย์/.test(t))k="wat";else if(/ไฟไหม้/.test(t))k="fire";else if(/กษัตริย์|พระเจ้า|พระมหา/.test(t))k="pal";
+if(cp){let m=PM(cp);if(m[1])k=m[1]}
+const T=["vil","vil","mkt","city","city","city","port","city","city"][S.r];
+SC={k,town:({wat:"wat",ship:"port",pal:"city",war:"city",fest:"mkt",work:T,home:"vil",fight:"city"})[k]||T,cp,t0:TK,ic:cp?iconFor(cp,k):""};
+return `<div class="cvw"><canvas id="cv" width="160" height="84"></canvas><div class="cap">${NE(cp?"กำลัง: "+cp:CH[S.r])}</div><div class="lg2">${NE(S.log[0]||"")}</div>${S.fl&&!S.busy?`<div class="fu2">${S.fl}</div>`:""}</div>`}
+try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+let GD=0;const LC=()=>{try{return +localStorage.getItem("ayuL")||0}catch(e){return 0}};
+const NM=[["ทองดี","บุญมี","มั่น","สิงห์","เกด"],["ศรีสุดา","แก้ว","พลอย","ลำดวน","บัวคำ"]];
+function showT(){CI=0;["en","md"].forEach(i=>document.getElementById(i).style.display="none");document.getElementById("ti").style.display="flex";document.getElementById("lv").textContent="🟢 ชีวิตที่เคยเล่น: "+LC()+" · ฉากจบ "+EU().length+"/"+Object.keys(ED).length}
+function SG(g){GD=g;[0,1,2].forEach(i=>document.getElementById("g"+i).classList.toggle("on",i==g))}
+function NL(){CI=0;document.getElementById("en").style.display="none";let g=GD?(GD==2?1:0):+(Math.random()<.5),n=document.getElementById("nm").value.trim()||NM[g][Math.floor(Math.random()*5)];init();S.nm=n;S.gd=g;S.log=[];S.pp={pt:{n:PN[0][Math.floor(Math.random()*5)],a:20},rv:{n:PN[1][Math.floor(Math.random()*5)],a:-10}};seedN();seedM();S.inv={};S.wev=[];rec("กำเนิด "+n+(g?" (หญิง)":" (ชาย)")+" เด็กวัดใกล้กรุงศรีอยุธยา ฝันอยากรับราชการ");try{localStorage.setItem("ayuL",LC()+1)}catch(e){}save();document.getElementById("ti").style.display="none";draw()}
+function LD(){if(!(S&&S.log&&!S.over))return alert("ไม่มีเกมที่บันทึกไว้");document.getElementById("ti").style.display="none";draw()}
+
+const THM={hp_war:"war",g_war:"war",h_war:"war",war_s:"war",guard:"war",hero:"war",sea:"sea",hp_sea:"sea",h_rich:"sea",merch:"sea",p_rich:"sea",renounce:"faith",debt_monk:"faith",h_faith:"faith",p_monk:"faith",secret:"faith",k_merit:"faith",k_fam:"home",p_fam:"home",clan:"home",l:"dark",l_rich:"dark",l_pow:"dark",debt:"dark",exec:"dark",traitor:"dark",fallen:"dark",forgot:"dark",hp:"dark"},SKY2={war:["#c9777a","#6b8e4e","sword"],sea:["#a8d8ea","#4a90b8","coin"],faith:["#f7d9a0","#a8c2a5","lotus"],home:["#f5d6c6","#a8c2a5","heart"],dark:["#3a4250","#2b3036","journal"],court:["#f0c27b","#a8c2a5","star"]},BAD=["l","l_rich","l_pow","debt","exec","traitor"],TRT=["ขยัน","ใจบุญ","ทะเยอทะยาน","ซื่อตรง","รักการต่อสู้","รักสนุก"];
+function mkKids(){let n=Math.min(5,Math.max(0,(S.fam||0)-1)),o=[];for(let j=0;j<n;j++){let g=Math.random()<.5?0:1,ri=x=>Math.floor(Math.random()*x);o.push({n:NM[g][ri(5)],g:g,w:1+Math.round(S.w*.25)+ri(4),i:ri(3)+Math.round(S.i*.15),m:ri(3),t:TRT[ri(6)]})}return o}
+function cine(){if(CI)return;CI=1;let id=S.endId||"",e=ED[id]||[S.endT,S.endD],H=S.hs||{},t=S.tc||{},th=SKY2[THM[id]||"court"],dk=THM[id]=="dark";if(!S.kids)S.kids=mkKids();
+let cr=[],add=(n,cols)=>{for(let j=0;j<n;j++)cr.push(`<b class="pp" style="--c:${cols[j%cols.length]};left:${6+((cr.length*11)%86)}%;animation-delay:${1+cr.length*.18}s"></b>`)};
+if(!dk){add(Math.min(8,(H.hel||0)*2),["#8b6b3e","#6d4c2a"]);add(Math.min(8,(H.war||0)*2+((t[9]||0)>=3?2:0)),["#555","#777"]);add(Math.min(6,S.fam||0),["#e86a92","#2a4d8f"]);add(S.r>=3?Math.min(5,S.r):0,["#a3261c","#b8860b"])}
+let tail=[(H.hel||0)>=3&&"ชาวบ้านที่ท่านเคยช่วยมายืนส่งท่านเต็มลานวัด",((H.war||0)>=2||(t[9]||0)>=3)&&"ทหารเก่ายืนตรงแสดงความเคารพ",(S.fam||0)>=2&&"ลูกหลานนั่งล้อมอยู่ข้างกายท่าน",S.r>=3&&"ขุนนางมาร่วมงานศพตามธรรมเนียม",(H.cor||0)>=2&&"เรื่องอื้อฉาวของท่านยังถูกกระซิบหลังงาน",dk&&"งานศพเงียบเหงา"].filter(Boolean).join(" · ");
+let ach=(S.ac||[]).join(" ")||"-",mile=(S.log||[]).filter(x=>/⭐|🏅|🏆/.test(x)).slice(0,5).map(x=>"<p>• "+esc(x)+"</p>").join("")||"<p>-</p>";
+let kids=S.kids.map((k,j)=>`<button onclick="PH(${j})">▶ สืบทอดโดย ${esc(k.n)} · ${k.g?"หญิง":"ชาย"} · ${k.t}</button>`).join("")||`<p class="sub">ไม่มีทายาท — สายตระกูลสิ้นสุดลง</p>`;
+let en=document.getElementById("en");en.style.display="block";en.scrollTop=0;
+en.innerHTML=`<div class="enw"><div class="es" style="background:${th[0]}"><div class="eg" style="background:${th[1]}"></div><div class="ei">${ico(th[2],56)}</div>${cr.join("")}</div><div class="eh en1">${esc(e[0])}</div><p class="en2">${esc(e[1])}</p><p class="sub en2">${esc(tail)}</p><div class="en3"><p><b>ตำแหน่งสูงสุด:</b> ${R[S.r][0]} · ผลงาน ${S.k}</p><p><b>ทรัพย์สิน:</b> ${S.g} · บารมี ${S.i} · บุญ ${S.m}</p><p><b>ครอบครัว:</b> ${S.pp&&S.pp.sp?"คู่ครอง "+esc(S.pp.sp.n):"ไม่มีคู่ครอง"} · บุตร ${S.kids.length} คน</p><p><b>ฉายา:</b> ${esc(ach)}</p><p><b>เหตุการณ์สำคัญ</b></p>${mile}<h3>ชีวิตต่อไป</h3>${kids}<button onclick="showT()">เริ่มชีวิตใหม่</button><div class="mr"><button onclick="W('g')">ฉากจบ</button><button onclick="W('c')">บันทึก</button><button onclick="W('f')">ตระกูล</button><button onclick="document.getElementById('en').style.display='none'">ปิด</button></div></div></div>`}
+function PH(j){let o=S,k=o.kids&&o.kids[j];if(!k)return;let bad=BAD.includes(o.endId),r=bad?0:Math.min(2,o.r>>2),cl=(o.cl||[]).concat([{n:o.nm||"?",r:R[o.r][0],yr:o.yr,e:o.endT||""}]),pp=o.pp,gen=(o.gen||1)+1;
+init();S.nm=k.n;S.gd=k.g;S.log=[];S.cl=cl;S.gen=gen;S.age=18;S.yr=o.yr;S.r=r;S.w=k.w;S.i=(bad?0:Math.floor(o.i*.4))+k.i;S.m=(bad?0:Math.floor(o.m*.3))+k.m;S.g=bad?0:Math.min(40,Math.floor(Math.max(0,o.g)*.4));S.l=bad?3:6;S.k=NEED[r];S.hs={};
+S.pp={pt:{n:pp?pp.pt.n:PN[0][0],a:bad?0:Math.floor((pp?pp.pt.a:20)*.5)},rv:{n:pp?pp.rv.n:PN[1][0],a:Math.min(0,Math.floor((pp?pp.rv.a:-10)*.5))}};
+S.npc=o.npc;S.npc.forEach(n=>{if(!n.ref)n.rel=Math.floor(n.rel*.5);n.mem=["พ.ศ."+o.yr+" รู้จักตระกูลของท่านมาแต่รุ่นก่อน"].concat(n.mem).slice(0,4);n.t=0});S.mk=o.mk;S.wev=o.wev||[];S.inv={};for(const q in o.inv||{})S.inv[q]=Math.floor(o.inv[q]/2);rec("สืบทอดตระกูลต่อจาก "+(o.nm||"บรรพชน")+(bad?" (ตระกูลเสื่อมเสีย ไม่ได้รับมรดก)":" รับมรดกเพียงบางส่วน"));CI=0;document.getElementById("en").style.display="none";document.getElementById("ti").style.display="none";save();draw()}
+function CM(){document.getElementById("md").style.display="none"}
+function W0(k){let T,B="",U=EU(),D={};try{D=JSON.parse(localStorage.getItem("ayuD")||"{}")}catch(x){}
+if(k=="g"){let ids=Object.keys(ED);T="🏅 สมุดฉากจบ "+U.length+"/"+ids.length;B=ids.map(i=>U.includes(i)?`<p>✅ <b>${esc(ED[i][0])}</b> <span class="sub">${esc(D[i]||"-")}</span><br><span class="sub">${esc(ED[i][1])}</span></p>`:`<p class="lk">🔒 ??? <span class="sub">${esc(EH[i]||"ฉากจบที่ยังไม่ปลดล็อก")}</span></p>`).join("")}
+else if(k=="c"){T="📜 พงศาวดาร";B=((S.cl||[]).map(c=>`<p>🏛 ${esc(c.n)} (${esc(c.r)}) พ.ศ.${c.yr}</p>`).join(""))+(S.log||[]).map(x=>`<p>${esc(x)}</p>`).join("")}
+else if(k=="f"){T="🌳 ตระกูล"+(S.gen?" · รุ่นที่ "+S.gen:"");let kd=S.kids||[];B=((S.cl||[]).map(c=>`<p>🪦 ${esc(c.n)} — ${esc(c.r)} (พ.ศ.${c.yr})</p>`).join(""))+`<p>👤 <b>${esc(S.nm||"-")}</b> — ${R[S.r][0]}</p><p>💞 คู่ครอง: ${S.pp&&S.pp.sp?esc(S.pp.sp.n):"ไม่มี"}</p><p>👶 บุตรธิดา: ${Math.max(0,(S.fam||0)-1)} คน</p>`+kd.map(x=>`<p>• ${esc(x.n)} (${x.t})</p>`).join("")}
+else{T="💾 จัดการเซฟ";B=`<p class="sub">คัดลอกข้อความนี้เก็บไว้เพื่อสำรอง หรือวางเซฟเดิมแล้วกดนำเข้า (ระบบจะสำรองเซฟปัจจุบันไว้ก่อน)</p><textarea id="sj"></textarea><button onclick="IM()">นำเข้าเซฟ</button>`}
+let m=document.getElementById("md");m.innerHTML=`<div class="mdb"><div class="mdh"><b>${T}</b><button onclick="CM()">✕ ปิด</button></div><div class="mdc">${B}</div></div>`;m.style.display="flex";let sj=document.getElementById("sj");if(sj)sj.value=JSON.stringify(S)}
+function IM(){try{let o=JSON.parse(document.getElementById("sj").value);if(!o||!Array.isArray(o.log)||!["w","i","g","l","m","k","age","yr","hp","r"].every(q=>Number.isFinite(+o[q]))||o.r<0||o.r>8)return alert("ข้อมูลเซฟไม่ถูกต้อง ไม่ได้นำเข้า");localStorage.setItem("ayu1bak",JSON.stringify(S));S=o;S.hs=S.hs||{};CI=0;save();CM();draw();toast("นำเข้าเซฟสำเร็จ")}catch(x){alert("อ่านข้อมูลไม่ได้ ไม่ได้นำเข้า")}}
+
+
+var GD2=[["rice","ข้าว",4],["salt","เกลือ",3],["cloth","ผ้า",6],["spice","เครื่องเทศ",10],["wood","ไม้",5],["pot","เครื่องปั้นดินเผา",4],["arms","อาวุธ",9],["herb","สมุนไพร",5],["fore","สินค้าต่างประเทศ",14]];
+const EVT={drought:["☀ ภัยแล้ง",{rice:.8,salt:.2,herb:.4}],flood:["🌊 น้ำท่วม",{rice:.5,wood:.3,pot:.2}],plague:["🦠 โรคระบาด",{herb:1,cloth:.2}],war:["⚔ เกิดศึก",{arms:1,rice:.3,cloth:.2}],fest:["🏮 เทศกาลใหญ่",{cloth:.3,spice:.3,fore:.2}],boom:["⛵ การค้าคึกคัก",{fore:-.25,spice:-.2}]};
+const NJ={"ขุนนาง":["หมื่น","ขุน","หลวง","พระ"],"ทหาร":["นายหมวด","หมื่น","ขุน","หลวง"]},NPR=["ซื่อตรง","ทะเยอทะยาน","ใจบุญ","เจ้าเล่ห์","ขี้ระแวง","อารมณ์ดี"],NGL={"ขุนนาง":"อยากเลื่อนยศ","พ่อค้า":"อยากร่ำรวยจากสำเภา","พระ":"อยากสร้างวัด","ทหาร":"อยากเป็นแม่ทัพ","ชาวบ้าน":"อยากมีที่นาของตัวเอง"},NB=[["ศรี","อินทร์","สุนทร","แก้ว","เพชร","สิงห์","ราม","พิชัย","ทอง","เกษม"],["บัว","สุดา","แก้ว","พลอย","ลำดวน","คำ","ทับทิม","เพ็ญ"]],RT={"ขุนนาง":["เตรียมเข้าเฝ้า","ประชุมในวัง","ตรวจงานกรม","พักที่เรือน"],"พ่อค้า":["เปิดร้านที่ตลาด","ค้าขายที่ท่าเรือ","ปิดร้าน","พักที่เรือน"],"พระ":["บิณฑบาต","สวดมนต์ที่วัด","เทศน์สอน","จำวัด"],"ทหาร":["ฝึกที่ค่าย","เดินตรวจ","เปลี่ยนเวร","พักที่ค่าย"],"ชาวบ้าน":["ทำนา","พักกลางวัน","ทำงานบ้าน","หลับนอน"]};
+const ri=x=>Math.floor(Math.random()*x),pk=a=>a[ri(a.length)];
+function pre(n){return n.j=="พระ"?"พระ":NJ[n.j]?NJ[n.j][n.ri||0]:n.g?"นาง":"นาย"}
+function mkN(j,a,g,ref){let n={b:pk(NB[g]),a:a,g:g,j:j,ri:j=="ขุนนาง"?1:0,p:pk(NPR),rel:ref?0:ri(16),mem:[],goal:NGL[j],st:"ปกติ",kids:0,sp:null,t:0};if(ref)n.ref=ref;n.n=pre(n)+n.b;return n}
+function seedN(){let pp=S.pp||(S.pp={pt:{n:PN[0][0],a:20},rv:{n:PN[1][0],a:-10}});let a=mkN("ขุนนาง",46,0,"pt");a.n=pp.pt.n;let b=mkN("ขุนนาง",35,0,"rv");b.n=pp.rv.n;S.npc=[a,b,mkN("พ่อค้า",38,1),mkN("พ่อค้า",50,0),mkN("พระ",58,0),mkN("ทหาร",30,0),mkN("ชาวบ้าน",63,1),mkN("ชาวบ้าน",27,0)]}
+function seedM(){S.mk={p:{},o:{}};GD2.forEach(g=>{S.mk.p[g[0]]=g[2];S.mk.o[g[0]]=g[2]})}
+function ensure(){if(!S.pp)S.pp={pt:{n:PN[0][0],a:20},rv:{n:PN[1][0],a:-10}};if(!S.npc)seedN();if(!S.mk)seedM();S.inv=S.inv||{};S.wev=S.wev||[]}
+const rl=n=>n.ref&&S.pp[n.ref]?S.pp[n.ref].a:n.rel;
+function ra(n,d){let v=Math.max(-100,Math.min(100,rl(n)+d));if(n.ref&&S.pp[n.ref])S.pp[n.ref].a=v;else n.rel=v}
+function nmem(j,t,d){(S.npc||[]).forEach(n=>{if(n.j==j){ra(n,d);n.mem=["พ.ศ."+S.yr+" "+t].concat(n.mem).slice(0,4)}})}
+function hasEv(k){return(S.wev||[]).some(e=>e.k==k)}
+function ph4(){return((((TK/1100)+(S.yr%4)/4)%1)*4)|0}
+function dieN(i){let ns=S.npc,n=ns[i],s=mkN(n.j,20+ri(8),ri(2),n.ref),k=n.kids>0;rec(n.n+" ถึงแก่กรรม (อายุ "+n.a+")");
+if(n.ref){S.pp[n.ref].n=s.n;S.pp[n.ref].a=Math.floor(S.pp[n.ref].a*(k?.5:.2))}else s.rel=k?Math.floor(n.rel/2):0;
+if(k&&NJ[n.j]){s.ri=Math.max(0,n.ri-1);s.n=pre(s)+s.b}if(n.ref)s.n=pre(s)+s.b;if(n.ref)S.pp[n.ref].n=s.n;
+s.mem=[k?"สืบต่อจาก "+n.n+" (บิดา/มารดา)":"เพิ่งมาอยู่ในเมือง"];ns.forEach(x=>{if(x.sp==n.b)x.sp=null});ns[i]=s}
+function tickN(){let ns=S.npc,w=hasEv("war"),pl=hasEv("plague"),news=0;
+for(let i=0;i<ns.length;i++){let n=ns[i];n.a++;let p=n.a>50?(n.a-50)*.02:.004;if(pl)p+=.1;if(w&&n.j=="ทหาร")p+=.08;if(n.a>78)p+=.3;
+if(Math.random()<p){dieN(i);continue}
+if(!n.ref&&NJ[n.j]&&n.ri<3&&!news&&Math.random()<.07){n.ri++;n.n=pre(n)+n.b;rec(n.n+" ได้เลื่อนยศ");news=1}
+if(n.j=="ขุนนาง"&&rl(n)>=40&&Math.random()<.25){ap({k:1});rec(n.n+" ช่วยสนับสนุนท่าน ("+S.fl+")")}
+if(n.j=="ขุนนาง"&&rl(n)<=-40&&Math.random()<.25){ap({i:-1});rec(n.n+" ใส่ร้ายท่านในราชสำนัก ("+S.fl+")")}}
+let m=ns.find(x=>!x.sp&&!x.g&&x.a>=18&&x.a<=45),f=ns.find(x=>!x.sp&&x.g&&x.a>=18&&x.a<=45);if(m&&f&&Math.random()<.12){m.sp=f.b;f.sp=m.b;rec(m.n+" สมรสกับ "+f.n)}
+ns.forEach(x=>{if(x.g&&x.sp&&x.a<=40&&Math.random()<.12){x.kids++;if(x.kids<=3)rec(x.n+" มีบุตร")}})}
+function evt(){let H=S.hs||{},le=S.wev.map(e=>e.k),c=H.cor||0,it=S.inv,pick_=null;S.wev.forEach(e=>e.y--);S.wev=S.wev.filter(e=>e.y>0);
+const T=[["plague",.04+(le.some(k=>k=="drought"||k=="flood")?.06:0),2],["war",.06,3],["bandit",.05+(le.includes("war")?.06:0),1],["fire",.04,1],["drought",.07-(le.includes("flood")?.05:0),2],["flood",.07,1],["fest",hasEv("war")?0:.1,1],["boom",hasEv("war")||hasEv("plague")?0:.08,2],["rumor",.03+.05*c,1]].sort(()=>Math.random()-.5);
+for(const t of T){if(["plague","war","drought","flood","fest","boom"].includes(t[0])&&hasEv(t[0]))continue;if(Math.random()<t[1]){pick_=t;break}}
+if(!pick_)return;let k=pick_[0],y=pick_[2];if(EVT[k])S.wev.push({k:k,y:y});
+if(k=="drought"){S.hp-=2;if(S.r>=3)S.g-=1;rec("ภัยแล้ง ข้าวยากหมากแพง")}
+else if(k=="flood"){if(it.rice)it.rice-=Math.floor(it.rice*.3);rec("น้ำท่วมใหญ่ ข้าวในยุ้งเสียหาย")}
+else if(k=="plague"){if((it.herb||0)>=1){it.herb--;rec("โรคระบาด ท่านใช้สมุนไพรที่สะสมไว้รักษาตัวรอด")}else{S.hp-=S.m>=10?3:8;rec("โรคระบาดแพร่ในเมือง ท่านล้มป่วย")}}
+else if(k=="war"){if(S.r>=3)S.g-=2;rec("เกิดศึก ราคาอาวุธและข้าวพุ่งสูง"+(S.r>=3?" ถูกเรียกเก็บภาษีศึก":""))}
+else if(k=="fire"){if(S.g>=6){S.g-=2;rec("ไฟไหม้ใกล้เรือน เสียทรัพย์ 2")}else rec("ไฟไหม้ในพระนคร แต่ไม่กระทบท่าน")}
+else if(k=="bandit"){if(S.g>=10){if((it.arms||0)>=1)rec("โจรปล้น แต่ท่านมีอาวุธป้องกันทรัพย์ไว้ได้");else if(S.npc.some(n=>n.j=="ทหาร"&&rl(n)>=40))rec("โจรปล้น ทหารที่คุ้นเคยช่วยไว้ทัน");else{S.g-=3;rec("โจรปล้นเรือน เสียทรัพย์ 3")}}else rec("โจรปล้นหมู่บ้าน แต่ท่านแทบไม่มีอะไรให้ปล้น")}
+else if(k=="fest"){ap({i:1,m:1});rec("เทศกาลใหญ่ในพระนคร ผู้คนคึกคัก ("+S.fl+")")}
+else if(k=="boom")rec("เรือสินค้าต่างชาติแวะมาก สินค้านำเข้าราคาลง");
+else if(k=="rumor"){if(c>=2){ap({i:-1});nmem("ขุนนาง","ได้ยินข่าวลือว่าท่านทุจริต",-3);rec("ข่าวลือว่าท่านรับสินบน แพร่ไปทั่วราชสำนัก")}else rec("ข่าวลือเรื่อง "+pk(S.npc).n+" แพร่ไปทั่วตลาด")}
+toast(NE(rec_last()))}
+function rec_last(){return S.log[0]||""}
+function pu(){let m={};S.wev.forEach(e=>{let f=EVT[e.k][1];for(const g in f)m[g]=(m[g]||0)+f[g]});GD2.forEach(g=>{let k=g[0],o=S.mk.p[k],t=g[2]*Math.max(.4,1+(m[k]||0))*(.88+Math.random()*.24);S.mk.o[k]=o;S.mk.p[k]=Math.max(1,Math.round(o+(t-o)*.6))})}
+function tick(){ensure();evt();pu();tickN();["rice","herb"].forEach(k=>{if(S.inv[k])S.inv[k]-=Math.floor(S.inv[k]*.15)});if(S.npc.some(n=>n.j=="พระ"&&rl(n)>=40))S.hp=Math.min(100,S.hp+2)}
+function NC(n,i){let v=rl(n),L=v>=60?"สนิทสนม":v>=25?"เป็นมิตร":v>-25?"เฉยๆ":v>-60?"ไม่ชอบ":"เป็นศัตรู";
+return `<div class="npc"><b>${esc(n.n)}</b> · อายุ ${n.a} · ${n.g?"หญิง":"ชาย"} · ${n.j} · ${esc(n.p)}<br>ความสัมพันธ์: <b>${L}</b> (${v}) <span class="bar2"><i style="width:${Math.max(0,Math.min(100,(v+100)/2))}%"></i></span><br><span class="sub">ตอนนี้: ${RT[n.j][ph4()]} · เป้าหมาย: ${esc(n.goal)} · ครอบครัว: ${n.sp?"คู่ "+esc(n.sp):"ยังไม่มีคู่"}${n.kids?" · บุตร "+n.kids:""}</span>${n.mem.length?`<br><span class="sub">จำได้ว่า: ${n.mem.map(x=>esc(x)).join(" / ")}</span>`:""}<div class="mr"><button onclick="NI(${i},0)">ฝากของ (-2 ทรัพย์)</button><button onclick="NI(${i},1)">ปรึกษา</button></div></div>`}
+function NI(i,k){let n=S.npc[i];if(!n||S.over)return;if(n.t==S.yr)return toast("ปีนี้พบท่านนี้แล้ว");
+if(k==0){if(S.g<2)return toast("ทรัพย์ไม่พอ");S.g-=2;ra(n,6);n.mem=["พ.ศ."+S.yr+" ท่านนำของมาฝาก"].concat(n.mem).slice(0,4);toast(n.n+" ยินดีที่ได้รับของฝาก")}
+else{if(rl(n)<25)return toast("ยังไม่สนิทพอจะปรึกษา");let j=n.j;if(j=="ขุนนาง")ap({k:1,w:1});else if(j=="พ่อค้า")ap({g:2});else if(j=="พระ")ap({m:1,w:1});else if(j=="ทหาร"){S.hp=Math.min(100,S.hp+4);ap({k:1})}else ap({w:1,m:1});rec(n.n+" ให้คำแนะนำ ("+S.fl+")");toast("ได้คำแนะนำจาก "+n.n)}
+n.t=S.yr;save();draw()}
+var PF=0;const PJ=["","","","","ขุนนาง","พ่อค้า","ทหาร","ชาวบ้าน","พระ"];
+function PC(){return `<div class="mr">`+["ทั้งหมด","ครอบครัว","มิตร","ศัตรู","ขุนนาง","พ่อค้า","ทหาร","ชาวบ้าน","พระ"].map((n,i)=>`<button class="${i==PF?"on":""}" onclick="PF=${i};TAB()">${n}</button>`).join("")+`</div>`}
+function PP(){let q=S.pp,o="";if(PF==0||PF==1)o+=`<p>${q.sp?"คู่ครองของท่าน: <b>"+esc(q.sp.n)+"</b> ("+q.sp.a+")":"ท่านยังไม่มีคู่ครอง — เลือกกิจกรรมสร้างครอบครัว"} · บุตร ${Math.max(0,(S.fam||0)-1)} คน</p>`;
+if(PF!=1)o+=(S.npc||[]).map((n,i)=>[n,i]).filter(x=>PF==0||(PF==2&&rl(x[0])>=25)||(PF==3&&rl(x[0])<=-25)||(PF>=4&&x[0].j==PJ[PF])).map(x=>NC(x[0],x[1])).join("")||"<p class=\"sub\">ไม่มีผู้คนในหมวดนี้</p>";return o}
+function GH(){let l=GD2.filter(g=>S.inv&&S.inv[g[0]]).map(g=>g[1]+" × "+S.inv[g[0]]);return "<p>สินค้า: "+(l.join(", ")||"ยังไม่มี")+"</p><p><button onclick=\"W('e')\">ไปตลาด</button></p>"}
+const dsc=()=>S.npc.some(n=>n.j=="พ่อค้า"&&rl(n)>=40)?.9:1;
+function EW(){let m=S.mk,d=dsc(),tv=0;let rows=GD2.map(g=>{let k=g[0],p=m.p[k],o=m.o[k],own=S.inv[k]||0,bp=Math.max(1,Math.round(p*d)),sl=Math.max(1,Math.floor(p*.85));tv+=own*sl;return `<p><b>${g[1]}</b> ราคา ${p} ${p>o?"▲":p<o?"▼":"■"} (ปีก่อน ${o}) · ถือ ${own}</p><div class="mr"><button onclick="MB('${k}',1)">ซื้อ ${bp}</button><button onclick="MB('${k}',0)" ${own?"":"disabled"}>ขาย ${sl}</button></div>`}).join("");
+let ev=S.wev.length?S.wev.map(e=>`<p>${NE(EVT[e.k][0])} (อีก ${e.y} ปี) → ราคา${Object.entries(EVT[e.k][1]).map(([k,v])=>GD2.find(x=>x[0]==k)[1]+(v>0?"↑":"↓")).join(" ")}</p>`).join(""):"<p class=\"sub\">บ้านเมืองสงบ ยังไม่มีเหตุการณ์ใหญ่</p>";
+OW("ตลาดและเศรษฐกิจ",`<p>ทรัพย์ <b>${S.g}</b> · มูลค่าสินค้าที่ถือ ${tv}${d<1?" · พ่อค้าที่สนิทลดราคาซื้อ 10%":""}</p><h3>เหตุการณ์ที่กระทบราคา</h3>${ev}<h3>สินค้า</h3>`+rows)}
+function MB(k,b){if(S.over)return;let p=S.mk.p[k];if(b){let c=Math.max(1,Math.round(p*dsc()));if(S.g<c)return toast("ทรัพย์ไม่พอ");S.g-=c;S.inv[k]=(S.inv[k]||0)+1}else{if(!S.inv[k])return;S.inv[k]--;S.g+=Math.max(1,Math.floor(p*.85))}save();draw();EW()}
+var LRs="",CFn=null,UP={fs:1,rm:0,ic:0};
+const ACL=[["ผู้มีศีล","บุญ ≥ 15"],["เศรษฐีกรุงศรี","ทรัพย์ ≥ 30"],["ครอบครัวใหญ่","สร้างครอบครัว 3 ครั้ง"],["ปราชญ์ราชสำนัก","ปัญญา ≥ 20"],["ผู้มีบารมี","บารมี ≥ 25"]];
+function DT(i){return i==0&&CT!=0&&S.log&&S.log[0]&&S.log[0]!==LRs?'<i class="dot" title="มีบันทึกใหม่"></i>':""}
+function toast(t){let d=document.getElementById("tt");d.textContent=t;d.className="";void d.offsetWidth;d.className="on"}
+function sv(){try{localStorage.setItem("ayuU",JSON.stringify(UP))}catch(e){}}
+function UA(){document.documentElement.style.setProperty("--fs",UP.fs);document.body.classList.toggle("rm",!!UP.rm)}
+function UL(){try{Object.assign(UP,JSON.parse(localStorage.getItem("ayuU")||"{}"))}catch(e){}UA();if(document.addEventListener)document.addEventListener("keydown",e=>{if(e.key=="Escape")CM()})}
+function US(k,v){UP[k]=v;sv();UA();W("t")}
+function IC(){UP.ic=UP.ic?0:1;sv();HD()}
+function HD(){let g=x=>document.getElementById(x);g("hs").textContent="พ.ศ."+S.yr+" · อายุ "+S.age+(S.wev&&S.wev.length?" · "+NE(S.wev.map(e=>EVT[e.k][0]).join(" ")):"");g("hg").innerHTML=ico("coin",14)+" ทรัพย์ "+S.g;g("lg").textContent=NE(S.log[0]||"");g("ic").classList.toggle("cl",!!UP.ic);g("icb").textContent=UP.ic?"▸":"▾";document.querySelectorAll(".spd button").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.s==SP)))}
+function OW(T,B){let m=document.getElementById("md");m.innerHTML=`<div class="mdb" role="dialog" aria-label="${esc(T)}"><div class="mdh"><b>${esc(T)}</b><button aria-label="ปิดหน้าต่าง" onclick="CM()">✕ ปิด</button></div><div class="mdc">${B}</div></div>`;m.style.display="flex"}
+function GT(i){CM();CT=i;TAB()}
+function CF(msg,fn){CFn=fn;OW("ยืนยัน",`<p>${esc(msg)}</p><button class="on" onclick="CM();CFn&&CFn()">ยืนยัน</button><button onclick="CM()">ยกเลิก</button>`)}
+function MM(){OW("เมนูเพิ่มเติม",[["กระเป๋า","GT(5)"],["สังกัด / ยศ","GT(6)"],["ตระกูล","W('f')"],["ความสำเร็จ","W('a')"],["สมุดฉากจบ","W('g')"],["พงศาวดาร","W('c')"],["จัดการเซฟ","W('s')"],["ตลาด/เศรษฐกิจ","W('e')"],["ตั้งค่า","W('t')"]].map(x=>`<button onclick="${x[1]}">${x[0]}</button>`).join(""))}
+function W(k){if(k=="a"){let ac=S.ac||[],n=Object.values(S.tc||{}).reduce((a,b)=>a+b,0);OW("ความสำเร็จ",ACL.map(a=>ac.some(x=>x.includes(a[0]))?`<p>✔ <b>${a[0]}</b> <span class="sub">ปลดล็อกแล้ว</span></p>`:`<p class="lk">🔒 ${a[0]} <span class="sub">เงื่อนไข: ${a[1]}</span></p>`).join("")+`<p class="sub">กิจกรรมที่ทำแล้ว ${n} ครั้ง · อายุ ${S.age} · ฉากจบที่ปลดล็อก ${EU().length}/${Object.keys(ED).length}</p><button onclick="W('g')">ดูสมุดฉากจบ</button>`)}
+else if(k=="t"){OW("ตั้งค่า",`<p><b>ขนาดตัวอักษร</b></p><div class="mr">${[["เล็ก",.9],["ปกติ",1],["ใหญ่",1.15]].map(a=>`<button class="${UP.fs==a[1]?"on":""}" onclick="US('fs',${a[1]})">${a[0]}</button>`).join("")}</div><p><b>ภาพเคลื่อนไหว</b></p><div class="mr"><button class="${UP.rm?"":"on"}" onclick="US('rm',0)">เปิด</button><button class="${UP.rm?"on":""}" onclick="US('rm',1)">ลด/ปิด</button></div><p><b>ความเร็วเกม</b></p><div class="mr">${[0,1,2,3].map(n=>`<button class="${SP==n?"on":""}" onclick="sp(${n});W('t')">${n?n+"×":"หยุด"}</button>`).join("")}</div><p class="sub">เกมบันทึกอัตโนมัติทุกครั้งที่ทำกิจกรรม</p><button onclick="W('s')">จัดการเซฟ (ส่งออก/นำเข้า)</button>`)}
+else if(k=="e")EW();else W0(k)}
+UL();if(S&&!S.hs)S.hs={};S&&S.log?draw():init();showT();setInterval(paint,70);
+</script><style id="pv-css">
+/* PREMIUM VISUAL LAYER v1 — additive only; no game logic touched */
+:root{--pv-gold:#C6A45A;--pv-wood:#80644E;--pv-ease:cubic-bezier(.2,.8,.2,1)}
+body{background-image:radial-gradient(ellipse at 50% -10%,#c6a45a1f,transparent 60%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 4l5 10-5 10-5-10zM4 24l10-5 10 5-10 5zM24 44l-5-10 5-10 5 10zM44 24l-10 5-10-5 10-5z' fill='none' stroke='%23426B57' stroke-opacity='.07'/%3E%3C/svg%3E");background-attachment:fixed}
+#hd{background:linear-gradient(180deg,#8d6f57,#6f563f);border:2px solid var(--pv-gold);box-shadow:0 3px 0 #0003,inset 0 1px 0 #ffffff33}
+#hd .ht{letter-spacing:.5px;text-shadow:0 1px 0 #0006;color:#f3e3b0}
+.card{position:relative}
+.card:not(#sc):not(#tc)::before,.card:not(#sc):not(#tc)::after{content:"";position:absolute;width:14px;height:14px;pointer-events:none;border:2px solid var(--pv-gold);opacity:.8}
+.card:not(#sc):not(#tc)::before{top:3px;left:3px;border-right:0;border-bottom:0;border-top-left-radius:6px}
+.card:not(#sc):not(#tc)::after{bottom:3px;right:3px;border-left:0;border-top:0;border-bottom-right-radius:6px}
+#sc{border:3px solid var(--pv-gold)!important;box-shadow:0 0 0 2px var(--pv-wood),0 8px 22px #0005,inset 0 0 40px #0003!important}
+button{transition:background .15s,transform .12s var(--pv-ease),box-shadow .15s,filter .15s}
+button:hover:not(:disabled){filter:brightness(1.04);box-shadow:0 2px 0 var(--b),0 0 10px #c6a45a55}
+button:active:not(:disabled){transform:translateY(2px) scale(.985)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--pv-gold);outline-offset:2px}
+#nv{box-shadow:0 -4px 14px #0004;background:linear-gradient(180deg,#8d6f57,#6f563f)}
+#nv .on{box-shadow:inset 0 -3px 0 var(--pv-gold)}
+#tt{background:linear-gradient(180deg,#4f7f68,#426B57);border:2px solid var(--pv-gold);box-shadow:0 6px 18px #0006,0 0 14px #c6a45a66}
+.pbar,.bar{box-shadow:inset 0 1px 2px #0003}.bar i{background:linear-gradient(90deg,#426B57,#C6A45A);transition:width .6s var(--pv-ease)}
+#pv-fx{position:fixed;z-index:8;pointer-events:none;image-rendering:pixelated;display:none}
+#pv-fade{position:fixed;inset:0;z-index:35;background:#14181a;opacity:0;pointer-events:none;transition:opacity .18s}
+#pv-fade.on{opacity:.55}
+#pv-glow{position:fixed;inset:0;z-index:36;pointer-events:none;opacity:0;background:radial-gradient(circle at 50% 40%,#ffe9a8cc,#c6a45a55 35%,transparent 70%)}
+#pv-glow.on{animation:pvg 1.6s ease-out}
+@keyframes pvg{0%{opacity:0}20%{opacity:1}100%{opacity:0}}
+#pv-badge{position:fixed;z-index:9;pointer-events:none;font-size:12px;padding:2px 8px;border-radius:10px;background:#1d2622cc;color:#f3e3b0;border:1px solid var(--pv-gold)}
+#pv-tg{min-width:44px!important;width:auto!important}
+@media(max-width:600px){.card:not(#sc):not(#tc)::before,.card:not(#sc):not(#tc)::after{width:10px;height:10px}}
+@media(prefers-reduced-motion:reduce){#pv-glow.on{animation:none;opacity:.5}}
+#pv-pn{position:fixed;z-index:50;right:10px;top:calc(56px + env(safe-area-inset-top,0px));width:min(280px,calc(100vw - 20px));background:var(--s);color:var(--t);border:2px solid var(--pv-gold);border-radius:10px;box-shadow:0 8px 24px #0006;padding:10px 12px;display:none}
+#pv-pn.on{display:block;animation:fi .15s}#pv-pn h4{margin:0 0 6px;color:var(--a);font-size:15px}
+#pv-pn label{display:flex;align-items:center;gap:8px;min-height:36px;font-size:14px}#pv-pn input[type=range]{flex:1}
+#pv-pn .q{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:4px 0 8px}#pv-pn .q button{margin:0;min-height:40px;padding:4px;text-align:center;font-size:12px}
+#pv-pn .q button[aria-pressed=true]{background:var(--pd);color:#F3F0E5;border-color:var(--pv-gold)}
+#pv-lt{position:fixed;inset:0;z-index:7;background:#fff;opacity:0;pointer-events:none}
+</style>
+<script id="pv-js">
+(function(){"use strict";
+var K=document,LS=function(k,d){try{var v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}},SS=function(k,v){try{localStorage.setItem(k,v)}catch(e){}};
+var on=LS("ayuFX","1")!=="0",Q=+LS("ayuQ","2"),amb=LS("ayuAm","0")==="1",sfx=LS("ayuSf","0")==="1",vol=+LS("ayuVo","0.5");
+/* Quality presets: 0 Performance,1 Balanced,2 High,3 Ultra */
+var QP=[{n:"ประหยัด",ms:120,cap:40,rays:0,w:120},{n:"สมดุล",ms:83,cap:90,rays:1,w:140},{n:"สูง",ms:66,cap:140,rays:3,w:160},{n:"สูงสุด",ms:33,cap:220,rays:4,w:200}];
+var rmq=matchMedia("(prefers-reduced-motion:reduce)");
+function still(){try{if(typeof UP!=="undefined"&&UP&&UP.rm)return true}catch(e){}return rmq.matches||K.body.classList.contains("rm")}
+var cv=K.createElement("canvas"),x=cv.getContext("2d"),bd=K.createElement("div"),fd=K.createElement("div"),gl=K.createElement("div"),lt=K.createElement("div");
+cv.id="pv-fx";bd.id="pv-badge";fd.id="pv-fade";gl.id="pv-glow";lt.id="pv-lt";K.body.append(cv,bd,fd,gl,lt);
+var W=160,H=90,P=[],t0=performance.now(),last=0,slow=0,cnt=0;
+var WN={clear:"แจ่มใส",cloud:"เมฆมาก",lrain:"ฝนพรำ",hrain:"ฝนหนัก",fog:"หมอกจาง",storm:"พายุ"};
+var WK=["clear","clear","cloud","fog","lrain","clear","cloud","hrain","lrain","storm"];
+function rnd(a,b){return a+Math.random()*(b-a)}
+function gs(){try{return typeof S!=="undefined"&&S&&S.yr!=null?S:null}catch(e){return null}}
+/* Weather & season derived (read-only) from game state yr/age so it follows story time; random fallback on title */
+var wx="clear",wsig="",rsn="cool";
+function hash(a,b){var h=(a*73856093)^(b*19349663);h=(h^(h>>>13))*1274126177;return(h^(h>>>16))>>>0}
+function syncState(){var s=gs();if(!s){return}var sig=s.yr+"/"+s.age;if(sig===wsig)return;wsig=sig;
+ var h=hash(s.yr|0,s.age|0);rsn=["cool","hot","rain"][h%3];
+ var k=WK[(h>>>4)%WK.length];if(rsn==="rain"&&(k==="clear"))k="lrain";if(rsn==="cool"&&(k==="hrain"||k==="storm"))k="cloud";
+ if(s.hp!=null&&s.hp<25&&rsn!=="cool")k="storm";wx=k}
+/* day cycle: real-time 4-min loop (visual only, no new game clock) */
+function gtk(){try{return typeof TK!=="undefined"?TK:0}catch(e){return 0}}
+function titleVis(){var t=K.getElementById("ti");return !!t&&t.style.display!=="none"}
+/* ONE clock: the game's own day cycle (TK + S.yr), mapped to sun-arc position s */
+function phase(){var s0=gs();if(!s0)return((performance.now()-t0)/240000+.3)%1;var ph=((gtk()/1100)+((s0.yr|0)%4)/4)%1,s=ph<.25?ph/.25*.1:ph<.5?.1+(ph-.25)/.25*.3:ph<.625?.4+(ph-.5)/.125*.1:.5+(ph-.625)/.375*.5;return(s-.25+1)%1}
+/* title screen has no game canvas, so advance the game's visual tick so the day keeps flowing */
+setInterval(function(){if(titleVis()&&!K.hidden&&!still()){try{TK++}catch(e){}}},70);
+/* weather = the game's own rules (rain event or yr%3==1 window, fog yr%3==2); storm/cloud are only extra moods */
+function gweather(){var s=gs();if(!s)return;var k="";try{k=(typeof SC!=="undefined"&&SC&&SC.k)||""}catch(e){}var T=gtk(),y=s.yr|0;
+ var rn=k==="rain"||(y%3===1&&((T/400)|0)%3===0),fg=y%3===2&&((T/500)|0)%2===0;
+ wx=rn?((s.hp!=null&&s.hp<25)?"storm":k==="rain"?"hrain":"lrain"):fg?"fog":(y%3===1?"cloud":"clear");rsn=["hot","cool","rain"][y%3]}
+function dark(p){return Math.max(0,Math.sin((p+.25)*2*Math.PI)*-1)*.62}
+function target(){var t=K.getElementById("ti"),s=K.getElementById("sc");
+ if(t&&getComputedStyle(t).display!=="none"){var h=t.querySelector(".hero");return h&&h.getBoundingClientRect()}
+ return s&&s.getBoundingClientRect()}
+function spawn(n,kind,ox,oy){var c=QP[Q].cap;for(var i=0;i<n&&P.length<c;i++)P.push(kind=="burst"?{k:"b",x:ox,y:oy,vx:rnd(-1.4,1.4),vy:rnd(-2,-.2),l:60}:
+ kind=="rain"?{k:"r",x:rnd(0,W+20),y:-4,vx:-.6,vy:rnd(2.5,3.6),l:60}:
+ kind=="leaf"?{k:"l",x:rnd(0,W),y:-3,vx:rnd(.1,.4),vy:rnd(.1,.3),l:400,ph:rnd(0,6)}:
+ {k:"f",x:rnd(0,W),y:rnd(H*.4,H),vx:rnd(-.05,.05),vy:rnd(-.05,.05),l:300,ph:rnd(0,6)})}
+var nextBolt=0,boltA=0;
+function frame(now){requestAnimationFrame(frame);
+ if(!on||K.hidden){cv.style.display="none";return}
+ var q=QP[Q];if(now-last<q.ms)return;var dt=now-last;last=now;
+ /* auto-downgrade when device can't keep up */
+ if(dt>q.ms*1.9+30){if(++slow>40&&Q>0){Q--;slow=0;SS("ayuQ",Q);syncUI();toastQ()}}else if(slow>0)slow-=.25;
+ var r=target();if(!r||r.width<40||r.bottom<0||r.top>innerHeight){cv.style.display="none";bd.style.display="none";return}
+ gweather();var rs=still(),stm=wx==="storm",rain=wx==="lrain"||wx==="hrain"||stm,tv=titleVis();
+ cv.style.display="block";cv.style.left=r.left+"px";cv.style.top=r.top+"px";cv.style.width=r.width+"px";cv.style.height=r.height+"px";
+ W=q.w;H=Math.max(40,Math.round(W*r.height/r.width));if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H}
+ x.clearRect(0,0,W,H);
+ var p=phase(),d=dark(p),dawn=Math.max(0,1-Math.abs(p-.25)*12)+Math.max(0,1-Math.abs(p-.75)*12),sunny=wx==="clear";
+ if(d<.35){var a=(1-d*2.5)*(sunny?.16:.05);x.fillStyle="rgba(255,226,150,"+(a*.5).toFixed(3)+")";x.fillRect(0,0,W,H);
+  if(sunny&&!rs&&q.rays){x.fillStyle="rgba(255,236,170,"+(a*.35).toFixed(3)+")";for(var i=0;i<q.rays;i++){var o=i*(W/q.rays)+((now/900)%1)*6;x.beginPath();x.moveTo(o,0);x.lineTo(o+14,0);x.lineTo(o+60,H);x.lineTo(o+34,H);x.fill()}}}
+ if(dawn>.05){x.fillStyle="rgba(255,150,90,"+(dawn*.1).toFixed(3)+")";x.fillRect(0,0,W,H)}
+ if(rsn==="hot"&&sunny){x.fillStyle="rgba(255,190,80,.06)";x.fillRect(0,0,W,H)}
+ if(wx==="cloud"||rain){x.fillStyle="rgba(70,85,90,"+(stm?.3:wx==="hrain"?.22:.12)+")";x.fillRect(0,0,W,H);
+  if(q.rays||Q>0){x.fillStyle="rgba(235,240,240,.10)";for(var c=0;c<3;c++){var cx=((now/(2400+c*900)+c*60)%(W+80))-40;x.fillRect(cx|0,6+c*9,34,5);x.fillRect((cx+8)|0,3+c*9,18,4)}}}
+ if(wx==="fog"&&tv){var g=x.createLinearGradient(0,H*.45,0,H);g.addColorStop(0,"rgba(235,240,235,0)");g.addColorStop(1,"rgba(235,240,235,.3)");x.fillStyle=g;x.fillRect(0,H*.45,W,H)}
+ if(!rs){
+  if(rain&&tv)spawn(wx==="lrain"?2:stm?6:5,"rain");
+  if(d<.4&&rsn!=="rain"&&!rain&&Math.random()<.06)spawn(1,"leaf");
+  if(d>.35&&!rain&&Math.random()<.08)spawn(1,"fly")}
+ if(stm){if(now>nextBolt){nextBolt=now+rnd(5000,12000);boltA=1;if(!rs)thunder()}}
+ if(boltA>0){lt.style.opacity=(rs?0:boltA*.28);boltA-=.12;if(boltA<=0)lt.style.opacity=0}
+ for(var i=P.length-1;i>=0;i--){var o=P[i];o.x+=o.vx;o.y+=o.vy;o.l--;
+  if(o.k=="r"){x.fillStyle="rgba(200,225,235,.7)";x.fillRect(o.x|0,o.y|0,1,3)}
+  else if(o.k=="l"){o.x+=Math.sin(o.ph+=.1)*.3;x.fillStyle="#9aa84a";x.fillRect(o.x|0,o.y|0,2,1)}
+  else if(o.k=="f"){o.vx+=rnd(-.02,.02);o.vy+=rnd(-.02,.02);x.fillStyle="rgba(255,240,150,"+(.4+.5*Math.sin(o.ph+=.15)).toFixed(2)+")";x.fillRect(o.x|0,o.y|0,1,1)}
+  else{o.vy+=.05;x.fillStyle="rgba(255,215,100,"+(o.l/60).toFixed(2)+")";x.fillRect(o.x|0,o.y|0,2,2)}
+  if(o.l<=0||o.y>H+4||o.x>W+24||o.x<-24)P.splice(i,1)}
+ bd.style.display="block";bd.style.left=(r.left+8)+"px";bd.style.top=(r.top+r.height-26)+"px";
+ var tx=(d>.45?"🌙 ราตรี":p>.15&&p<.3?"🌇 สนธยา":p>.7&&p<.85?"🌅 รุ่งอรุณ":"☀ กลางวัน")+" · "+WN[wx];if(bd.textContent!==tx)bd.textContent=tx;
+ ambUpdate(d,rain,wx)}
+window.PV={phase:phase,dark:dark,still:still,q:function(){return Q},wx:function(){return wx}};
+requestAnimationFrame(frame);
+/* ---- Audio: synthesized WebAudio, starts only after user gesture; separate Ambient / SFX ---- */
+var AC=null,mA=null,rainG,windG,nz;
+function ctx(){if(AC)return AC;try{AC=new(window.AudioContext||window.webkitAudioContext)()}catch(e){return null}
+ var b=AC.createBuffer(1,AC.sampleRate*2,AC.sampleRate),a=b.getChannelData(0);for(var i=0;i<a.length;i++)a[i]=Math.random()*2-1;nz=b;
+ mA=AC.createGain();mA.gain.value=0;mA.connect(AC.destination);
+ function ch(f,type){var s=AC.createBufferSource();s.buffer=nz;s.loop=true;var fl=AC.createBiquadFilter();fl.type=type;fl.frequency.value=f;var g=AC.createGain();g.gain.value=0;s.connect(fl);fl.connect(g);g.connect(mA);s.start();return g}
+ rainG=ch(3200,"highpass");windG=ch(500,"lowpass");return AC}
+function ambUpdate(d,rain,w){if(!AC||!mA)return;var t=AC.currentTime;mA.gain.setTargetAtTime(amb?vol*.5:0,t,.5);
+ rainG.gain.setTargetAtTime(rain?(w==="lrain"?.25:.6):0,t,.8);windG.gain.setTargetAtTime(w==="storm"?.5:w==="cloud"?.18:.07,t,1.2);
+ if(amb&&!rain&&d<.4&&Math.random()<.012)chirp()}
+function chirp(){if(!AC||!amb)return;var o=AC.createOscillator(),g=AC.createGain(),t=AC.currentTime,f=rnd(2200,3400);o.frequency.setValueAtTime(f,t);o.frequency.exponentialRampToValueAtTime(f*1.3,t+.08);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol*.06,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.14);o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+.16)}
+function thunder(){if(!AC||!amb)return;var s=AC.createBufferSource();s.buffer=nz;var f=AC.createBiquadFilter();f.type="lowpass";f.frequency.value=200;var g=AC.createGain(),t=AC.currentTime+.3;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol*.7,t+.1);g.gain.exponentialRampToValueAtTime(.001,t+2);s.connect(f);f.connect(g);g.connect(AC.destination);s.start(t);s.stop(t+2.1)}
+function tick(f,len){if(!sfx||!AC)return;var o=AC.createOscillator(),g=AC.createGain(),t=AC.currentTime;o.type="triangle";o.frequency.value=f;g.gain.setValueAtTime(vol*.15,t);g.gain.exponentialRampToValueAtTime(.0001,t+len);o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+len)}
+function chime(){tick(660,.25);setTimeout(function(){tick(880,.3)},110);setTimeout(function(){tick(1320,.45)},230)}
+K.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("button");if(b&&!b.closest("#pv-pn"))tick(520,.07)},true);
+/* nav fade */
+function flash(){if(!on||still())return;fd.classList.add("on");setTimeout(function(){fd.classList.remove("on")},140)}
+K.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("#nv button");if(b)flash()},true);
+/* rank change: glow + burst + chime (reads real DOM) */
+var rk=K.getElementById("rk"),prev=rk&&rk.textContent,nt=function(s){return s.replace(/[^\u0E00-\u0E7F]/g,"")};
+if(rk)new MutationObserver(function(){var c=rk.textContent;if(prev&&c&&on&&nt(c)!==nt(prev)){gl.classList.remove("on");void gl.offsetWidth;gl.classList.add("on");if(!still())spawn(40,"burst",W/2,H/2);chime()}prev=c}).observe(rk,{childList:true,characterData:true,subtree:true});
+/* settings panel: effects, quality, audio */
+var pn=K.createElement("div");pn.id="pv-pn";pn.setAttribute("role","dialog");pn.setAttribute("aria-label","ภาพและเสียง");
+pn.innerHTML='<h4>ภาพและเสียง</h4><label><input type="checkbox" id="pv-e"> เอฟเฟกต์แสง/อากาศ</label><div class="sub">คุณภาพภาพ (ลดอัตโนมัติถ้าเครื่องช้า)</div><div class="q"></div><label><input type="checkbox" id="pv-a"> เสียงบรรยากาศ (ฝน ลม นก)</label><label><input type="checkbox" id="pv-s"> เสียงปุ่ม/รางวัล</label><label>ระดับเสียง <input type="range" id="pv-v" min="0" max="1" step=".05"></label>';
+K.body.appendChild(pn);
+var qb=pn.querySelector(".q");QP.forEach(function(z,i){var b=K.createElement("button");b.textContent=z.n;b.onclick=function(){Q=i;SS("ayuQ",i);slow=0;syncUI()};qb.appendChild(b)});
+function syncUI(){pn.querySelector("#pv-e").checked=on;pn.querySelector("#pv-a").checked=amb;pn.querySelector("#pv-s").checked=sfx;pn.querySelector("#pv-v").value=vol;
+ [].forEach.call(qb.children,function(b,i){b.setAttribute("aria-pressed",i===Q)})}
+function toastQ(){try{toast("ลดคุณภาพภาพเป็น "+QP[Q].n+" เพื่อความลื่นไหล")}catch(e){}}
+pn.addEventListener("change",function(e){var i=e.target.id;
+ if(i==="pv-e"){on=e.target.checked;SS("ayuFX",on?1:0);if(!on)bd.style.display="none"}
+ if(i==="pv-a"){amb=e.target.checked;SS("ayuAm",amb?1:0);if(amb)ctx()&&AC.resume()}
+ if(i==="pv-s"){sfx=e.target.checked;SS("ayuSf",sfx?1:0);if(sfx)ctx()&&AC.resume()}
+ if(i==="pv-v"){vol=+e.target.value;SS("ayuVo",vol)}});
+pn.addEventListener("input",function(e){if(e.target.id==="pv-v"){vol=+e.target.value;SS("ayuVo",vol)}});
+var hc=K.querySelector("#hd .hc");
+if(hc){var b=K.createElement("button");b.id="pv-tg";b.title="ภาพและเสียง: เอฟเฟกต์ คุณภาพ เสียง";b.setAttribute("aria-label","ภาพและเสียง");b.textContent="✨";
+ b.onclick=function(){syncUI();pn.classList.toggle("on")};hc.insertBefore(b,hc.lastElementChild)}
+K.addEventListener("click",function(e){if(pn.classList.contains("on")&&!e.target.closest("#pv-pn,#pv-tg"))pn.classList.remove("on")});
+K.addEventListener("keydown",function(e){if(e.key==="Escape")pn.classList.remove("on")});
+syncUI();
+})();
+</script>
+<style id="pm-css">
+/* MAIN MENU v3 */
+#ti{background:#10151c}
+#ti .hero svg,#ti .tt{display:none}
+#pm-cv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;image-rendering:pixelated}
+#pm-logo{position:absolute;left:0;right:0;top:calc(14px + env(safe-area-inset-top,0px));text-align:center;pointer-events:none;padding:0 12px}
+#pm-logo .en{font:700 clamp(11px,2.4vw,15px)/1 "Sarabun",sans-serif;letter-spacing:.5em;color:#f3e3b0;text-shadow:0 1px 0 #3a2a10,0 0 8px #0008;margin-bottom:6px;padding-left:.5em}
+#pm-logo h1{margin:0;font:900 clamp(34px,9vw,68px)/1.15 "Noto Sans Thai","Sarabun",sans-serif;color:#e9c76a;background:linear-gradient(180deg,#fff0b8 0%,#e3bb55 45%,#a8802d 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 0 #4a3210) drop-shadow(0 0 10px #0009);text-shadow:none}
+#pm-logo .dv{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:2px}
+#pm-logo .dv i{height:2px;width:clamp(30px,10vw,90px);background:linear-gradient(90deg,transparent,#c6a45a)}#pm-logo .dv i:last-child{transform:scaleX(-1)}
+#pm-logo .dv b{width:10px;height:10px;background:#c6a45a;transform:rotate(45deg);box-shadow:0 0 0 2px #10151c,0 0 0 3px #c6a45a}
+#pm-logo .tag{display:inline-block;background:#10151ca8;padding:2px 12px;border-radius:12px;font-size:clamp(12px,2.6vw,15px);color:#f3f0e5;text-shadow:0 1px 3px #000;margin-top:6px}
+#pm-menu{position:absolute;z-index:3;display:flex;flex-direction:column;gap:6px;right:max(16px,env(safe-area-inset-right,0px));bottom:16px;width:min(300px,calc(100% - 32px));padding:12px;border-radius:12px;background:linear-gradient(180deg,#f3f0e5ee,#e7e4d8ee);border:2px solid #c6a45a;box-shadow:0 0 0 2px #80644E,0 10px 28px #0008}
+#pm-menu button{margin:0;display:flex;align-items:center;gap:10px;min-height:46px;padding:8px 12px;border:2px solid #A9BFAF;border-radius:10px;background:#f6faf6;color:#293A34;font-weight:600;transition:transform .15s,background .15s,border-color .15s,box-shadow .15s}
+#pm-menu button:hover,#pm-menu button:focus-visible,#pm-menu button.sel{background:#fff7dc;border-color:#C6A45A;transform:translateX(-4px);box-shadow:0 0 0 2px #c6a45a55,0 0 12px #c6a45a66}
+#pm-menu button:active{transform:translateX(-4px) scale(.98)}
+#pm-menu button:disabled{opacity:.45;transform:none;box-shadow:none}
+#pm-menu button.pri{background:linear-gradient(180deg,#4f7f68,#426B57);color:#F3F0E5;border-color:#C6A45A;font-size:17px}
+#pm-menu button.pri:hover,#pm-menu button.pri.sel{background:linear-gradient(180deg,#5a8d75,#4a7863)}
+#pm-menu .ic{width:22px;text-align:center;font-size:18px}
+#pm-menu small{margin-left:auto;font-size:11px;color:#5d6f66;font-weight:400}#pm-menu .pri small{color:#d7e6da}
+#ti .pnl{display:none}
+#ti.pm-new .pnl{display:grid;position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);width:min(420px,calc(100% - 28px));background:#f3f0e5;border:2px solid #c6a45a;border-radius:12px;box-shadow:0 0 0 2px #80644E,0 14px 40px #000a;padding:16px;gap:8px;grid-template-columns:repeat(3,1fr);margin:0;animation:fi .2s}
+#ti.pm-new .pnl>input{grid-column:1/-1;min-height:46px;border:2px solid #A9BFAF;border-radius:10px;padding:0 12px;font:inherit;background:#fff;color:#293A34}
+#ti.pm-new .pnl>.big{grid-column:1/-1;order:5;background:#426B57;color:#F3F0E5;border-color:#C6A45A;font-weight:700;text-align:center;font-size:17px}
+#ti.pm-new .pnl>button{text-align:center;display:block}
+#ti.pm-new .pnl>button.on{background:#e3c978;border-color:#C6A45A;font-weight:700;color:#293A34}
+#ti.pm-new .pnl>button[onclick^="LD"],#ti.pm-new .pnl>button[onclick*="classList"],#ti.pm-new .pnl>button[onclick^="alert"]{display:none}
+#pm-x{display:none;position:absolute;z-index:5;left:50%;top:calc(50% - 150px);width:44px;margin:0;text-align:center}
+@media(max-width:700px),(orientation:portrait){#pm-menu{left:12px;right:12px;width:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px}
+ #pm-menu .pri{grid-column:1/-1}#pm-menu small{display:none}#pm-menu button{min-height:44px;font-size:14px;padding:6px 8px}}
+@media(max-height:560px) and (orientation:landscape){#pm-logo h1{font-size:34px}#pm-menu{gap:3px;padding:8px}#pm-menu button{min-height:34px;padding:2px 10px}}
+</style><script id="pm-js">
+(function(){"use strict";
+var K=document,ti=K.getElementById("ti"),hero=ti&&ti.querySelector(".hero");if(!hero)return;
+var cv=K.createElement("canvas");cv.id="pm-cv";cv.width=224;cv.height=126;hero.insertBefore(cv,hero.firstChild);
+var g=cv.getContext("2d"),CW=224,CH=126,HZ=70;
+var lg=K.createElement("div");lg.id="pm-logo";lg.innerHTML='<div class="en">WAY OF KHUNNANG</div><h1>เส้นทางขุนนางกรุงศรี</h1><div class="dv"><i></i><b></b><i></i></div><div class="tag">เส้นทางสู่ตำแหน่งเจ้าพระยาแห่งกรุงศรี</div>';hero.appendChild(lg);
+function RC(c,a,b,w,h){g.fillStyle=c;g.fillRect(a|0,b|0,w,h)}
+function hx(h){return[parseInt(h.substr(1,2),16),parseInt(h.substr(3,2),16),parseInt(h.substr(5,2),16)]}
+function mix(a,b,t){a=hx(a);b=hx(b);return"#"+[0,1,2].map(function(i){return Math.round(a[i]+(b[i]-a[i])*t).toString(16).padStart(2,"0")}).join("")}
+function sh(c,dk){return mix(c,"#141c3a",dk*.55)}
+function pv(){return window.PV}
+function stupa(x,y,h,dk,gold){var c=sh("#e7e4d8",dk);for(var i=0;i<h;i++){var w=Math.max(2,Math.round(2+(h-i)*.45));RC(i%5==0?sh("#c6a45a",dk):c,x-w/2,y-i,w,1)}RC(sh("#c6a45a",dk),x-1,y-h-5,2,6);RC(gold,x,y-h-8,1,3)}
+function roof(x,y,w,dk,t,lit){RC(sh("#80644E",dk),x+2,y+4,w-4,8,1);RC(sh("#f1e3b8",dk),x+3,y+6,w-6,6);if(lit)for(var i=6;i<w-6;i+=8)RC("#ffd873",x+i,y+8,3,4);
+ for(var k=0;k<3;k++){var ww=w-k*7,yy=y-k*4;RC(sh("#a8402e",dk),x+(w-ww)/2,yy,ww,4);RC(sh("#c6a45a",dk),x+(w-ww)/2,yy+4,ww,1);RC(sh("#c6a45a",dk),x+(w-ww)/2-1,yy-1,1,2);RC(sh("#c6a45a",dk),x+(w+ww)/2,yy-1,1,2)}
+ RC(sh("#c6a45a",dk),x+w/2,y-14,1,10)}
+function tree(x,y,t,dk,s,sc){var sw=Math.sin(t*1.4+x)*s;RC(sh("#5a3f26",dk),x,y-10*sc,2,10*sc);for(var i=0;i<5;i++){var a=-1+i*.5;RC(sh("#3f7a4a",dk),x+1+Math.cos(a)*7*sc+sw,y-10*sc-Math.sin(a+1.6)*3*sc+Math.abs(a)*2,3*sc+3,2)}RC(sh("#4f8f58",dk),x-2+sw,y-12*sc,7,2)}
+function person(x,y,t,c,dk,ph){var st=Math.floor(t*4+ph)%2;RC(sh("#e0b48a",dk),x,y-6,2,2);RC(sh(c,dk),x,y-4,2,3);RC(sh("#5a3f26",dk),x+st,y-1,1,1);RC(sh("#5a3f26",dk),x+1-st,y-1,1,1)}
+function boat(x,y,t,dk,sc,dir,night){RC(sh("#80644E",dk),x,y,22*sc,3);RC(sh("#5a3f26",dk),x-2*dir,y-1,3,2);RC(sh("#5a3f26",dk),x+22*sc-1+2*dir,y-1,3,2);RC(sh("#a8402e",dk),x+5,y-5,12*sc,3);RC(sh("#c6a45a",dk),x+5,y-6,12*sc,1);person(x+7,y,t,"#426B57",dk,0);RC(sh("#5a3f26",dk),x+18*sc,y-6,1,6);if(night){RC("#ffd873",x+2,y-3,1,1)}}
+var smoke=[],t0=performance.now(),last=0,flies=[];for(var i=0;i<18;i++)flies.push({x:Math.random()*CW,y:HZ-8+Math.random()*50,p:Math.random()*6});
+function draw(t,still){var P=pv()?pv().phase():0,s=(P+.25)%1,dk=Math.max(0,Math.min(1,-Math.sin(2*Math.PI*s)*1.6)),wm=1-Math.min(1,Math.abs(Math.sin(2*Math.PI*s))*3);
+ var top=mix(mix("#5fa8d3","#141c40",dk),"#c4604a",wm*.45),bot=mix(mix("#d4ecea","#2c3566",dk),"#f3b66a",wm*.7);
+ for(var y=0;y<HZ;y++){RC(mix(top,bot,y/HZ),0,y,CW,1)}
+ if(dk>.3)for(var i=0;i<30;i++){var a=(i*97)%CW,b=(i*53)%(HZ-14);if((i+Math.floor(t*2))%7)RC("#fff6d0",a,b,1,1)}
+ var ang=s<.5?s/.5:(s-.5)/.5,sx=ang*CW,sy=HZ-Math.sin(Math.PI*ang)*HZ*.8;
+ if(s<.5){RC("#fff2b0",sx-5,sy-5,10,10);RC("#fffbe0",sx-3,sy-3,6,6);g.globalAlpha=.18;RC("#fff2b0",sx-9,sy-9,18,18);g.globalAlpha=1}else{RC("#f3efd8",sx-4,sy-4,8,8);RC(mix("#141c40","#2c3566",.5),sx-1,sy-4,5,6)}
+ g.globalAlpha=.55-dk*.3;for(var c=0;c<5;c++){var cx=((t*(2+c)+c*70)%(CW+60))-30,cy=6+c*8;RC("#fff",cx,cy,26+c*4,3);RC("#fff",cx+5,cy-2,14,3)}g.globalAlpha=1;
+ var hill=sh("#7fa391",dk);for(var x=0;x<CW;x+=2)RC(hill,x,HZ-8-Math.sin(x*.05)*4-Math.sin(x*.13)*2,2,12);
+ stupa(34,HZ-2,26,dk,"#fff");stupa(188,HZ-2,22,dk,"#fff");stupa(62,HZ-2,14,dk,"#fff");stupa(214,HZ-2,12,dk,"#fff");
+ roof(78,HZ-16,66,dk,t,dk>.25);roof(92,HZ-30,38,dk,t,dk>.25);RC(sh("#c6a45a",dk),110,HZ-52,1,16);
+ var fw=Math.sin(t*3)*1.5;RC("#b64c43",111,HZ-52,6+fw,3);RC("#b64c43",142,HZ-34,5+fw,2);RC(sh("#c6a45a",dk),142,HZ-38,1,6);
+ RC(sh("#4f8f58",dk),0,HZ,CW,8);RC(sh("#7a6a48",dk),0,HZ+6,CW,3);
+ for(var x=8;x<CW;x+=44)tree(x+((x*7)%13),HZ+6,t,dk,still?0:1.2,1);
+ for(var h=0;h<2;h++){var hxp=150+h*26;RC(sh("#80644E",dk),hxp,HZ+1,12,6);RC(sh("#a8402e",dk),hxp-1,HZ-2,14,3);if(dk>.25)RC("#ffd873",hxp+4,HZ+3,2,2);if(!still&&Math.random()<.03)smoke.push({x:hxp+8,y:HZ-3,l:50})}
+ person(22+((t*3)%60),HZ+8,t,"#80644E",dk,0);person(120-((t*2.4)%70),HZ+8,t,"#b64c43",dk,1);person(60+((t*1.5)%40),HZ+8,t,"#C6A45A",dk,2);
+ for(var i=smoke.length-1;i>=0;i--){var o=smoke[i];o.y-=.15;o.x+=.05;o.l--;g.globalAlpha=Math.max(0,o.l/80);RC("#d8d8d0",o.x,o.y,2,2);g.globalAlpha=1;if(o.l<=0)smoke.splice(i,1)}
+ var rb=mix(mix("#4f9aa6","#142a4a",dk),"#e8a867",wm*.25),rb2=mix(mix("#357e8a","#0e1d38",dk),"#c98a55",wm*.2);
+ for(var y=HZ+9;y<CH;y++)RC((y%4<2)?rb:rb2,0,y,CW,1);
+ g.globalAlpha=.25;RC(s<.5?"#fff2b0":"#f3efd8",sx-3,HZ+10,6,CH-HZ-10);g.globalAlpha=1;
+ g.globalAlpha=.35;for(var i=0;i<26;i++){var rx=((i*37+t*(3+i%3)*(still?0:1))%CW),ry=HZ+12+(i*11)%(CH-HZ-14);RC("#e8f6f4",rx,ry,5+i%4,1)}g.globalAlpha=1;
+ boat(((t*9)%(CW+60))-30,HZ+28,t,dk,1.2,1,dk>.3);boat(CW-((t*5)%(CW+50))+10,HZ+18,t,dk,.8,-1,dk>.3);
+ g.globalAlpha=.22+dk*.1;RC("#eef4f0",0,HZ+9,CW,5);g.globalAlpha=1;
+ RC(sh("#2c4a36",dk),0,CH-12,CW,12);tree(6,CH-2,t,dk,still?0:1.6,2);tree(CW-22,CH-2,t,dk,still?0:1.6,2);
+ if(dk>.35)for(var i=0;i<flies.length;i++){var f=flies[i];f.p+=.05;var a=.3+.7*Math.abs(Math.sin(f.p));g.globalAlpha=a*dk;RC("#ffe98a",f.x+Math.sin(f.p*.7)*6,f.y+Math.cos(f.p*.5)*4,1,1)}g.globalAlpha=1;
+ if(wm>.1&&dk<.6){g.globalAlpha=wm*.12;RC("#ffb070",0,0,CW,CH);g.globalAlpha=1}}
+function loop(n){requestAnimationFrame(loop);if(K.hidden||ti.style.display==="none")return;var P=pv(),still=P?P.still():false,ms=still?500:(P&&P.q()<2?80:50);if(n-last<ms)return;last=n;draw(still?0:(n-t0)/1000,still)}
+requestAnimationFrame(loop);
+/* menu — every item calls a real game function */
+var m=K.createElement("div");m.id="pm-menu";m.setAttribute("role","menu");
+function has(){try{return !!(S&&S.log&&!S.over)}catch(e){return false}}
+function say(t){try{toast(t)}catch(e){}}
+function eg(){try{var u=EU(),ids=Object.keys(ED);return OW("คลังฉากจบ",'<p class="sub">ปลดล็อกแล้ว '+u.length+'/'+ids.length+' ฉาก</p>'+ids.map(function(k){var ok=u.some(function(x){return x===k||x===ED[k][0]||String(x).indexOf(ED[k][0])>=0});return ok?'<p>✔ <b>'+ED[k][0]+'</b><br><span class="sub">'+(ED[k][1]||"")+'</span></p>':'<p class="lk">🔒 ฉากจบที่ยังไม่ค้นพบ</p>'}).join(""))}catch(e){say("ยังเปิดคลังฉากจบไม่ได้")}}
+function hist(){try{OW("ประวัติศาสตร์ — ลำดับชั้นขุนนาง",R_()+'<p class="sub">เนื้อหาในเกมได้แรงบันดาลใจจากกรุงศรีอยุธยา และปรับให้เหมาะกับการเล่น ไม่ใช่การอ้างอิงทางประวัติศาสตร์โดยตรง</p>')}catch(e){say("เปิดไม่ได้")}}
+function R_(){try{return R.map(function(r,i){return"<p><b>"+(i+1)+". "+r[0]+"</b><br><span class=\"sub\">"+r[1]+"</span></p>"}).join("")}catch(e){return""}}
+var ITEMS=[["🏯","เริ่มต้นเส้นทางใหม่","สร้างตัวละคร",function(){ti.classList.add("pm-new");setTimeout(function(){var n=K.getElementById("nm");n&&n.focus()},50)},1],
+ ["▶","เล่นต่อ","โหลดเกมล่าสุด",function(){if(!has())return say("ยังไม่มีเกมที่บันทึกไว้");LD()},0,"cont"],
+ ["💾","จัดการบันทึก","ส่งออก/นำเข้า",function(){if(!has())return say("ยังไม่มีเกมให้จัดการ — เริ่มเส้นทางก่อน");W("s")}],
+ ["📜","ประวัติศาสตร์","ชั้นขุนนาง",hist],
+ ["🏆","คลังฉากจบ","",eg],
+ ["⚙","ตั้งค่า","",function(){try{W("t")}catch(e){say("เปิดไม่ได้")}}],
+ ["✦","เครดิต","",function(){OW("เครดิต",'<p><b>เส้นทางขุนนางกรุงศรี</b><br><span class="sub">WAY OF KHUNNANG</span></p><p>เกมจำลองชีวิตขุนนางในโลกกรุงศรีอยุธยา ภาพพิกเซลวาดด้วยโค้ดทั้งหมด</p>')}]];
+ITEMS.forEach(function(it){var b=K.createElement("button");b.setAttribute("role","menuitem");if(it[4])b.className="pri";if(it[5])b.id="pm-"+it[5];b.innerHTML='<span class="ic">'+it[0]+'</span>'+it[1]+(it[2]?'<small>'+it[2]+'</small>':"");b.onclick=it[3];m.appendChild(b)});
+ti.appendChild(m);
+function sync(){var c=K.getElementById("pm-cont");if(c)c.disabled=!has()}
+new MutationObserver(function(){sync();if(ti.style.display!=="none"&&!K.querySelector("#md[style*='flex']"))m.style.display=""}).observe(ti,{attributes:true,attributeFilter:["style"]});sync();setInterval(sync,1500);
+var x=K.createElement("button");x.id="pm-x";x.textContent="✕";x.setAttribute("aria-label","ปิด");ti.appendChild(x);
+function closeNew(){ti.classList.remove("pm-new");x.style.display="none"}
+new MutationObserver(function(){x.style.display=ti.classList.contains("pm-new")?"block":"none"}).observe(ti,{attributes:true,attributeFilter:["class"]});
+x.onclick=closeNew;
+K.addEventListener("keydown",function(e){if(ti.style.display==="none")return;if(e.key==="Escape")closeNew();
+ if(ti.classList.contains("pm-new")||e.target.tagName==="INPUT")return;
+ var bs=[].filter.call(m.children,function(b){return!b.disabled}),i=bs.indexOf(K.activeElement);
+ if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();bs[(i+(e.key==="ArrowDown"?1:-1)+bs.length)%bs.length].focus()}});
+})();
+</script><script id="pv-loc-js">(function(){"use strict";
+var sn=Math.sin,NAMES={camp:"ค่ายทหาร",hall:"ท้องพระโรง",wat:"วัด",junk:"ท่าเรือสำเภา",paddy:"ทุ่งนา",noble:"เรือนขุนนาง",fmkt:"ตลาดน้ำ",forest:"ป่าริมทาง",fire:"ไฟไหม้ชุมชน",bandit:"ทางเปลี่ยวถูกดักปล้น",battle:"สนามรบ",elephant:"โรงช้างหลวง",krath:"ลอยกระทงริมน้ำ",wedding:"พิธีมงคลสมรส",cremation:"เมรุ",astro:"หอโหรหลวง",court:"ศาลลูกขุน",herb:"โรงยาสมุนไพร",drought:"ทุ่งนาแล้ง",flood:"ย่านน้ำท่วม",foreign:"ย่านพ่อค้าต่างชาติ"};
+function pick(k,tw,cp){if(window.PVFORCE)return window.PVFORCE; var h=((S.yr|0)*7+(S.age|0)*3)%6,c=cp||"",ev=(S.ev&&S.ev.x)||"",lg=(S.log&&S.log[0])||"",he=function(z){try{return hasEv(z)}catch(e){return false}};
+ if(k=="fire"||/ไฟไหม้/.test(ev))return"fire";
+ if(/โจร/.test(ev))return"bandit";
+ if(/ช้างเผือก|ช้าง/.test(ev+lg+c))return"elephant";
+ if(/ลอย/.test(c))return"krath";
+ if(/แต่งงาน|สมรส|ลูกสาว/.test(c)||/สมรสกับ/.test(lg))return"wedding";
+ if(/ถึงแก่กรรม/.test(lg))return"cremation";
+ if(/โหรา|ฤกษ์|โหร/.test(c))return"astro";
+ if(/กฎหมาย|คดี|ตรวจ|บัญชี/.test(c))return"court";
+ if(/พม่า|ทัพ/.test(ev)||(k=="war"&&!/ประลอง|ฝึก/.test(c))||(he("war")&&h<3&&!/ประลอง|ฝึก/.test(c)))return"battle";
+ if(/ระบาด/.test(ev)||/ยา/.test(c)||(he("plague")&&h<4))return"herb";
+ if(/แล้ง/.test(ev)||(he("drought")&&h<4))return"drought";
+ if(/ท่วม/.test(ev)||(he("flood")&&h<4))return"flood";
+ if(/สำเภา|ต่างชาติ/.test(ev+c)||(he("boom")&&h<4))return"foreign";
+ if(k=="war"||k=="fight"||/ศึก|ประลอง|ทหาร|ปราบ|ดาบ|อาวุธ/.test(c))return"camp";
+ if(k=="pal"||/เข้าเฝ้า|ราชสำนัก|ถวาย|ท้องพระโรง/.test(c))return"hall";
+ if(k=="wat"||/บุญ|เรียน|สังฆ|ธรรม/.test(c))return"wat";
+ if(k=="ship"||tw=="port")return"junk";
+ if(k=="rain"||/ไร่|นา|ข้าว|เกษตร/.test(c))return"paddy";
+ if(k=="fest")return"fmkt";
+ if(k=="home"&&S.r>=3)return"noble";
+ if(tw=="vil")return h<2?"forest":h<4?"paddy":null;
+ if(tw=="mkt")return h<3?"fmkt":null;
+ if(tw=="city")return h<2?"noble":h<3?"hall":null;
+ return null}
+window.PVL=function(x,R,T,k,tw,i,j,f,cp){var L;try{L=pick(k,tw,cp)}catch(e){L=null}
+ if(!L){window.PVLN=null;return 0}window.PVLN=NAMES[L];
+ var n=(i==3||(i==2&&f>.6));
+ function sky(){for(var y=0;y<58;y+=2)R(0,y,160,2,MX(MX(SKY[i][0],SKY[j][0],f),MX(SKY[i][1],SKY[j][1],f),y/58));
+  if(n){for(var q=0;q<14;q++)if((T/9+q*7)%20>2)R((q*37)%158,(q*13)%30,1,1,"#fff");R(128,10,7,7,"#f2eee2");R(131,10,4,7,"#c9cbd4")}else{var sy=10+(i==2?14:0);R(127,sy,7,7,"#ffe9a0");R(125,sy+2,11,3,"#ffe9a0");R(129,sy-2,3,11,"#ffe9a0")}
+  for(var c=0;c<3;c++){var cx=((T*.07*(c+1)+c*70)%200)-30,cy=8+c*9;R(cx,cy,22,4,"#f6faf6");R(cx+4,cy-3,12,3,"#f6faf6")}}
+ function hills(a,b,h){for(var q=0;q<160;q++){var u=h+sn(q/19)*9+sn(q/6)*3,v=h*.6+sn(q/11+2)*6;R(q,58-u,1,u,a);R(q,58-v,1,v,b)}}
+ function roof(cx,y,w,h,c1,c2){for(var r=0;r<h;r++){var ww=w*(.25+.75*r/h);R(cx-ww/2,y+r,ww,1,r%4==3?c2:c1)}R(cx-w/2-2,y+h-1,w+4,2,c2);R(cx,y-5,1,6,c2)}
+ function tree(px,by,s,c){R(px,by-8*s,2,8*s,"#6e4a2a");for(var r=0;r<4;r++)R(px-3*s+r+sn(T/25+px)*.8,by-9*s-r*2*s,6*s-2*r,2*s,c)}
+ function lamp(lx,ly){var fl=sn(T/3+lx)>0?1:0;if(n||L=="hall"){x.globalAlpha=.25;R(lx-4,ly-3,10,10,"#ffd24a");x.globalAlpha=1}R(lx,ly,2,3+fl,"#ffd24a");R(lx-1,ly-2,4,2,"#a3261c")}
+ if(L=="camp"){sky();hills("#8aa890","#6e9578",20);R(0,58,160,26,"#c9b583");for(var q=0;q<30;q++)R((q*47)%160,60+(q*13)%24,2,1,"#b09a68");
+  for(q=0;q<18;q++){R(q*9+2,40,2,18,"#2f5a3a");R(q*9,36+(q%3)*2,6,8,"#3f6f45")}
+  for(q=0;q<40;q++){R(q*4,48,2,10,"#6e4a2a");R(q*4,47,2,1,"#4a2e1a")}R(66,40,28,18,"#3a2e24");R(68,36,24,4,"#6e4a2a");
+  [[14,58,34,22,"#f2eee2"],[100,60,40,24,"#e8d8a8"],[56,70,28,16,"#f2eee2"]].forEach(function(t){for(var r=0;r<t[3];r++){var w=t[2]*r/t[3]+2;R(t[0]+(t[2]-w)/2,t[1]-t[3]+r,w,1,r%5?t[4]:"#c9372c")}R(t[0]+t[2]/2-2,t[1]-5,4,5,"#3a2e24")});
+  R(142,26,1,32,"#3a2e24");R(143,27+sn(T/6),12,7,"#a3261c");for(q=0;q<4;q++){R(8+q*3,66,1,12,"#8a6b4a");R(7+q*3,64,3,3,"#c9cbd4")}
+  var fx=96;R(fx-3,76,8,2,"#4a2e1a");for(q=0;q<6;q++)R(fx-2+q%3*2,74-((T/2+q*3)%9),2,3,q%2?"#ff7a1a":"#ffd24a");x.globalAlpha=.5;R(fx+(T/9)%5,60-((T/3)%14),2,2,"#cfcfcf");x.globalAlpha=1}
+ else if(L=="hall"){R(0,0,160,54,"#4a2e20");for(q=0;q<8;q++){R(q*20+1,8,18,40,"#5c3a28");R(q*20+1,8,18,1,"#d9b04a");R(q*20+1,47,18,1,"#d9b04a")}
+  x.globalAlpha=.12;for(q=0;q<3;q++){R(20+q*50,0,10,54,"#ffe9a0")}x.globalAlpha=1;
+  R(0,54,160,30,"#d9c9a0");for(q=0;q<12;q++)for(var r=0;r<3;r++)if((q+r)%2)R(q*14,56+r*9,14,9,"#c9b88c");
+  R(58,54,44,30,"#8a2a22");R(58,54,2,30,"#d9b04a");R(100,54,2,30,"#d9b04a");
+  [8,48,106,146].forEach(function(px){R(px,0,8,54,"#a3261c");R(px,10,8,2,"#d9b04a");R(px,40,8,2,"#d9b04a");R(px-1,52,10,3,"#d9b04a")});
+  R(56,48,48,6,"#d9b04a");R(62,44,36,4,"#e6c25e");R(72,24,16,20,"#d9b04a");R(74,26,12,16,"#a3261c");R(76,28,8,4,"#e6c25e");
+  for(q=0;q<9;q++){var w=14-q*1.4;R(80-w/2,20-q*2,w,2,q%2?"#e6c25e":"#a3261c")}R(79,0,2,4,"#d9b04a");
+  R(0,0,22,30,"#8a2a22");R(138,0,22,30,"#8a2a22");for(q=0;q<22;q+=3){R(q,0,1,30,"#6e1a14");R(138+q,0,1,30,"#6e1a14")}
+  lamp(34,14);lamp(124,14);lamp(80,8)}
+ else if(L=="wat"){sky();hills("#9db9b0","#7fa393",22);R(0,58,160,26,"#e3d3a2");for(q=0;q<24;q++)R((q*53)%160,60+(q*17)%24,2,1,"#cdbb94");
+  [24,140].forEach(function(cx){R(cx-12,52,24,6,"#d9b04a");R(cx-9,44,18,8,"#e6c25e");R(cx-6,34,12,10,"#d9b04a");R(cx-4,26,8,8,"#e6c25e");R(cx-2,16,4,10,"#d9b04a");R(cx-1,8,2,8,"#b8860b")});
+  R(52,46,56,12,"#f6f0e0");for(q=0;q<8;q++)R(54+q*7,46,2,12,"#c9372c");R(74,48,12,10,"#5a3a26");R(76,50,8,8,"#d9b04a");
+  roof(80,26,64,16,"#c9372c","#e6c25e");roof(80,16,40,12,"#a3261c","#e6c25e");R(50,43,60,3,"#d9b04a");
+  for(q=0;q<40;q++)R(q*4,58,2,5,"#f6f0e0");R(0,57,160,1,"#c9b88c");
+  tree(134,60,2,"#4f8f58");R(96,64,1,6,"#8a6b4a");x.globalAlpha=.5;R(96+sn(T/12)*2,60-((T/4)%8),1,3,"#dcdcdc");x.globalAlpha=1}
+ else if(L=="junk"){sky();hills("#9db9b0","#7fa393",14);R(0,50,160,34,"#4f8fb0");for(q=0;q<18;q++)R(((q*23+T*.4)%170)-5,52+(q*7)%30,8,1,"#a8d0de");
+  [[18,56,1],[88,60,1.3]].forEach(function(b){var o=sn(T/20+b[0])*1,cx=b[0],s=b[2];R(cx,b[1]+o,44*s,6,"#6e3a2a");R(cx-4,b[1]-2+o,6,5,"#6e3a2a");R(cx+44*s-2,b[1]-3+o,5,6,"#6e3a2a");
+   [8,26].forEach(function(m){R(cx+m*s,b[1]-34*s+o,1,34*s,"#3a2e24");for(var r=0;r<26*s;r++)if(r%5==0)R(cx+m*s+1,b[1]-32*s+r+o,13*s,1,"#7a3a22");else R(cx+m*s+1,b[1]-32*s+r+o,13*s,1,"#a3523a")});R(cx+16*s,b[1]-40*s+o,6,3+sn(T/6),"#a3261c")});
+  R(0,68,160,16,"#7a5a3a");for(q=0;q<10;q++){R(q*16,68,1,16,"#5a4030")}R(0,67,160,2,"#9a7a52");
+  for(q=0;q<4;q++){R(6+q*3,62,3,6,"#8a6b4a");R(7+q*3,62,1,6,"#6a4a2a")}R(130,58,12,10,"#8a6b4a");R(130,62,12,1,"#5a4636");R(136,50,10,8,"#a68e76");
+  for(q=0;q<3;q++){var gx=((T*.5+q*50)%190)-15,gy=20+q*6+sn(T/6+q)*2;R(gx,gy,2,1,"#fff");R(gx+2,gy-1,2,1,"#fff");R(gx+4,gy,2,1,"#fff")}}
+ else if(L=="paddy"){sky();hills("#9db9b0","#7fa393",24);R(0,50,160,34,"#8fbf5a");
+  for(var y=50;y<84;y+=4){R(0,y,160,2,(y/4)%2?"#7fb04d":"#9ccf63");R(0,y+2,160,1,"#7ab6c9")}
+  for(q=0;q<10;q++){R(((q*37+T*.1)%160),52+(q*7)%30,6,1,"#cfe8f0")}
+  R(116,34,28,12,"#a68e76");roof(130,22,36,12,"#8a4a34","#6e3a2a");R(118,46,2,16,"#7a6450");R(140,46,2,16,"#7a6450");
+  [10,76,150].forEach(function(px){R(px,34,2,24,"#8a6b4a");for(var r=0;r<6;r++)R(px-8+r*3+sn(T/20+r),30+(r%2)*2,5,2,"#5c8f58")});
+  var bx=((T*.15)%190)-20;R(bx,62,14,7,"#4a4a50");R(bx+12,60,5,5,"#4a4a50");R(bx+15,58,1,3,"#c9cbd4");R(bx+17,58,1,3,"#c9cbd4");R(bx+1,69,2,5-((T/8|0)%2),"#3a3a40");R(bx+10,69,2,5+((T/8|0)%2)-1,"#3a3a40");
+  R(30,56,1,10,"#8a6b4a");R(27,58,7,1,"#8a6b4a");R(28,54,4,4,"#e8d8a8");for(q=0;q<3;q++){var gx=((T*.3+q*60)%190)-15;R(gx,18+q*5+sn(T/5+q)*2,2,1,"#2a2a30")}}
+ else if(L=="noble"){sky();hills("#9db9b0","#7fa393",18);R(0,40,160,18,"#e8dcc0");for(q=0;q<40;q++)R(q*4,38,3,3,"#8a3b2a");R(0,58,160,26,"#a8c2a5");for(q=0;q<30;q++)R((q*53)%160,60+(q*17)%24,2,1,"#8fae8c");
+  R(36,30,88,22,"#c9a46a");for(q=0;q<11;q++){R(38+q*8,32,6,16,"#a68250");R(39+q*8,34,4,8,n?"#ffd873":"#f2e2a8")}R(34,50,92,3,"#d9b04a");
+  roof(80,6,96,24,"#8a3b2a","#d9b04a");R(70,52,20,6,"#7a5a3a");R(60,40,2,12,"#d9b04a");R(98,40,2,12,"#d9b04a");
+  R(8,66,62,14,"#6fa5bd");R(6,65,66,1,"#8a8f80");R(6,80,66,1,"#8a8f80");for(q=0;q<5;q++){R(14+q*11+sn(T/30+q),70+(q%2)*5,5,2,"#3f7a4a");if(q%2)R(16+q*11,69+(q%2)*5,2,2,"#e8a0c0")}
+  var kx=20+(sn(T/40)+1)*20;R(kx,75,4,1,"#ff8a3a");R(kx-1,75,1,1,"#ff8a3a");
+  R(120,70,6,10,"#b9b9ad");R(119,68,8,3,"#cfcfc2");R(121,66,4,2,"#b9b9ad");if(n){x.globalAlpha=.3;R(117,64,12,10,"#ffd24a");x.globalAlpha=1}
+  tree(10,60,2,"#4f8f58");tree(150,60,2,"#4f8f58")}
+ else if(L=="fmkt"){sky();hills("#9db9b0","#7fa393",16);
+  [0,120].forEach(function(hx){R(hx+4,42,36,14,"#a68e76");roof(hx+22,28,44,14,"#8a4a34","#6e3a2a");for(var q=0;q<4;q++)R(hx+6+q*9,56,2,8,"#7a6450");R(hx+10,46,6,6,n?"#ffd873":"#f2e2a8");R(hx+24,46,6,6,n?"#ffd873":"#f2e2a8")});
+  R(0,56,160,28,"#6f9f86");for(var q=0;q<20;q++)R(((q*23+T*.4)%170)-5,58+(q*7)%24,8,1,"#a8cfbc");
+  for(q=0;q<11;q++){var lx=q*15+4,ly=14+sn(q)*3;R(lx,ly,2,1,"#3a2e24");R(lx,ly+1,3,4,"#d9382c");if(n){x.globalAlpha=.3;R(lx-2,ly,7,8,"#ffd24a");x.globalAlpha=1}}R(0,13,160,1,"#3a2e24");
+  [[0.3,64,"#e67e22"],[-0.2,72,"#2e7d5b"],[0.18,78,"#c0392b"]].forEach(function(b,ii){var bx=((T*b[0]+ii*60)%(190)+190)%190-20,o=sn(T/18+ii);R(bx,b[1]+o,30,3,"#6e3a2a");R(bx+2,b[1]+3+o,26,1,"#4a2a1a");R(bx+6,b[1]-6+o,18,6,b[2]);R(bx+4,b[1]-8+o,22,2,"#f2eee2");for(var u=0;u<5;u++)R(bx+8+u*3,b[1]-3+o,2,2,["#ffd24a","#e8603a","#8fcf5a"][u%3])})}
+ else if(L=="forest"){for(var y=0;y<58;y+=2)R(0,y,160,2,MX("#4a7a5a","#9cc08a",y/58));x.globalAlpha=.18;for(q=0;q<4;q++){x.fillStyle="#ffeeaa";x.beginPath();x.moveTo(20+q*38,0);x.lineTo(30+q*38,0);x.lineTo(50+q*38,58);x.lineTo(34+q*38,58);x.fill()}x.globalAlpha=1;
+  R(0,58,160,26,"#6a8a5a");for(q=0;q<20;q++){R(q*8+3,24,3,36,"#2f4a34");R(q*8-2,16+(q%3)*3,12,14,"#3f6f45")}
+  for(q=0;q<8;q++){R(q*22+4,8,5,52,"#4a3a26");R(q*22-4+sn(T/30+q),0,22,22,"#2f5a3a");R(q*22-1+sn(T/28+q),10,16,12,"#3f7a4a")}
+  for(y=58;y<84;y++)R(66-(y-58)*.9,y,28+(y-58)*1.8,1,"#bfa56e");
+  var cx=((T*.25)%200)-30;R(cx,62,16,6,"#8a6b4a");R(cx+2,68,5,5,"#5a4030");R(cx+10,68,5,5,"#5a4030");R(cx+16,60,10,8,"#6a5a52");R(cx+24,58,4,4,"#6a5a52");R(cx-8,62,8,1,"#5a4030");
+  for(q=0;q<13;q++){var bx=q*12+4;R(bx+sn(T/15+q),77,2,6,"#3f7a4a");R(bx+2,79,2,4,"#4f8f58")}
+  if(n)for(q=0;q<12;q++){x.globalAlpha=.4+.5*Math.abs(sn(T/10+q));R((q*31+sn(T/30+q)*8)%160,30+(q*17)%40,1,1,"#ffe98a");x.globalAlpha=1}
+  for(q=0;q<2;q++){var gx=((T*.4+q*80)%190)-15;R(gx,14+q*8+sn(T/5)*2,2,1,"#2a2a30");R(gx+2,13+q*8+sn(T/5)*2,2,1,"#2a2a30")}}
+
+ function stilt(hx,hy,w,roofc){for(var q=0;q<=w;q+=w/2)R(hx+q,hy+12,2,12,"#7a6450");R(hx,hy+10,w+2,2,"#7a6450");R(hx+2,hy,w-2,10,"#a68e76");R(hx+w/2-3,hy+3,6,7,"#5a4636");roof(hx+w/2+1,hy-12,w+10,12,roofc||"#8a4a34","#6e3a2a")}
+ function flame(fx,fy,h,s){for(var q=0;q<h;q++){var w=Math.max(2,(h-q)*.8)+sn(T/3+q+s)*1.5;R(fx-w/2,fy-q,w,1,q<h*.4?"#ffd24a":q<h*.75?"#ff7a1a":"#c9372c")}}
+ function dsky(a,b){for(var y=0;y<58;y+=2)R(0,y,160,2,MX(a,b,y/58))}
+ if(L=="drought"){sky();R(0,0,0,0,"#000");x.globalAlpha=.22;R(0,0,160,58,"#ffb040");x.globalAlpha=1;hills("#b8a070","#a08a5a",16);R(0,50,160,34,"#c9a56a");
+  for(q=0;q<30;q++){R((q*37)%160,52+(q*11)%30,7,1,"#8a6a3a");R((q*37)%160+3,53+(q*11)%30,1,3,"#8a6a3a")}
+  for(q=0;q<26;q++)R(q*6+2,64+(q%3)*5,1,6,"#b09040");R(14,66,44,12,"#a8895a");for(q=0;q<6;q++)R(16+q*7,67+(q%3)*3,5,1,"#7a5a30");
+  [[32,"#5a4030"],[110,"#5a4030"]].forEach(function(t){R(t[0],26,2,32,t[1]);R(t[0]-8,32,8,1,t[1]);R(t[0]+2,28,9,1,t[1]);R(t[0]-5,30,1,4,t[1]);R(t[0]+8,24,1,4,t[1])});
+  stilt(124,30,26,"#8a6a40");x.globalAlpha=.12;for(q=0;q<4;q++)R(0,50+q*7+sn(T/10+q)*2,160,2,"#fff0b0");x.globalAlpha=1}
+ else if(L=="flood"){dsky("#7a8a96","#b6c2c4");hills("#8a9a9a","#70847e",14);
+  stilt(14,28,34,"#8a4a34");stilt(100,32,30,"#8a4a34");R(72,22,2,34,"#6e4a2a");R(64,20,18,10,"#3f6f45");
+  R(0,54,160,30,"#8a7a52");for(q=0;q<26;q++)R(((q*29+T*.5)%170)-5,56+(q*7)%26,9,1,"#a8946a");x.globalAlpha=.55;R(0,54,160,5,"#c9b88c");x.globalAlpha=1;
+  [[0.35,70,"#6e3a2a"],[-0.25,78,"#80644E"]].forEach(function(b,ii){var bx=((T*b[0]+ii*70)%190+190)%190-20,o=sn(T/15+ii);R(bx,b[1]+o,24,3,b[2]);R(bx+8,b[1]-5+o,6,5,"#e8a33a")});
+  for(q=0;q<4;q++)R(((T*.2+q*45)%170)-5,60+q*5+sn(T/9+q),10,2,"#6e4a2a");x.globalAlpha=.3;for(q=0;q<30;q++)R((q*37+T*1.2)%160,(q*19+T*4)%58,1,3,"#cfe3f0");x.globalAlpha=1}
+ else if(L=="herb"){sky();hills("#9db9b0","#7fa393",20);R(0,58,160,26,"#b8c48a");for(q=0;q<24;q++)R((q*53)%160,60+(q*17)%24,2,1,"#9aaa6a");
+  for(q=0;q<5;q++)R(40+q*18,44,3,16,"#8a6b4a");roof(80,26,92,18,"#a68250","#6e4a2a");R(38,58,86,2,"#6e4a2a");
+  for(q=0;q<4;q++){R(46+q*20,60,16,5,"#e8d8a8");R(46+q*20,60,16,1,"#c9a46a");R(50+q*20,57,4,3,"#e0b48a")}
+  for(q=0;q<9;q++){R(44+q*9,34,2,1,"#3a2e24");R(44+q*9,35,2,6+(q%3),q%2?"#6f9a4a":"#a08a3a")}
+  R(126,62,10,8,"#5a4636");R(124,60,14,3,"#3a2e24");for(q=0;q<4;q++){x.globalAlpha=.5-q*.1;R(129+sn(T/10+q)*2,56-q*5-((T/4)%4),3,3,"#e8e8e0");x.globalAlpha=1}
+  for(q=0;q<12;q++)R(8+q%4*8,66+(q/4|0)*5,5,3,["#6f9a4a","#a08a3a","#c9a46a"][q%3]);R(6,60,1,16,"#8a6b4a");R(40,60,1,16,"#8a6b4a")}
+ else if(L=="battle"){sky();x.globalAlpha=.3;R(0,0,160,58,"#a3261c");x.globalAlpha=1;hills("#8a7a70","#6a5a52",14);R(0,58,160,26,"#a8905a");for(q=0;q<24;q++)R((q*47)%160,60+(q*13)%24,3,1,"#8a7248");
+  R(0,38,160,18,"#8a8a80");for(q=0;q<20;q++){R(q*8,34,5,4,"#8a8a80");R(q*8+1,36,3,1,"#6a6a60")}for(q=0;q<14;q++)R(q*12+2,42,2,10,"#72726a");R(62,40,36,16,"#3a2e24");R(60,32,6,24,"#9a9a90");R(94,32,6,24,"#9a9a90");R(60,28,6,4,"#a3261c");R(94,28,6,4,"#a3261c");
+  R(30,14,1,22,"#3a2e24");R(31,15+sn(T/5),10,6,"#a3261c");R(126,14,1,22,"#3a2e24");R(127,15+sn(T/5+1),10,6,"#2a4d8f");
+  for(q=0;q<5;q++){x.globalAlpha=.55;R(10+q*34+sn(T/20+q)*3,28-((T/3+q*9)%26),6,7,"#4a4a4a");x.globalAlpha=1}
+  var ex=118+sn(T/60)*6,lg2=(T/8|0)%2;R(ex,46,28,14,"#6a6a70");R(ex-8,44,10,12,"#6a6a70");R(ex-10,54,2,10+lg2,"#5a5a60");R(ex-14,56,4,2,"#e8e8e0");R(ex+3,60,5,8,"#5a5a60");R(ex+19,60,5,8-lg2,"#5a5a60");R(ex+6,40,16,6,"#a3261c");R(ex+6,40,16,1,"#d9b04a");
+  for(q=0;q<4;q++){var ax=((T*3+q*40)%170);R(ax,30+q*7+ax*.05,5,1,"#3a2e24")}for(q=0;q<5;q++){R(10+q*8,74+q%2,10,1,"#8a8a90");R(10+q*8,75+q%2,2,2,"#6a4a2a")}}
+ else if(L=="fire"){sky();x.globalAlpha=.35;R(0,0,160,58,"#2a1a2a");x.globalAlpha=1;hills("#7a6a6a","#5a4a4a",14);R(0,58,160,26,"#a89066");
+  [[6,30,30],[56,32,30],[108,28,34]].forEach(function(h,ii){stilt(h[0],h[1],h[2],"#6e3a2a");for(var u=0;u<4;u++)flame(h[0]+4+u*h[2]/4,h[1]+2+(u%2)*4,10+(u%3)*5,ii+u)});
+  for(q=0;q<6;q++){x.globalAlpha=.5;R(10+q*24+sn(T/14+q)*5,34-((T/2+q*11)%34),9,9,"#3a3234");x.globalAlpha=1}
+  for(q=0;q<16;q++){x.globalAlpha=1-((T*.8+q*7)%30)/30;R((q*23+sn(T/6+q)*6)%150+4,50-((T*.8+q*7)%30)*1.2,1,1,"#ffb040");x.globalAlpha=1}
+  x.globalAlpha=.12+.05*sn(T/3);R(0,0,160,84,"#ff7a1a");x.globalAlpha=1;for(q=0;q<6;q++){R(20+q*22,70+(q%2)*4,5,4,"#6e4a2a");R(20+q*22,70+(q%2)*4,5,1,"#a8845a")}}
+ else if(L=="bandit"){dsky("#141c2a","#2e4a46");R(30,10,7,7,"#f2eee2");R(33,10,4,7,"#2e3a52");hills("#2a3a36","#22302c",18);R(0,58,160,26,"#3a4a3a");
+  for(q=0;q<18;q++){R(q*9+3,22,3,38,"#1a2a20");R(q*9-2,14+(q%3)*3,12,14,"#22382a")}for(q=0;q<8;q++){R(q*22+4,6,5,54,"#2a2218");R(q*22-4,0,22,22,"#1a3224")}
+  for(y=58;y<84;y++)R(66-(y-58)*.9,y,28+(y-58)*1.8,1,"#6a5a42");
+  [[36,64],[112,66],[90,60]].forEach(function(b,ii){R(b[0],b[1],5,10,"#0a0a0e");R(b[0]+1,b[1]-4,3,4,"#0a0a0e");R(b[0]-1,b[1]-6,7,2,"#2a1a10");R(b[0]+5,b[1]-8,1,12,"#5a4030");x.globalAlpha=.3;R(b[0]-3,b[1]-14,10,10,"#ffb040");x.globalAlpha=1;flame(b[0]+5,b[1]-8,5,ii)});
+  x.globalAlpha=.25;R(((T*.2)%60)-20,50,200,10,"#cfd8d8");x.globalAlpha=1;for(q=0;q<10;q++){x.globalAlpha=.4+.5*Math.abs(sn(T/10+q));R((q*31+sn(T/30+q)*8)%160,30+(q*17)%40,1,1,"#ffe98a");x.globalAlpha=1}}
+ else if(L=="elephant"){sky();hills("#9db9b0","#7fa393",14);R(0,58,160,26,"#d8c890");for(q=0;q<30;q++)R((q*43)%160,60+(q*13)%24,3,1,"#c0a870");
+  R(8,36,144,22,"#a68e76");roof(80,14,150,22,"#8a3b2a","#d9b04a");for(q=0;q<9;q++)R(10+q*17,36,3,24,"#6e4a2a");R(6,56,148,3,"#6e4a2a");
+  var tr=sn(T/14)*3;R(52,34,44,24,"#f2eee2");R(52,52,44,6,"#d8d4c8");R(40,32,16,22,"#f2eee2");R(36,50,5,10,"#f2eee2");R(32,58+tr,3,4,"#f2eee2");R(41+tr,54,3,6,"#e8e4d8");R(30,48,6,2,"#fff8e0");R(52,56,6,10,"#e8e4d8");R(86,56,6,10,"#e8e4d8");R(43,34,2,2,"#26332f");R(56+sn(T/10),30,6,10,"#d8d4c8");
+  R(58,32,34,8,"#a3261c");R(58,32,34,1,"#d9b04a");R(58,39,34,1,"#d9b04a");R(70,22,10,10,"#d9b04a");R(74,16,2,6,"#d9b04a");
+  for(q=0;q<8;q++)R(100+q*3,58+q%2,3,2,"#c8a850");R(118,50,2,12,"#6e4a2a");for(q=0;q<4;q++)R(114+q*3,46+q%2,3,4,"#f0d85a");R(126,52,12,8,"#3f7a4a");R(10,64,8,6,"#a3261c");R(10,64,8,1,"#d9b04a")}
+ else if(L=="krath"){dsky("#141c3a","#3a4a7a");for(q=0;q<24;q++)if((T/9+q*5)%16>2)R((q*37)%158,(q*13)%40,1,1,"#fff6d0");R(112,8,10,10,"#f6f0d8");R(116,8,6,10,"#d8d4c0");x.globalAlpha=.15;R(104,0,26,26,"#fff6d0");x.globalAlpha=1;hills("#2a3a4a","#22303c",14);
+  R(0,50,160,34,"#2f5a7a");for(q=0;q<18;q++)R(((q*23+T*.3)%170)-5,52+(q*7)%30,8,1,"#5a8aaa");x.globalAlpha=.2;R(112,50,8,34,"#f6f0d8");x.globalAlpha=1;
+  for(q=0;q<14;q++){var kx=((q*29+T*.12*(1+q%3*.3))%170)-5,ky=58+(q*11)%22+sn(T/12+q)*.8;R(kx,ky+2,7,2,"#4a7a3a");R(kx+1,ky,5,2,"#e8a0c0");R(kx+3,ky-2,1,2,"#ffd24a");x.globalAlpha=.3;R(kx-1,ky-4,9,7,"#ffd24a");x.globalAlpha=1}
+  R(0,38,160,14,"#4a3a2a");roof(30,24,50,14,"#6e3a2a","#c6a45a");for(q=0;q<9;q++){var lx=q*18+6;R(lx,16,2,3,"#d9382c");x.globalAlpha=.3;R(lx-2,15,6,7,"#ffd24a");x.globalAlpha=1}
+  var fp=(T/40|0)%3,fq=(T%40)/40;if(fq<.6){var fx=30+fp*50,fy=20;for(q=0;q<10;q++){x.globalAlpha=1-fq/.6;R(fx+Math.cos(q*.63)*fq*30,fy+Math.sin(q*.63)*fq*30,2,2,["#ffd24a","#ff7a9a","#8ad0ff"][q%3])}x.globalAlpha=1}}
+ else if(L=="wedding"){sky();hills("#9db9b0","#7fa393",16);R(0,58,160,26,"#a8c2a5");R(54,58,52,26,"#a3261c");R(54,58,2,26,"#d9b04a");R(104,58,2,26,"#d9b04a");
+  R(30,34,100,22,"#c9a46a");for(q=0;q<6;q++)R(34+q*17,34,3,24,"#a68250");roof(80,12,112,22,"#c9372c","#e6c25e");
+  for(q=0;q<22;q++){var ax=44+q*3.6,ay=40+Math.sin(q/21*Math.PI)*8;R(ax,ay,2,2,["#f0d85a","#e8a0c0","#fff"][q%3])}R(76,44,8,14,"#d9b04a");R(77,46,6,2,"#c9372c");
+  [[8,66],[124,66]].forEach(function(t){R(t[0],t[1],26,9,"#f2eee2");R(t[0],t[1],26,2,"#c9372c");R(t[0]+4,t[1]-4,6,4,"#d9b04a");R(t[0]+14,t[1]-3,6,3,"#d9b04a");R(t[0]+8,t[1]-7,3,3,"#e8a0c0")});
+  for(q=0;q<10;q++){R((q*31+sn(T/20+q)*5)%160,((T*.4+q*9)%62),2,2,q%2?"#f0d85a":"#e8a0c0")}tree(12,60,2,"#4f8f58");tree(148,60,2,"#4f8f58");R(70,60,3,3,"#d9b04a")}
+ else if(L=="cremation"){sky();hills("#9db9b0","#7fa393",18);R(0,58,160,26,"#d8cfa8");for(q=0;q<20;q++)R((q*53)%160,60+(q*17)%24,2,1,"#c0b890");
+  for(q=0;q<7;q++){var w=44-q*5;R(80-w/2,52-q*5,w,5,q%2?"#f6f0e0":"#e6c25e");R(80-w/2,52-q*5,w,1,"#c9a46a")}R(79,10,2,10,"#d9b04a");R(60,52,40,6,"#8a6b4a");
+  for(q=0;q<6;q++){R(54+q*10,38+q%2*2,1,12,"#f2eee2");R(55+q*10+sn(T/8+q),38,4,3,"#f2eee2")}
+  for(q=0;q<4;q++){x.globalAlpha=.45-q*.08;R(80+sn(T/12+q)*3,8-q*4-((T/6)%5),6,5,"#d0d0d0");x.globalAlpha=1}
+  [[20,66],[36,68],[118,66],[134,68]].forEach(function(p){R(p[0],p[1],5,6,"#e8760a");R(p[0],p[1]-3,4,3,"#e0b48a");R(p[0]-1,p[1]+6,7,1,"#a89060")});
+  for(q=0;q<12;q++)R(8+q*13,76+q%2,3,2,"#f6f0e0");tree(8,60,2,"#4f8f58");tree(150,60,2,"#4f8f58")}
+ else if(L=="astro"){dsky("#0e1530","#2a3a6a");for(q=0;q<50;q++)if((T/9+q*5)%14>2)R((q*37)%158,(q*13)%48,1,1,"#fff6d0");
+  var ss=(T*1.2)%160;if((T/90|0)%2)R(ss,ss*.3,3,1,"#fff");R(120,10,9,9,"#f6f0d8");R(124,10,5,9,"#d8d4c0");
+  for(q=0;q<6;q++){R(20+q*14,14+(q*7)%20,1,1,"#ffe9a0");if(q)R(20+(q-1)*14+3,16+((q-1)*7)%20,10,1,"#ffe9a022")}
+  hills("#1a2640","#141c34",14);R(0,58,160,26,"#2a3a34");R(110,30,6,28,"#a68e76");R(100,28,26,3,"#8a6b4a");R(104,22,18,6,"#a68e76");R(108,10,10,1,"#d9b04a");R(111,6,4,5,"#d9b04a");R(112,14,2,8,"#8a6b4a");
+  roof(40,30,50,12,"#6e3a2a","#c6a45a");R(18,42,44,16,"#a68e76");R(36,44,10,14,"#3a2e24");R(22,46,6,6,"#ffd873");
+  R(54,62,26,8,"#6e4a2a");R(56,60,22,2,"#e8d8a8");for(q=0;q<4;q++)R(58+q*5,60,2,1,"#a3261c");R(66,56,1,4,"#ffd24a");R(84,64,6,4,"#ffd873");lamp(36,40);lamp(60,52);
+  for(q=0;q<2;q++){x.globalAlpha=.5;R(86+sn(T/10+q)*2,58-q*5-((T/5)%5),2,4,"#cfcfcf");x.globalAlpha=1}}
+ else if(L=="court"){R(0,0,160,56,"#5a3e2a");for(q=0;q<8;q++){R(q*20+1,10,18,36,"#6a4a30");R(q*20+1,10,18,1,"#c6a45a")}R(0,56,160,28,"#a8845a");for(q=0;q<18;q++)R(q*9,56,1,28,"#8a6a44");
+  R(60,56,40,28,"#2a4a3a");R(60,56,2,28,"#c6a45a");R(98,56,2,28,"#c6a45a");
+  R(56,44,48,12,"#7a5a3a");R(60,40,40,4,"#c6a45a");R(70,24,20,16,"#c6a45a");R(72,26,16,12,"#3a2a1a");R(78,28,4,8,"#e8d8a8");R(76,6,8,18,"#a3261c");R(74,4,12,3,"#c6a45a");
+  [[8,40],[132,40]].forEach(function(s){R(s[0],s[1],20,18,"#7a5a3a");for(var u=0;u<4;u++)for(var v=0;v<3;v++)R(s[0]+2+v*6,s[1]+2+u*4,5,3,(u+v)%2?"#e8d8a8":"#c8b888")});
+  [[20,70],[118,70]].forEach(function(d){R(d[0],d[1],22,5,"#6e4a2a");R(d[0]+3,d[1]-3,8,3,"#e8d8a8");R(d[0]+14,d[1]-2,5,2,"#a3261c");R(d[0]+4,d[1]+5,2,6,"#6e4a2a");R(d[0]+16,d[1]+5,2,6,"#6e4a2a")});
+  [[6,0],[46,0],[108,0],[148,0]].forEach(function(p){R(p[0],0,6,56,"#8a2a22");R(p[0],14,6,2,"#c6a45a");R(p[0],40,6,2,"#c6a45a")});lamp(30,18);lamp(130,18);x.globalAlpha=.1;R(70,0,24,56,"#ffe9a0");x.globalAlpha=1}
+ else if(L=="foreign"){sky();hills("#9db9b0","#7fa393",14);R(0,52,160,32,"#4f8fb0");for(q=0;q<18;q++)R(((q*23+T*.4)%170)-5,54+(q*7)%28,8,1,"#a8d0de");
+  var o1=sn(T/20)*1,o2=sn(T/20+2)*1;R(10,58+o1,50,6,"#4a3a2a");R(14,54+o1,42,4,"#6e4a2a");[20,34,48].forEach(function(m,ii){R(m,22+o1+ii*2,1,34-ii*2,"#3a2e24");for(var r=0;r<20-ii*2;r++)R(m+1,24+r+o1+ii*2,12,1,r%6?"#f2eee2":"#d8d4c8")});R(54,16+o1,1,6,"#3a2e24");R(55,16+o1,6+sn(T/5),3,"#2a4d8f");
+  R(96,60+o2,44,5,"#6e3a2a");R(92,56+o2,6,6,"#6e3a2a");R(138,57+o2,6,7,"#6e3a2a");[106,124].forEach(function(m){R(m,26+o2,1,34,"#3a2e24");for(var r=0;r<24;r++)R(m+1,28+r+o2,12,1,r%5?"#a3523a":"#7a3a22")});R(116,20+o2,5+sn(T/6),3,"#c9372c");
+  R(0,68,160,16,"#7a5a3a");for(q=0;q<10;q++)R(q*16,68,1,16,"#5a4030");R(0,67,160,2,"#9a7a52");
+  [[10,"#c9372c","#f2eee2"],[28,"#2a4d8f","#f2eee2"],[46,"#f2eee2","#a3261c"]].forEach(function(f,ii){R(f[0],38,1,28,"#3a2e24");R(f[0]+1,38+sn(T/5+ii),10,3,f[1]);R(f[0]+1,41+sn(T/5+ii),10,3,f[2]);R(f[0]+1,44+sn(T/5+ii),10,3,ii==1?"#c9372c":f[1])});
+  [[70,"#a3261c"],[88,"#2a7a5a"],[106,"#d9a02a"]].forEach(function(s){R(s[0],54,14,2,"#e8d8a8");R(s[0],56,14,8,s[1]);R(s[0]+2,62,10,2,"#f6f0e0")});for(q=0;q<4;q++)R(122+q*5,60+(q%2)*3,4,4,"#8a6b4a")}
+ return 1};
+/* location name pill (reads game's own scene key; no state changes) */
+var pl=document.createElement("div");pl.id="pv-loc";document.body.appendChild(pl);
+var st=document.createElement("style");st.textContent="#pv-loc{position:fixed;z-index:9;pointer-events:none;font-size:12px;padding:2px 10px;border-radius:10px;background:#1d2622cc;color:#f3e3b0;border:1px solid #C6A45A;display:none}";document.head.appendChild(st);
+setInterval(function(){var s=document.getElementById("sc"),t=document.getElementById("ti");if(!s||document.hidden||(t&&t.style.display!=="none")||!window.PVLN){pl.style.display="none";return}
+ var r=s.getBoundingClientRect();if(r.width<40||r.bottom<0||r.top>innerHeight){pl.style.display="none";return}
+ pl.style.display="block";pl.style.left=(r.right-8)+"px";pl.style.transform="translateX(-100%)";pl.style.top=(r.top+8)+"px";var tx="📍 "+window.PVLN;if(pl.textContent!==tx)pl.textContent=tx},250);
+})();
+</script></body></html>
